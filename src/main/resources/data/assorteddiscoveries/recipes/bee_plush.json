@@ -1,0 +1,25 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "W W",
+    "SSS",
+    "BCB"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:white_wool"
+    },
+    "B": {
+      "item": "minecraft:yellow_wool"
+    },
+    "S": {
+      "item": "minecraft:brown_wool"
+    },
+    "C": {
+      "item": "minecraft:honeycomb"
+    }
+  },
+  "result": {
+    "item": "assorteddiscoveries:bee_plush"
+  }
+}

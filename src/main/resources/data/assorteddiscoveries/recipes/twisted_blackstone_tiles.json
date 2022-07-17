@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:twisting_vines"
+    },
+    {
+      "item": "assorteddiscoveries:blackstone_tiles"
+    }
+  ],
+  "result": {
+    "item": "assorteddiscoveries:twisted_blackstone_tiles"
+  }
+}

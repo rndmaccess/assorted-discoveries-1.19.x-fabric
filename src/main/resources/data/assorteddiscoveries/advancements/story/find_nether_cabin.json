@@ -1,0 +1,33 @@
+{
+  "parent": "assorteddiscoveries:story/root",
+  "display": {
+    "icon": {
+      "item": "assorteddiscoveries:twisted_polished_blackstone_bricks"
+    },
+    "title": {
+      "translate": "advancements.assorteddiscoveries.story.find_nether_cabin.title"
+    },
+    "description": {
+      "translate": "advancements.assorteddiscoveries.story.find_nether_cabin.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "nether_cabin": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "location": {
+          "feature": "assorteddiscoveries:nether_cabin"
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "nether_cabin"
+    ]
+  ]
+}

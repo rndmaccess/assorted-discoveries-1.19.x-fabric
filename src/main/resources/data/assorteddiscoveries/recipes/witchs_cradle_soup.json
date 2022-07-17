@@ -1,0 +1,17 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "assorteddiscoveries:witchs_cradle_branch"
+    },
+    {
+      "item": "assorteddiscoveries:blood_vial"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "assorteddiscoveries:witchs_cradle_soup"
+  }
+}

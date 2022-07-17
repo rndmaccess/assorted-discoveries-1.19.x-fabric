@@ -1,0 +1,6 @@
+{
+  "parent": "assorteddiscoveries:block/template_bamboo_fence_post2",
+  "textures": {
+    "bamboo": "assorteddiscoveries:block/dried_bamboo_stalk"
+  }
+}

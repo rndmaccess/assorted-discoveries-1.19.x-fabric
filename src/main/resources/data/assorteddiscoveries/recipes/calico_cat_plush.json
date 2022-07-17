@@ -1,0 +1,29 @@
+{
+  "type": "crafting_shaped",
+  "group": "cat_plush",
+  "pattern": [
+    "OWO",
+    "WFB",
+    "BGO"
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:orange_wool"
+    },
+    "W": {
+      "item": "minecraft:white_wool"
+    },
+    "B": {
+      "item": "minecraft:brown_wool"
+    },
+    "G": {
+      "item": "minecraft:green_wool"
+    },
+    "F": {
+      "tag": "assorteddiscoveries:raw_fishes"
+    }
+  },
+  "result": {
+    "item": "assorteddiscoveries:calico_cat_plush"
+  }
+}

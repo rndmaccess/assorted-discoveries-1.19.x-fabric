@@ -1,0 +1,22 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "BBB",
+    "CIC",
+    "B B"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:light_blue_wool"
+    },
+    "C": {
+      "item": "minecraft:cyan_wool"
+    },
+    "I": {
+      "item": "minecraft:glow_ink_sac"
+    }
+  },
+  "result": {
+    "item": "assorteddiscoveries:glow_squid_plush"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "crafting_shaped",
+  "group": "stripped_wooden_wall",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "assorteddiscoveries:stripped_oak_logs"
+    }
+  },
+  "result": {
+    "item": "assorteddiscoveries:stripped_oak_wall",
+    "count": 6
+  }
+}

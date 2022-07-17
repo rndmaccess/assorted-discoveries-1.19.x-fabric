@@ -1,0 +1,26 @@
+{
+  "type": "crafting_shaped",
+  "group": "villager_plush",
+  "pattern": [
+    "HHH",
+    "HBH",
+    "CIC"
+  ],
+  "key": {
+    "H": {
+      "item": "minecraft:terracotta"
+    },
+    "C": {
+      "item": "minecraft:blue_wool"
+    },
+    "B": {
+      "item": "minecraft:book"
+    },
+    "I": {
+      "item": "minecraft:lead"
+    }
+  },
+  "result": {
+    "item": "assorteddiscoveries:wandering_trader_plush"
+  }
+}

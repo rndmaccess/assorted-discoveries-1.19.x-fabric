@@ -1,0 +1,23 @@
+{
+  "type": "crafting_shaped",
+  "group": "cat_plush",
+  "pattern": [
+    "YYY",
+    "YFY",
+    "YBY"
+  ],
+  "key": {
+    "Y": {
+      "item": "minecraft:yellow_wool"
+    },
+    "B": {
+      "item": "minecraft:light_blue_wool"
+    },
+    "F": {
+      "tag": "assorteddiscoveries:raw_fishes"
+    }
+  },
+  "result": {
+    "item": "assorteddiscoveries:persian_cat_plush"
+  }
+}

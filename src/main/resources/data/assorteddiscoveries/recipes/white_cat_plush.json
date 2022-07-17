@@ -1,0 +1,23 @@
+{
+  "type": "crafting_shaped",
+  "group": "cat_plush",
+  "pattern": [
+    "WWW",
+    "WFW",
+    "WBW"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:white_wool"
+    },
+    "B": {
+      "item": "minecraft:black_wool"
+    },
+    "F": {
+      "tag": "assorteddiscoveries:raw_fishes"
+    }
+  },
+  "result": {
+    "item": "assorteddiscoveries:white_cat_plush"
+  }
+}

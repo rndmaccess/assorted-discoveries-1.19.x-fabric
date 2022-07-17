@@ -1,0 +1,204 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_post1"
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_post2"
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_post3"
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_post4"
+        }
+      ]
+    },
+    {
+      "when": {
+        "north": "true",
+        "up": "false"
+      },
+      "apply": [
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_side4"
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_side3"
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_side2"
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_side1"
+        }
+      ]
+    },
+    {
+      "when": {
+        "east": "true",
+        "up": "false"
+      },
+      "apply": [
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_side3",
+          "y": 90
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_side2",
+          "y": 90
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_side4",
+          "y": 90
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_side1",
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+        "south": "true",
+        "up": "false"
+      },
+      "apply": [
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_side3",
+          "y": 180
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_side1",
+          "y": 180
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_side4",
+          "y": 180
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_side2",
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+        "west": "true",
+        "up": "false"
+      },
+      "apply": [
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_side3",
+          "y": 270
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_side2",
+          "y": 270
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_side1",
+          "y": 270
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_side4",
+          "y": 270
+        }
+      ]
+    },
+    {
+      "when": {
+        "north": "true",
+        "up": "true"
+      },
+      "apply": [
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_tall_side4"
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_tall_side3"
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_tall_side2"
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_tall_side1"
+        }
+      ]
+    },
+    {
+      "when": {
+        "east": "true",
+        "up": "true"
+      },
+      "apply": [
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_tall_side3",
+          "y": 90
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_tall_side2",
+          "y": 90
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_tall_side4",
+          "y": 90
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_tall_side1",
+          "y": 90
+        }
+      ]
+    },
+    {
+      "when": {
+        "south": "true",
+        "up": "true"
+      },
+      "apply": [
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_tall_side3",
+          "y": 180
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_tall_side1",
+          "y": 180
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_tall_side4",
+          "y": 180
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_tall_side2",
+          "y": 180
+        }
+      ]
+    },
+    {
+      "when": {
+        "west": "true",
+        "up": "true"
+      },
+      "apply": [
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_tall_side3",
+          "y": 270
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_tall_side2",
+          "y": 270
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_tall_side1",
+          "y": 270
+        },
+        {
+          "model": "assorteddiscoveries:block/dried_bamboo_fence_tall_side4",
+          "y": 270
+        }
+      ]
+    }
+  ]
+}

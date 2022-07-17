@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "assorteddiscoveries:dark_forest_cabin",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 15,
+    "separation": 10,
+    "salt": 724628428
+  }
+}

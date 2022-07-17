@@ -1,0 +1,8 @@
+{
+  "type": "assorteddiscoveries:woodcutting",
+  "ingredient": {
+    "tag": "assorteddiscoveries:warped_stems"
+  },
+  "result": "assorteddiscoveries:warped_wall",
+  "count": 1
+}

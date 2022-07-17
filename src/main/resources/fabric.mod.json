@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "assorteddiscoveries",
+  "version": "${version}",
+
+  "name": "Assorted Discoveries",
+  "description": "Discover Minecraft in a new way with Assorted Discoveries!",
+  "authors": [
+    "rndm_access (creator)",
+    "JinxyCatt (contributor)"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://https://github.com/rndmaccess/assorted-discoveries-fabric"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/assorteddiscoveries/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "rndm_access.assorteddiscoveries.common.AssortedDiscoveries"
+    ],
+    "client": [
+      "rndm_access.assorteddiscoveries.client.AssortedDiscoveriesClient"
+    ],
+    "rei_server": [
+      "rndm_access.assorteddiscoveries.rei_compat.server.ADServerPlugin"
+    ],
+    "rei_client": [
+      "rndm_access.assorteddiscoveries.rei_compat.client.ADClientPlugin"
+    ]
+  },
+  "mixins": [
+    "assorteddiscoveries.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

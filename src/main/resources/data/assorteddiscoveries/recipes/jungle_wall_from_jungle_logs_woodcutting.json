@@ -1,0 +1,8 @@
+{
+  "type": "assorteddiscoveries:woodcutting",
+  "ingredient": {
+    "tag": "assorteddiscoveries:jungle_logs"
+  },
+  "result": "assorteddiscoveries:jungle_wall",
+  "count": 1
+}

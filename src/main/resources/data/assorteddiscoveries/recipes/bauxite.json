@@ -1,0 +1,18 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "#X"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:granite"
+    },
+    "X": {
+      "item": "minecraft:terracotta"
+    }
+  },
+  "result": {
+    "item": "assorteddiscoveries:bauxite",
+	"count": 2
+  }
+}

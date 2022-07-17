@@ -1,0 +1,17 @@
+{
+  "type": "crafting_shaped",
+  "group": "stripped_wooden_wall",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "assorteddiscoveries:stripped_crimson_stems"
+    }
+  },
+  "result": {
+    "item": "assorteddiscoveries:stripped_crimson_wall",
+    "count": 6
+  }
+}

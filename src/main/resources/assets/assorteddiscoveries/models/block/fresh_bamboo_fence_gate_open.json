@@ -1,0 +1,7 @@
+{
+  "parent": "assorteddiscoveries:block/template_bamboo_fence_gate_open",
+  "textures": {
+    "bamboo": "minecraft:block/bamboo_stalk",
+    "cut_bamboo": "assorteddiscoveries:block/bamboo_cut_stalk"
+  }
+}

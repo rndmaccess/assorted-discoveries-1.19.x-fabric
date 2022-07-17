@@ -1,0 +1,26 @@
+{
+  "type": "crafting_shaped",
+  "group": "villager_plush",
+  "pattern": [
+    "HHH",
+    "HBH",
+    "CIC"
+  ],
+  "key": {
+    "H": {
+      "item": "minecraft:terracotta"
+    },
+    "C": {
+      "item": "minecraft:white_wool"
+    },
+    "B": {
+      "item": "minecraft:book"
+    },
+    "I": {
+      "item": "minecraft:cactus"
+    }
+  },
+  "result": {
+    "item": "assorteddiscoveries:desert_villager_plush"
+  }
+}
