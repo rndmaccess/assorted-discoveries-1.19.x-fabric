@@ -23,7 +23,6 @@ import rndm_access.assorteddiscoveries.common.core.*;
 
 @Environment(EnvType.CLIENT)
 public class AssortedDiscoveriesClient implements ClientModInitializer {
-
     @Override
     public void onInitializeClient() {
         registerBlockColorProviders();

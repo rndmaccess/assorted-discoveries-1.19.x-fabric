@@ -13,7 +13,6 @@ import rndm_access.assorteddiscoveries.common.core.ADBlockTags;
 
 @Mixin(SpreadableBlock.class)
 public class ADSpreadableBlockMixin {
-
     @Inject(method = "canSurvive", at = @At("HEAD"), cancellable = true)
     private static void assorteddiscoveries_canSurvive(BlockState state, WorldView world, BlockPos pos,
                                                        CallbackInfoReturnable<Boolean> info) {

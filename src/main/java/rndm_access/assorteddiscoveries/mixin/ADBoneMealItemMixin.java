@@ -20,7 +20,6 @@ import java.util.Random;
 
 @Mixin(BoneMealItem.class)
 public abstract class ADBoneMealItemMixin {
-
     @Shadow
     public static void createParticles(WorldAccess world, BlockPos pos, int count) {}
 

@@ -7,7 +7,6 @@ import net.minecraft.util.math.BlockPos;
 import rndm_access.assorteddiscoveries.common.core.ADBlockEntityTypes;
 
 public class ADDyedCampfireBlockEntity extends CampfireBlockEntity {
-
     public ADDyedCampfireBlockEntity(BlockPos pos, BlockState state) {
         super(pos, state);
     }

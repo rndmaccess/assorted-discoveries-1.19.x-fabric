@@ -9,7 +9,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 
 public class ADRopeLadderBlockItem extends BlockItem {
-
     public ADRopeLadderBlockItem(Block block, Item.Settings settings) {
         super(block, settings);
     }

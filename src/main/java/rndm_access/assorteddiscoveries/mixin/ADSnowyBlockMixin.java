@@ -21,7 +21,6 @@ import rndm_access.assorteddiscoveries.common.util.ADBlockStateUtil;
 
 @Mixin(SnowyBlock.class)
 public class ADSnowyBlockMixin {
-
     @Inject(method = "getStateForNeighborUpdate", at = @At("HEAD"), cancellable = true)
     private void assorteddiscoveries_getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
                                                 WorldAccess world, BlockPos pos, BlockPos neighborPos,
