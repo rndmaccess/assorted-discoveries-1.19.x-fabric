@@ -282,6 +282,16 @@ public class ADBlocks {
             AbstractBlock.Settings.copy(BAUXITE_BRICKS));
     public static final Block BAUXITE_BRICK_SLAB = new SlabBlock(AbstractBlock.Settings.copy(BAUXITE_BRICKS));
     public static final Block BAUXITE_BRICK_WALL = new WallBlock(AbstractBlock.Settings.copy(BAUXITE_BRICKS));
+    public static final Block MOSSY_BAUXITE_BRICKS = new Block(AbstractBlock.Settings.copy(BAUXITE_BRICKS));
+    public static final Block MOSSY_BAUXITE_BRICK_STAIRS = new StairsBlock(MOSSY_BAUXITE_BRICKS.getDefaultState(),
+            AbstractBlock.Settings.copy(BAUXITE_BRICKS));
+    public static final Block MOSSY_BAUXITE_BRICK_SLAB = new SlabBlock(AbstractBlock.Settings.copy(BAUXITE_BRICKS));
+    public static final Block MOSSY_BAUXITE_BRICK_WALL = new WallBlock(AbstractBlock.Settings.copy(BAUXITE_BRICKS));
+    public static final Block CRACKED_BAUXITE_BRICKS = new Block(AbstractBlock.Settings.copy(BAUXITE_BRICKS));
+    public static final Block CRACKED_BAUXITE_BRICK_STAIRS = new StairsBlock(BAUXITE_BRICKS.getDefaultState(),
+            AbstractBlock.Settings.copy(BAUXITE_BRICKS));
+    public static final Block CRACKED_BAUXITE_BRICK_SLAB = new SlabBlock(AbstractBlock.Settings.copy(BAUXITE_BRICKS));
+    public static final Block CRACKED_BAUXITE_BRICK_WALL = new WallBlock(AbstractBlock.Settings.copy(BAUXITE_BRICKS));
     public static final Block SNOW_SLAB = new SlabBlock(AbstractBlock.Settings.of(Material.SNOW_BLOCK).requiresTool()
             .strength(0.2F).sounds(BlockSoundGroup.SNOW));
     public static final Block SNOW_STAIRS = new StairsBlock(Blocks.SNOW_BLOCK.getDefaultState(),
@@ -718,6 +728,14 @@ public class ADBlocks {
         register("bauxite_brick_stairs", BAUXITE_BRICK_STAIRS);
         register("bauxite_brick_slab", BAUXITE_BRICK_SLAB);
         register("bauxite_brick_wall", BAUXITE_BRICK_WALL);
+        register("mossy_bauxite_bricks", MOSSY_BAUXITE_BRICKS);
+        register("mossy_bauxite_brick_stairs", MOSSY_BAUXITE_BRICK_STAIRS);
+        register("mossy_bauxite_brick_slab", MOSSY_BAUXITE_BRICK_SLAB);
+        register("mossy_bauxite_brick_wall", MOSSY_BAUXITE_BRICK_WALL);
+        register("cracked_bauxite_bricks", CRACKED_BAUXITE_BRICKS);
+        register("cracked_bauxite_brick_stairs", CRACKED_BAUXITE_BRICK_STAIRS);
+        register("cracked_bauxite_brick_slab", CRACKED_BAUXITE_BRICK_SLAB);
+        register("cracked_bauxite_brick_wall", CRACKED_BAUXITE_BRICK_WALL);
         register("snow_slab", SNOW_SLAB);
         register("snow_stairs", SNOW_STAIRS);
         register("snow_wall", SNOW_WALL);

@@ -26,11 +26,7 @@ public class ADPlanterBoxBlock extends Block {
     public static final BooleanProperty SOUTH = Properties.SOUTH;
     public static final BooleanProperty WEST = Properties.WEST;
     public static final BooleanProperty EAST = Properties.EAST;
-
-    private static final VoxelShape NORTH_EDGE_SHAPE = Block.createCuboidShape(0.0, 15.0, 13.0,
-            16.0, 16.0, 16.0);
-    private static final List<VoxelShape> EDGE_SHAPES = ADVoxelShapeHelper.getShapeRotationsAsList(NORTH_EDGE_SHAPE);
-    private static final HashMap<List<Boolean>, VoxelShape> SHAPES = composeShapes(EDGE_SHAPES, 4);
+    private static final HashMap<List<Boolean>, VoxelShape> SHAPES = composeRotatedShapes();
 
     public ADPlanterBoxBlock(AbstractBlock.Settings settings) {
         super(settings);
@@ -42,18 +38,20 @@ public class ADPlanterBoxBlock extends Block {
      * A helper method that creates a hashmap that maps a list of booleans that represent each property,
      * (south, north, east, west), to the appropriate shape.
      */
-    private static HashMap<List<Boolean>, VoxelShape> composeShapes(List<VoxelShape> borderShapes, int set_size) {
+    private static HashMap<List<Boolean>, VoxelShape> composeRotatedShapes() {
         VoxelShape bottomShape = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 15.0, 16.0);
+        VoxelShape northBorderShape = Block.createCuboidShape(0.0, 15.0, 13.0, 16.0, 16.0, 16.0);
+        List<VoxelShape> borderShapes = ADVoxelShapeHelper.getShapeRotationsAsList(northBorderShape);
+        double setSize = 4;
+        double power_set_size = Math.pow(2, setSize);
         HashMap<List<Boolean>, VoxelShape> map = new HashMap<>();
-        double power_set_size = Math.pow(2, set_size);
 
         // Add every subset to the map which covers every possible shape for every state these blocks.
         for (int i = 0; i < power_set_size; i++) {
             List<Boolean> isBorderOpen = new ArrayList<>(4);
             VoxelShape tempBorderShape = VoxelShapes.empty();
 
-            for (int j = 0; j < set_size; j++) {
-
+            for (int j = 0; j < setSize; j++) {
                 // If true there is a border here on the planter box.
                 if ((i & (1 << j)) > 0) {
                     isBorderOpen.add(false);
@@ -69,7 +67,7 @@ public class ADPlanterBoxBlock extends Block {
     }
 
     @Override
-    @SuppressWarnings("depreciated")
+    @SuppressWarnings("deprecation")
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         List<Boolean> stateProperties = ImmutableList.of(state.get(SOUTH), state.get(NORTH), state.get(EAST), state.get(WEST));
 
@@ -85,7 +83,7 @@ public class ADPlanterBoxBlock extends Block {
     }
 
     @Override
-    @SuppressWarnings("depreciated")
+    @SuppressWarnings("deprecation")
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         return getPlanterBoxState(state, world, pos);
     }
@@ -102,7 +100,7 @@ public class ADPlanterBoxBlock extends Block {
      * state each block should be in.
      */
     @Override
-    @SuppressWarnings("depreciated")
+    @SuppressWarnings("deprecation")
     public BlockState rotate(BlockState state, BlockRotation rotation) {
         BlockState rotatedState = this.getDefaultState();
         boolean north = state.get(NORTH);
