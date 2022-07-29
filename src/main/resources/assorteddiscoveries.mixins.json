@@ -8,8 +8,6 @@
     "ADNetherWartBlockMixin",
     "ADPlantBlockMixin",
     "ADShovelItemMixin",
-    "ADLeavesBlockMixin",
-    "ADBlockMixin",
     "ADEntityAccessor",
     "ADLivingEntityMixin",
     "ADBoneMealItemMixin",
