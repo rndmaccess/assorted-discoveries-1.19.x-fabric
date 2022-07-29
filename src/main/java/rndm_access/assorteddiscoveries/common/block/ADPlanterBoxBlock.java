@@ -36,7 +36,7 @@ public class ADPlanterBoxBlock extends Block {
 
     /**
      * A helper method that creates a hashmap that maps a list of booleans that represent each property,
-     * (south, north, east, west), to the appropriate shape.
+     * (south, north, east, west), to their appropriate shape.
      */
     private static HashMap<List<Boolean>, VoxelShape> composeRotatedShapes() {
         VoxelShape bottomShape = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 15.0, 16.0);
@@ -53,7 +53,7 @@ public class ADPlanterBoxBlock extends Block {
 
             for (int j = 0; j < setSize; j++) {
                 // If true there is a border here on the planter box.
-                if ((i & (1 << j)) > 0) {
+                if ((i >> j) % 2 == 1) {
                     isBorderOpen.add(false);
                     tempBorderShape = VoxelShapes.union(tempBorderShape, borderShapes.get(j));
                 }
@@ -63,6 +63,7 @@ public class ADPlanterBoxBlock extends Block {
             }
             map.put(isBorderOpen, VoxelShapes.union(tempBorderShape, bottomShape));
         }
+        System.out.println(map);
         return map;
     }
 
