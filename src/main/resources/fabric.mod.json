@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Assorted Discoveries",
-  "description": "Discover Minecraft in a new way with Assorted Discoveries!",
+  "description": "Experience Minecraft like never before with new blocks, items, structures, and much much more with Assorted Discoveries!",
   "authors": [
     "rndm_access"
   ],
@@ -13,7 +13,7 @@
     "sources": "https://github.com/rndmaccess/assorted-discoveries-fabric"
   },
 
-  "license": "CC0-1.0",
+  "license": "MIT",
   "icon": "assets/assorteddiscoveries/icon.png",
 
   "environment": "*",
