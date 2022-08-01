@@ -63,7 +63,6 @@ public class ADPlanterBoxBlock extends Block {
             }
             map.put(isBorderOpen, VoxelShapes.union(tempBorderShape, bottomShape));
         }
-        System.out.println(map);
         return map;
     }
 

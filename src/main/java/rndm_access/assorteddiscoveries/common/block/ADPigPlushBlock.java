@@ -8,11 +8,6 @@ public class ADPigPlushBlock extends ADAbstractDirectionalPlushBlock {
             12.0D, 15.0D);
 
     public ADPigPlushBlock(Settings settings) {
-        super(settings);
-    }
-
-    @Override
-    protected VoxelShape northOutlineShape() {
-        return NORTH_SHAPE;
+        super(settings, NORTH_SHAPE);
     }
 }

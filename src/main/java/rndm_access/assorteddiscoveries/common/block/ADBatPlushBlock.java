@@ -9,12 +9,6 @@ public class ADBatPlushBlock extends ADAbstractDirectionalPlushBlock {
             12.0D, 12.0D);
 
     public ADBatPlushBlock(AbstractBlock.Settings settings) {
-        super(settings);
+        super(settings, NORTH_SHAPE);
     }
-
-    @Override
-    public VoxelShape northOutlineShape() {
-        return NORTH_SHAPE;
-    }
-
 }

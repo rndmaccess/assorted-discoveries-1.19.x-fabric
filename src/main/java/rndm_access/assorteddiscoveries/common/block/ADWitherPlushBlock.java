@@ -9,11 +9,6 @@ public class ADWitherPlushBlock extends ADAbstractDirectionalPlushBlock {
             13.5, 12.5);
 
     public ADWitherPlushBlock(AbstractBlock.Settings settings) {
-        super(settings);
-    }
-
-    @Override
-    public VoxelShape northOutlineShape() {
-        return NORTH_SHAPE;
+        super(settings, NORTH_SHAPE);
     }
 }

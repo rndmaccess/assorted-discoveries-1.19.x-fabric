@@ -9,11 +9,6 @@ public class ADZombiePlushBlock extends ADAbstractDirectionalPlushBlock {
             12.5D, 12.5D);
 
     public ADZombiePlushBlock(AbstractBlock.Settings settings) {
-        super(settings);
-    }
-
-    @Override
-    protected VoxelShape northOutlineShape() {
-        return NORTH_SHAPE;
+        super(settings, NORTH_SHAPE);
     }
 }

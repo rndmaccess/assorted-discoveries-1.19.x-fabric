@@ -9,11 +9,6 @@ public class ADMooshroomPlushBlock extends ADAbstractDirectionalPlushBlock {
             14.0D, 15.0D);
 
     public ADMooshroomPlushBlock(AbstractBlock.Settings settings) {
-        super(settings);
-    }
-
-    @Override
-    protected VoxelShape northOutlineShape() {
-        return NORTH_SHAPE;
+        super(settings, NORTH_SHAPE);
     }
 }

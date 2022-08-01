@@ -9,11 +9,6 @@ public class ADBeePlushBlock extends ADAbstractDirectionalPlushBlock {
             7.0D, 14.5D);
 
     public ADBeePlushBlock(AbstractBlock.Settings settings) {
-        super(settings);
-    }
-
-    @Override
-    public VoxelShape northOutlineShape() {
-        return NORTH_SHAPE;
+        super(settings, NORTH_SHAPE);
     }
 }

@@ -9,11 +9,6 @@ public class ADCaveSpiderPlushBlock extends ADAbstractDirectionalPlushBlock {
             6.0D, 14.0D);
 
     public ADCaveSpiderPlushBlock(AbstractBlock.Settings settings) {
-        super(settings);
-    }
-
-    @Override
-    public VoxelShape northOutlineShape() {
-        return NORTH_SHAPE;
+        super(settings, NORTH_SHAPE);
     }
 }

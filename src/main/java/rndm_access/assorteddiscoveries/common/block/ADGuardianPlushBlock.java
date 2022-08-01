@@ -9,11 +9,6 @@ public class ADGuardianPlushBlock extends ADAbstractDirectionalPlushBlock {
             8.5D, 12.5D);
 
     public ADGuardianPlushBlock(AbstractBlock.Settings settings) {
-        super(settings);
-    }
-
-    @Override
-    public VoxelShape northOutlineShape() {
-        return NORTH_SHAPE;
+        super(settings, NORTH_SHAPE);
     }
 }

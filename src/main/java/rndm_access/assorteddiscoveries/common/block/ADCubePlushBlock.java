@@ -66,7 +66,7 @@ public class ADCubePlushBlock extends ADPlushBlock {
     }
 
     @Override
-    @SuppressWarnings("depreciated")
+    @SuppressWarnings("deprecation")
     public boolean canReplace(BlockState state, ItemPlacementContext context) {
         BlockPos topPos = context.getBlockPos().up();
         BlockState topState = context.getWorld().getBlockState(topPos);

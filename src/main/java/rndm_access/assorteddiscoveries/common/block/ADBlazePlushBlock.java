@@ -9,11 +9,6 @@ public class ADBlazePlushBlock extends ADAbstractDirectionalPlushBlock {
             15.5D, 12.0D);
 
     public ADBlazePlushBlock(AbstractBlock.Settings settings) {
-        super(settings);
-    }
-
-    @Override
-    public VoxelShape northOutlineShape() {
-        return NORTH_SHAPE;
+        super(settings, NORTH_SHAPE);
     }
 }

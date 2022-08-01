@@ -8,11 +8,6 @@ public class ADCreeperPlushBlock extends ADAbstractDirectionalPlushBlock {
             12.0D, 14.0D);
 
     public ADCreeperPlushBlock(Settings settings) {
-        super(settings);
-    }
-
-    @Override
-    protected VoxelShape northOutlineShape() {
-        return NORTH_SHAPE;
+        super(settings, NORTH_SHAPE);
     }
 }

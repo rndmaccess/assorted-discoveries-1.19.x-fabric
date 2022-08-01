@@ -9,11 +9,6 @@ public class ADSheepPlushBlock extends ADAbstractDirectionalPlushBlock {
             12.0D, 14.0D);
 
     public ADSheepPlushBlock(AbstractBlock.Settings settings) {
-        super(settings);
-    }
-
-    @Override
-    protected VoxelShape northOutlineShape() {
-        return NORTH_SHAPE;
+        super(settings, NORTH_SHAPE);
     }
 }

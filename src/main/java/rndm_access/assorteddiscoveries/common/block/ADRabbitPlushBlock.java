@@ -9,11 +9,6 @@ public class ADRabbitPlushBlock extends ADAbstractDirectionalPlushBlock {
             10.5D, 13.0D);
 
     public ADRabbitPlushBlock(AbstractBlock.Settings settings) {
-        super(settings);
-    }
-
-    @Override
-    public VoxelShape northOutlineShape() {
-        return NORTH_SHAPE;
+        super(settings, NORTH_SHAPE);
     }
 }

@@ -9,11 +9,6 @@ public class ADHorsePlushBlock extends ADAbstractDirectionalPlushBlock {
             12.5, 15.5D);
 
     public ADHorsePlushBlock(AbstractBlock.Settings settings) {
-        super(settings);
-    }
-
-    @Override
-    public VoxelShape northOutlineShape() {
-        return NORTH_SHAPE;
+        super(settings, NORTH_SHAPE);
     }
 }

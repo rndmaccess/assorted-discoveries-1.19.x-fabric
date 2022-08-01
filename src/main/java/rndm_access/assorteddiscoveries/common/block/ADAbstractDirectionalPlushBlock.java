@@ -13,15 +13,13 @@ import java.util.HashMap;
 public abstract class ADAbstractDirectionalPlushBlock extends ADPlushBlock {
     private final HashMap<Direction, VoxelShape> shapes;
 
-    protected ADAbstractDirectionalPlushBlock(Settings settings) {
+    protected ADAbstractDirectionalPlushBlock(Settings settings, VoxelShape northShape) {
         super(settings);
-        this.shapes = ADVoxelShapeHelper.getShapeRotationsAsMap(northOutlineShape());
+        this.shapes = ADVoxelShapeHelper.getShapeRotationsAsMap(northShape);
     }
 
-    protected abstract VoxelShape northOutlineShape();
-
     @Override
-    @SuppressWarnings("depreciated")
+    @SuppressWarnings("deprecation")
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return shapes.get(state.get(FACING));
     }

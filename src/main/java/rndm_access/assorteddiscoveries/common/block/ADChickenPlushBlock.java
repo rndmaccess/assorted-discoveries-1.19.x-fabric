@@ -9,11 +9,6 @@ public class ADChickenPlushBlock extends ADAbstractDirectionalPlushBlock {
             11.0D, 13.0D);
 
     public ADChickenPlushBlock(AbstractBlock.Settings settings) {
-        super(settings);
-    }
-
-    @Override
-    protected VoxelShape northOutlineShape() {
-        return NORTH_SHAPE;
+        super(settings, NORTH_SHAPE);
     }
 }
