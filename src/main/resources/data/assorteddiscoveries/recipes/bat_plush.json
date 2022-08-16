@@ -1,22 +1,19 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
-    "WGW",
-    "GSG",
-    "GIG"
+    "GGG",
+    "BSB",
+    "GGG"
   ],
   "key": {
-    "W": {
-      "item": "minecraft:white_wool"
-    },
     "G": {
-      "item": "minecraft:gray_wool"
+      "item": "minecraft:light_gray_wool"
+    },
+    "B": {
+      "item": "minecraft:black_wool"
     },
     "S": {
-      "item": "minecraft:stone"
-    },
-    "I": {
-      "item": "minecraft:iron_ore"
+      "tag": "c:natural_stones"
     }
   },
   "result": {

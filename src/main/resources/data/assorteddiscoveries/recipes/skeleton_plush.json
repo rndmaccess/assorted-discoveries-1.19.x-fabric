@@ -1,25 +1,19 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
-    "GLG",
-    "BLA",
-    "DLD"
+    "WWW",
+    "GIG",
+    "WWW"
   ],
   "key": {
+    "W": {
+      "item": "minecraft:white_wool"
+    },
     "G": {
       "item": "minecraft:gray_wool"
     },
-    "L": {
-      "item": "minecraft:white_wool"
-    },
-    "B": {
-      "item": "minecraft:bow"
-    },
-    "A": {
+    "I": {
       "item": "minecraft:arrow"
-    },
-    "D": {
-      "item": "minecraft:bone"
     }
   },
   "result": {

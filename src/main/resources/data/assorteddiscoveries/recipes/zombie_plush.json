@@ -1,16 +1,16 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
     "GGG",
-    "CRC",
-    "G G"
+    "BRB",
+    "GGG"
   ],
   "key": {
     "G": {
       "item": "minecraft:green_wool"
     },
-    "C": {
-      "item": "minecraft:cyan_wool"
+    "B": {
+      "item": "minecraft:black_wool"
     },
     "R": {
       "item": "minecraft:rotten_flesh"

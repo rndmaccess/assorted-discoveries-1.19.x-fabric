@@ -1,7 +1,9 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
-    "BMB"
+    "BBB",
+    "LML",
+    "BBB"
   ],
   "key": {
     "M": {
@@ -9,6 +11,9 @@
     },
     "B": {
       "item": "minecraft:blue_wool"
+    },
+    "L": {
+      "item": "minecraft:lime_wool"
     }
   },
   "result": {

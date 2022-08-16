@@ -1,25 +1,22 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
-    "BPP",
-    "GRG",
-    "PLP"
+    "WWW",
+    "BIB",
+    "PPP"
   ],
   "key": {
+    "W": {
+      "item": "minecraft:white_wool"
+    },
     "P": {
       "item": "minecraft:pink_wool"
     },
     "B": {
-      "item": "minecraft:bone"
+      "item": "minecraft:black_wool"
     },
-    "G": {
-      "item": "minecraft:gold_nugget"
-    },
-    "R": {
-      "item": "minecraft:rotten_flesh"
-    },
-    "L": {
-      "item": "minecraft:leather_leggings"
+    "I": {
+      "item": "minecraft:gold_ingot"
     }
   },
   "result": {

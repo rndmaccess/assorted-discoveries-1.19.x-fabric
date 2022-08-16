@@ -1,9 +1,10 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
+  "group": "squid_plush",
   "pattern": [
     "BBB",
     "bIb",
-    "B B"
+    "BBB"
   ],
   "key": {
     "B": {

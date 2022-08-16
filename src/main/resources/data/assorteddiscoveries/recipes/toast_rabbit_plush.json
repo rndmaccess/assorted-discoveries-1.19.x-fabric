@@ -1,10 +1,10 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "group": "rabbit_plush",
   "pattern": [
-    "BPB",
-    "BRB",
-    "FWF"
+    "BWB",
+    "GIG",
+    "WWW"
   ],
   "key": {
     "B": {
@@ -13,14 +13,11 @@
     "W": {
       "item": "minecraft:white_wool"
     },
-    "P": {
-      "item": "minecraft:pink_wool"
+    "G": {
+      "item": "minecraft:gray_wool"
     },
-    "R": {
+    "I": {
       "item": "minecraft:rabbit"
-    },
-    "F": {
-      "item": "minecraft:rabbit_foot"
     }
   },
   "result": {

@@ -1,10 +1,10 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "group": "cat_plush",
   "pattern": [
     "BBB",
-    "BFB",
-    "BOB"
+    "OFO",
+    "BBB"
   ],
   "key": {
     "B": {
@@ -14,7 +14,7 @@
       "item": "minecraft:orange_wool"
     },
     "F": {
-      "tag": "assorteddiscoveries:raw_fishes"
+      "tag": "c:raw_fish"
     }
   },
   "result": {

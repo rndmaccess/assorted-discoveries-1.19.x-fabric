@@ -1,10 +1,10 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "group": "cat_plush",
   "pattern": [
-    "WGW",
-    "WFW",
-    "GBG"
+    "GWG",
+    "BFB",
+    "WWW"
   ],
   "key": {
     "W": {
@@ -17,7 +17,7 @@
       "item": "minecraft:blue_wool"
     },
     "F": {
-      "tag": "assorteddiscoveries:raw_fishes"
+      "tag": "c:raw_fish"
     }
   },
   "result": {

@@ -1,9 +1,9 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
-    "BPB",
-    "PIP",
-    "IPI"
+    "PPP",
+    "BIB",
+    "PPP"
   ],
   "key": {
     "B": {

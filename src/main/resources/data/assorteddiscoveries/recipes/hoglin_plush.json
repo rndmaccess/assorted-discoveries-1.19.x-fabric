@@ -1,8 +1,9 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
-    "WTT",
-    "T T"
+    "TTT",
+    "WPW",
+	"TTT"
   ],
   "key": {
     "W": {
@@ -10,6 +11,9 @@
     },
     "T": {
       "item": "minecraft:terracotta"
+    },
+    "P": {
+      "item": "minecraft:porkchop"
     }
   },
   "result": {

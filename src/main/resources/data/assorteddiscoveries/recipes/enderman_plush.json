@@ -1,14 +1,17 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
     "WWW",
-    "WPW",
+    "MPM",
     "WGW"
   ],
   "key": {
     "W": {
       "item": "minecraft:black_wool"
     },
+	"M": {
+	  "item": "minecraft:magenta_wool"
+	},
     "P": {
       "item": "minecraft:ender_pearl"
     },

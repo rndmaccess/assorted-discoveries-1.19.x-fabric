@@ -1,22 +1,19 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
     "TTT",
-    "GRG",
-    "TLT"
+    "WIW",
+    "TTT"
   ],
   "key": {
     "T": {
       "item": "minecraft:terracotta"
     },
-    "G": {
-      "item": "minecraft:gold_nugget"
+    "W": {
+      "item": "minecraft:white_wool"
     },
-    "R": {
-      "item": "minecraft:rotten_flesh"
-    },
-    "L": {
-      "item": "minecraft:leather_leggings"
+    "I": {
+      "item": "minecraft:gold_ingot"
     }
   },
   "result": {

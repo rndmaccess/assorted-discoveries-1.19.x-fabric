@@ -1,18 +1,18 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
-    "WTW",
-    "WBW",
+    "WWW",
+    "BIB",
     "WWW"
   ],
   "key": {
     "W": {
       "item": "minecraft:white_wool"
     },
-    "T": {
-      "item": "minecraft:gray_wool"
-    },
     "B": {
+      "item": "minecraft:black_wool"
+    },
+    "I": {
       "item": "minecraft:bone"
     }
   },

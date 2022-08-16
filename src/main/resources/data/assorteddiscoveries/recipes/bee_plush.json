@@ -1,21 +1,21 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
     "W W",
-    "SSS",
-    "BCB"
+    "BBB",
+    "YIY"
   ],
   "key": {
     "W": {
       "item": "minecraft:white_wool"
     },
-    "B": {
+    "Y": {
       "item": "minecraft:yellow_wool"
     },
-    "S": {
-      "item": "minecraft:brown_wool"
+    "B": {
+      "item": "minecraft:black_wool"
     },
-    "C": {
+    "I": {
       "item": "minecraft:honeycomb"
     }
   },

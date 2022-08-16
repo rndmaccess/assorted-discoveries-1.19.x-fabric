@@ -1,19 +1,19 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "group": "horse_plush",
   "pattern": [
-    "  B",
-    "BSB",
-    "H H"
+    "BBB",
+    "GIG",
+    "BBB"
   ],
   "key": {
     "B": {
       "item": "minecraft:black_wool"
     },
-    "H": {
+    "G": {
       "item": "minecraft:gray_wool"
     },
-    "S": {
+    "I": {
       "item": "minecraft:leather"
     }
   },

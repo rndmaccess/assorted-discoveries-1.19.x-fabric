@@ -1,9 +1,9 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
     "BBB",
-    "BFB",
-    "WOW"
+    "OFO",
+    "BBB"
   ],
   "key": {
     "B": {
@@ -12,11 +12,8 @@
     "O": {
       "item": "minecraft:orange_wool"
     },
-    "W": {
-      "item": "minecraft:white_wool"
-    },
     "F": {
-      "tag": "assorteddiscoveries:raw_fishes"
+      "tag": "c:raw_fish"
     }
   },
   "result": {
