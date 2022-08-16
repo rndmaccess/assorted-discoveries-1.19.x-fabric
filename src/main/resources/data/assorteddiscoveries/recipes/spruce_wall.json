@@ -1,5 +1,5 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "group": "wooden_wall",
   "pattern": [
     "###",
@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "tag": "assorteddiscoveries:spruce_logs"
+      "tag": "c:natural_spruce_logs"
     }
   },
   "result": {

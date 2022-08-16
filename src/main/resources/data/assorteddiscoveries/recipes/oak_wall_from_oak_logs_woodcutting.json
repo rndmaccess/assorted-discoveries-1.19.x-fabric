@@ -1,7 +1,7 @@
 {
   "type": "assorteddiscoveries:woodcutting",
   "ingredient": {
-    "tag": "assorteddiscoveries:oak_logs"
+    "tag": "c:natural_oak_logs"
   },
   "result": "assorteddiscoveries:oak_wall",
   "count": 1

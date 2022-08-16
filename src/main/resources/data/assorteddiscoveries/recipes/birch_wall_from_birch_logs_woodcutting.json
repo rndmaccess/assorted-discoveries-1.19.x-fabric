@@ -1,7 +1,7 @@
 {
   "type": "assorteddiscoveries:woodcutting",
   "ingredient": {
-    "tag": "assorteddiscoveries:birch_logs"
+    "tag": "c:natural_birch_logs"
   },
   "result": "assorteddiscoveries:birch_wall",
   "count": 1

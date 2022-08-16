@@ -1,5 +1,5 @@
 {
-  "type": "crafting_shaped",
+  "type": "minecraft:crafting_shaped",
   "group": "stripped_wooden_wall",
   "pattern": [
     "###",
@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "tag": "assorteddiscoveries:stripped_jungle_logs"
+      "tag": "c:stripped_jungle_logs"
     }
   },
   "result": {

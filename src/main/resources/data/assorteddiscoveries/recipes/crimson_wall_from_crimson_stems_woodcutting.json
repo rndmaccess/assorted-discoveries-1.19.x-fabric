@@ -1,7 +1,7 @@
 {
   "type": "assorteddiscoveries:woodcutting",
   "ingredient": {
-    "tag": "assorteddiscoveries:crimson_stems"
+    "tag": "c:natural_crimson_stems"
   },
   "result": "assorteddiscoveries:crimson_wall",
   "count": 1

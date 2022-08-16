@@ -1,7 +1,7 @@
 {
   "type": "assorteddiscoveries:woodcutting",
   "ingredient": {
-    "tag": "assorteddiscoveries:jungle_logs"
+    "tag": "c:natural_jungle_logs"
   },
   "result": "assorteddiscoveries:jungle_wall",
   "count": 1
