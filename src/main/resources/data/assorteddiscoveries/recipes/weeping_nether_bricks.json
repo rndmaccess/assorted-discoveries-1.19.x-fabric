@@ -5,7 +5,7 @@
       "item": "minecraft:nether_bricks"
     },
     {
-      "item": "minecraft:weeping_vines"
+      "tag": "c:crimson_vegetation"
     }
   ],
   "result": {

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:weeping_vines"
+      "tag": "c:crimson_vegetation"
     },
     {
       "item": "minecraft:polished_blackstone_bricks"

@@ -5,7 +5,7 @@
       "item": "minecraft:nether_bricks"
     },
     {
-      "item": "minecraft:twisting_vines"
+      "tag": "c:warped_vegetation"
     }
   ],
   "result": {

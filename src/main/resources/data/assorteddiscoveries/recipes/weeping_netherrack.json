@@ -5,7 +5,7 @@
       "item": "minecraft:netherrack"
     },
     {
-      "item": "minecraft:weeping_vines"
+      "tag": "c:crimson_vegetation"
     }
   ],
   "result": {

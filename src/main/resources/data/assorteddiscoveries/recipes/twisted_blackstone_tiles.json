@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:twisting_vines"
+      "tag": "c:warped_vegetation"
     },
     {
       "item": "assorteddiscoveries:blackstone_tiles"
