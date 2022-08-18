@@ -38,7 +38,7 @@
   "depends": {
     "fabricloader": ">=0.14.6",
     "fabric": ">=0.58.0+1.19",
-	"architectury": ">=5.12.42",
+	"architectury": ">=5.9.31",
 	"roughlyenoughitems": ">=9.1.526",
     "minecraft": "~1.19",
     "java": ">=17"
