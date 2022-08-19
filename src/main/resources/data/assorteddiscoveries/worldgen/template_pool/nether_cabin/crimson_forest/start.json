@@ -6,7 +6,7 @@
       "weight": 10,
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "assorteddiscoveries:nether_cabin/crimson_forest/crimson_forest_cabin",
+        "location": "assorteddiscoveries:nether_cabin/crimson_forest/house",
         "processors": "assorteddiscoveries:weeping_blackstone_bricks_70_percent",
         "projection": "rigid"
       }

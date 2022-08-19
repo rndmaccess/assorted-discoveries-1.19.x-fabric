@@ -6,7 +6,7 @@
       "weight": 1,
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "assorteddiscoveries:cabin/forest/decorations/oak_fire_pit",
+        "location": "assorteddiscoveries:cabin/common/decorations/fire_pits/oak_fire_pit",
         "processors": "minecraft:empty",
         "projection": "rigid"
       }
@@ -15,7 +15,7 @@
       "weight": 1,
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "assorteddiscoveries:cabin/forest/decorations/oak_log_pile",
+        "location": "assorteddiscoveries:cabin/common/decorations/fire_pits/birch_fire_pit",
         "processors": "minecraft:empty",
         "projection": "rigid"
       }
@@ -24,7 +24,16 @@
       "weight": 1,
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "assorteddiscoveries:cabin/birch_forest/decorations/birch_log_pile",
+        "location": "assorteddiscoveries:cabin/common/decorations/log_piles/oak_log_pile",
+        "processors": "minecraft:empty",
+        "projection": "rigid"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "assorteddiscoveries:cabin/common/decorations/log_piles/birch_log_pile",
         "processors": "minecraft:empty",
         "projection": "rigid"
       }

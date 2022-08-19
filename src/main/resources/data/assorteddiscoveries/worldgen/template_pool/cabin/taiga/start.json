@@ -5,7 +5,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "assorteddiscoveries:cabin/taiga/taiga_cabin",
+        "location": "assorteddiscoveries:cabin/taiga/house",
         "processors": "minecraft:mossify_70_percent",
         "projection": "rigid"
       },

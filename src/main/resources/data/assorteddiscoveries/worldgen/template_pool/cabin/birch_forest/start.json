@@ -6,7 +6,7 @@
       "weight": 10,
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "assorteddiscoveries:cabin/birch_forest/birch_forest_cabin",
+        "location": "assorteddiscoveries:cabin/birch_forest/house",
         "processors": "minecraft:mossify_70_percent",
         "projection": "rigid"
       }
