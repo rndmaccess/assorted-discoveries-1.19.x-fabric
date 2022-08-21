@@ -5,7 +5,7 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "assorteddiscoveries:cabin/forest/house",
+        "location": "assorteddiscoveries:cabin/forest/forest_cabin",
         "processors": "minecraft:mossify_70_percent",
         "projection": "rigid"
       },

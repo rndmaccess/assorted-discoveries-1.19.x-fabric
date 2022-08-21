@@ -6,7 +6,7 @@
       "weight": 10,
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "assorteddiscoveries:nether_cabin/warped_forest/villagers/unemployed",
+        "location": "assorteddiscoveries:nether_cabin/warped_forest/villagers/warped_forest_unemployed",
         "processors": "minecraft:empty",
         "projection": "rigid"
       }
