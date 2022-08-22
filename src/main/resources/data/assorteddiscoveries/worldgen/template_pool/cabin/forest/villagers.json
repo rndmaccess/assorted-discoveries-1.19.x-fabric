@@ -6,7 +6,7 @@
       "weight": 10,
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "assorteddiscoveries:cabin/forest/villagers/forest_unemployed",
+        "location": "assorteddiscoveries:cabin/villagers/forest_unemployed",
         "processors": "minecraft:empty",
         "projection": "rigid"
       }

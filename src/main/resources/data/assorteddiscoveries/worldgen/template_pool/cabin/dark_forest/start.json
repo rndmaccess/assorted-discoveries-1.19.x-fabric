@@ -6,7 +6,7 @@
       "weight": 10,
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "assorteddiscoveries:cabin/dark_forest/dark_forest_cabin",
+        "location": "assorteddiscoveries:cabin/dark_forest_cabin",
         "processors": "assorteddiscoveries:mossify_stone_bricks_70_percent",
         "projection": "rigid"
       }
