@@ -99,6 +99,7 @@ public class ADItems {
     public static final Item HOGLIN_PLUSH = blockItem(ADBlocks.HOGLIN_PLUSH);
     public static final Item ZOGLIN_PLUSH = blockItem(ADBlocks.ZOGLIN_PLUSH);
     public static final Item POLAR_BEAR_PLUSH = blockItem(ADBlocks.POLAR_BEAR_PLUSH);
+    public static final Item ALLAY_PLUSH = blockItem(ADBlocks.ALLAY_PLUSH);
     public static final Item NETHER_SMOKY_QUARTZ_ORE = blockItem(ADBlocks.NETHER_SMOKY_QUARTZ_ORE);
     public static final Item SMOKY_QUARTZ_BLOCK = blockItem(ADBlocks.SMOKY_QUARTZ_BLOCK);
     public static final Item CHISELED_SMOKY_QUARTZ_BLOCK = blockItem(ADBlocks.CHISELED_SMOKY_QUARTZ_BLOCK);
@@ -499,6 +500,7 @@ public class ADItems {
         register("hoglin_plush", HOGLIN_PLUSH);
         register("zoglin_plush", ZOGLIN_PLUSH);
         register("polar_bear_plush", POLAR_BEAR_PLUSH);
+        register("allay_plush", ALLAY_PLUSH);
         register("nether_smoky_quartz_ore", NETHER_SMOKY_QUARTZ_ORE);
         register("smoky_quartz_block", SMOKY_QUARTZ_BLOCK);
         register("chiseled_smoky_quartz_block", CHISELED_SMOKY_QUARTZ_BLOCK);
