@@ -373,6 +373,7 @@ public class ADItems {
     public static final Item BLOOD_KELP = item();
     public static final Item DRIED_BLOOD_KELP_BLOCK = blockItem(ADBlocks.DRIED_BLOOD_KELP_BLOCK);
     public static final Item DRIED_BLOOD_KELP = new Item(makeSettings(FoodComponents.DRIED_KELP));
+    public static final Item BLOOD_KELP_LANTERN = blockItem(ADBlocks.BLOOD_KELP_LANTERN);
 
     private static Item item() {
         return new Item(makeSettings());
@@ -775,6 +776,7 @@ public class ADItems {
         register("blood_kelp", BLOOD_KELP);
         register("dried_blood_kelp_block", DRIED_BLOOD_KELP_BLOCK);
         register("dried_blood_kelp", DRIED_BLOOD_KELP);
+        register("blood_kelp_lantern", BLOOD_KELP_LANTERN);
 
         AssortedDiscoveries.LOGGER.info("Registered Items");
     }
