@@ -43,7 +43,7 @@ public abstract class ADCuttingRecipe extends CuttingRecipe {
 
             String string2 = JsonHelper.getString(jsonObject, "result");
             int i = JsonHelper.getInt(jsonObject, "count");
-            ItemStack itemStack = new ItemStack((ItemConvertible) Registry.ITEM.get(new Identifier(string2)), i);
+            ItemStack itemStack = new ItemStack(Registry.ITEM.get(new Identifier(string2)), i);
             return this.recipeFactory.create(identifier, string, ingredient, itemStack);
         }
 
@@ -62,9 +62,13 @@ public abstract class ADCuttingRecipe extends CuttingRecipe {
 
         @Override
         public boolean equals(Object obj) {
-            if (obj == this) return true;
-            if (obj == null || obj.getClass() != this.getClass()) return false;
-            var that = (Serializer) obj;
+            if (obj == this) {
+                return true;
+            }
+            if (obj == null || obj.getClass() != this.getClass()) {
+                return false;
+            }
+            Serializer<ADCuttingRecipe> that = (Serializer<ADCuttingRecipe>) obj;
             return Objects.equals(this.recipeFactory, that.recipeFactory);
         }
 
