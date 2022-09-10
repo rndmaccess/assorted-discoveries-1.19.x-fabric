@@ -1,11 +1,11 @@
 package rndm_access.assorteddiscoveries.common;
 
-import dev.architectury.registry.fuel.FuelRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Blocks;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.ItemGroup;
@@ -81,7 +81,7 @@ public class AssortedDiscoveries implements ModInitializer {
 	}
 
 	private static void registerFuel() {
-		FuelRegistry.register(4000, ADItems.DRIED_BLOOD_KELP_BLOCK);
+		FuelRegistry.INSTANCE.add(ADItems.DRIED_BLOOD_KELP_BLOCK, 4000);
 	}
 
 	private static void modifyLootTables() {
