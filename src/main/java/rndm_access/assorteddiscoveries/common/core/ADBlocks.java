@@ -122,6 +122,7 @@ public class ADBlocks {
     public static final Block POLAR_BEAR_PLUSH = new ADPolarBearPlushBlock(AbstractBlock.Settings.copy(CHICKEN_PLUSH));
     public static final Block ALLAY_PLUSH = new ADAllayPlushBlock(AbstractBlock.Settings.copy(GLOW_SQUID_PLUSH));
     public static final Block RAVAGER_PLUSH = new ADHoglinPlushBlock(AbstractBlock.Settings.copy(HOGLIN_PLUSH));
+    public static final Block SHULKER_PLUSH = new ADShulkerPlushBlock(AbstractBlock.Settings.copy(PURPLE_SHEEP_PLUSH));
     public static final Block NETHER_SMOKY_QUARTZ_ORE = new OreBlock(AbstractBlock.Settings.copy(Blocks.NETHER_QUARTZ_ORE));
     public static final Block SMOKY_QUARTZ_BLOCK = new Block(AbstractBlock.Settings.of(Material.STONE, MapColor.BLACK)
             .requiresTool().strength(0.8F));
@@ -586,6 +587,7 @@ public class ADBlocks {
         register("polar_bear_plush", POLAR_BEAR_PLUSH);
         register("allay_plush", ALLAY_PLUSH);
         register("ravager_plush", RAVAGER_PLUSH);
+        register("shulker_plush", SHULKER_PLUSH);
         register("nether_smoky_quartz_ore", NETHER_SMOKY_QUARTZ_ORE);
         register("smoky_quartz_block", SMOKY_QUARTZ_BLOCK);
         register("chiseled_smoky_quartz_block", CHISELED_SMOKY_QUARTZ_BLOCK);
