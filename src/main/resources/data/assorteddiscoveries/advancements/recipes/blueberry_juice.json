@@ -6,6 +6,18 @@
     ]
   },
   "criteria": {
+    "has_blueberries": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "assorteddiscoveries:blueberries"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_glass_bottle": {
       "conditions": {
         "items": [
@@ -27,6 +39,7 @@
   },
   "requirements": [
     [
+      "has_blueberries",
       "has_glass_bottle",
       "has_the_recipe"
     ]
