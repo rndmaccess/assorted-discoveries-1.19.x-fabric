@@ -24,7 +24,7 @@ public class ADDrinkItem extends Item {
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         if (user instanceof PlayerEntity playerEntity) {
-            if (playerEntity.isCreative()) {
+            if (!playerEntity.isCreative()) {
                 playerEntity.giveItemStack(new ItemStack(this.returnItem, 1));
                 return super.finishUsing(stack, world, user);
             }
