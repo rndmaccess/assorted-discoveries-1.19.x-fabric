@@ -13,116 +13,105 @@ import rndm_access.assorteddiscoveries.common.block.*;
 import java.util.function.ToIntFunction;
 
 public class ADBlocks {
-    public static final Block BAT_PLUSH = new ADBatPlushBlock(AbstractBlock.Settings.of(Material.WOOL, MapColor.GRAY)
+    public static final Block BAT_PLUSH = new ADBatPlushBlock(AbstractBlock.Settings.of(Material.WOOL, MapColor.CLEAR)
             .strength(0.2F).sounds(BlockSoundGroup.WOOL));
-    public static final Block BLAZE_PLUSH = new ADBlazePlushBlock(AbstractBlock.Settings.of(Material.WOOL, MapColor.YELLOW)
-            .strength(0.2F).sounds(BlockSoundGroup.WOOL));
-    public static final Block CAVE_SPIDER_PLUSH = new ADCaveSpiderPlushBlock(AbstractBlock.Settings.of(Material.WOOL, MapColor.CYAN)
-            .strength(0.2F).sounds(BlockSoundGroup.WOOL));
-    public static final Block CHICKEN_PLUSH = new ADChickenPlushBlock(AbstractBlock.Settings.of(Material.WOOL, MapColor.WHITE)
-            .strength(0.2F).sounds(BlockSoundGroup.WOOL));
-    public static final Block COW_PLUSH = new ADCowPlushBlock(AbstractBlock.Settings.of(Material.WOOL, MapColor.BROWN)
-            .strength(0.2F).sounds(BlockSoundGroup.WOOL));
-    public static final Block CREEPER_PLUSH = new ADCreeperPlushBlock(AbstractBlock.Settings.of(Material.WOOL, MapColor.LIME)
-            .strength(0.2F).sounds(BlockSoundGroup.WOOL));
-    public static final Block ENDERMAN_PLUSH = new ADEndermanPlushBlock(AbstractBlock.Settings.of(Material.WOOL, MapColor.BLACK)
-            .strength(0.2F).sounds(BlockSoundGroup.WOOL));
-    public static final Block GHAST_PLUSH = new ADGhastPlushBlock(AbstractBlock.Settings.copy(CHICKEN_PLUSH));
-    public static final Block GUARDIAN_PLUSH = new ADGuardianPlushBlock(AbstractBlock.Settings.copy(CAVE_SPIDER_PLUSH));
-    public static final Block WHITE_HORSE_PLUSH = new ADHorsePlushBlock(AbstractBlock.Settings.copy(CHICKEN_PLUSH));
+    public static final Block BLAZE_PLUSH = new ADBlazePlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block CAVE_SPIDER_PLUSH = new ADCaveSpiderPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block CHICKEN_PLUSH = new ADChickenPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block COW_PLUSH = new ADCowPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block CREEPER_PLUSH = new ADCreeperPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block ENDERMAN_PLUSH = new ADEndermanPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block GHAST_PLUSH = new ADGhastPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block GUARDIAN_PLUSH = new ADGuardianPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block WHITE_HORSE_PLUSH = new ADHorsePlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
     public static final Block GRAY_HORSE_PLUSH = new ADHorsePlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
-    public static final Block LIGHT_GRAY_HORSE_PLUSH = new ADHorsePlushBlock(AbstractBlock.Settings.of(Material.WOOL, MapColor.LIGHT_GRAY)
-            .strength(0.2F).sounds(BlockSoundGroup.WOOL));
-    public static final Block BROWN_HORSE_PLUSH = new ADHorsePlushBlock(AbstractBlock.Settings.copy(COW_PLUSH));
-    public static final Block BLACK_HORSE_PLUSH = new ADHorsePlushBlock(AbstractBlock.Settings.copy(ENDERMAN_PLUSH));
-    public static final Block MAGMA_CUBE_PLUSH = new ADCubePlushBlock(AbstractBlock.Settings.of(Material.WOOL, MapColor.RED)
-            .strength(0.2F).sounds(BlockSoundGroup.WOOL));
-    public static final Block RED_MOOSHROOM_PLUSH = new ADMooshroomPlushBlock(AbstractBlock.Settings.copy(MAGMA_CUBE_PLUSH));
-    public static final Block BROWN_MOOSHROOM_PLUSH = new ADMooshroomPlushBlock(AbstractBlock.Settings.copy(COW_PLUSH));
-    public static final Block OCELOT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(BLAZE_PLUSH));
-    public static final Block TABBY_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(COW_PLUSH));
-    public static final Block TUXEDO_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(ENDERMAN_PLUSH));
-    public static final Block RED_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.of(Material.WOOL, MapColor.ORANGE)
-            .strength(0.2F).sounds(BlockSoundGroup.WOOL));
-    public static final Block SIAMESE_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(CHICKEN_PLUSH));
-    public static final Block BRITISH_SHORTHAIR_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(LIGHT_GRAY_HORSE_PLUSH));
-    public static final Block CALICO_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(CHICKEN_PLUSH));
-    public static final Block PERSIAN_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(BLAZE_PLUSH));
-    public static final Block RAGDOLL_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(CHICKEN_PLUSH));
-    public static final Block WHITE_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(CHICKEN_PLUSH));
-    public static final Block JELLIE_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(CHICKEN_PLUSH));
-    public static final Block BLACK_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(ENDERMAN_PLUSH));
-    public static final Block PIG_PLUSH = new ADPigPlushBlock(AbstractBlock.Settings.of(Material.WOOL, MapColor.PINK)
-            .strength(0.2F).sounds(BlockSoundGroup.WOOL));
-    public static final Block BROWN_RABBIT_PLUSH = new ADRabbitPlushBlock(AbstractBlock.Settings.copy(COW_PLUSH));
-    public static final Block WHITE_RABBIT_PLUSH = new ADRabbitPlushBlock(AbstractBlock.Settings.copy(CHICKEN_PLUSH));
-    public static final Block BLACK_RABBIT_PLUSH = new ADRabbitPlushBlock(AbstractBlock.Settings.copy(ENDERMAN_PLUSH));
-    public static final Block WHITE_SPLOTCHED_RABBIT_PLUSH = new ADRabbitPlushBlock(AbstractBlock.Settings.copy(CHICKEN_PLUSH));
-    public static final Block GOLD_RABBIT_PLUSH = new ADRabbitPlushBlock(AbstractBlock.Settings.copy(BLAZE_PLUSH));
-    public static final Block TOAST_RABBIT_PLUSH = new ADRabbitPlushBlock(AbstractBlock.Settings.copy(CHICKEN_PLUSH));
-    public static final Block SALT_RABBIT_PLUSH = new ADRabbitPlushBlock(AbstractBlock.Settings.copy(COW_PLUSH));
-    public static final Block WHITE_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(CHICKEN_PLUSH));
-    public static final Block ORANGE_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(RED_CAT_PLUSH));
-    public static final Block MAGENTA_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.of(Material.WOOL, MapColor.MAGENTA)
-            .strength(0.2F).sounds(BlockSoundGroup.WOOL));
-    public static final Block LIGHT_BLUE_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.of(Material.WOOL, MapColor.LIGHT_BLUE)
-            .strength(0.2F).sounds(BlockSoundGroup.WOOL));
-    public static final Block YELLOW_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BLAZE_PLUSH));
-    public static final Block LIME_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(CREEPER_PLUSH));
-    public static final Block PINK_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(PIG_PLUSH));
+    public static final Block LIGHT_GRAY_HORSE_PLUSH = new ADHorsePlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block BROWN_HORSE_PLUSH = new ADHorsePlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block BLACK_HORSE_PLUSH = new ADHorsePlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block MAGMA_CUBE_PLUSH = new ADCubePlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block RED_MOOSHROOM_PLUSH = new ADMooshroomPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block BROWN_MOOSHROOM_PLUSH = new ADMooshroomPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block OCELOT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block TABBY_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block TUXEDO_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block RED_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block SIAMESE_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block BRITISH_SHORTHAIR_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block CALICO_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block PERSIAN_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block RAGDOLL_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block WHITE_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block JELLIE_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block BLACK_CAT_PLUSH = new ADCatPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block PIG_PLUSH = new ADPigPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block BROWN_RABBIT_PLUSH = new ADRabbitPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block WHITE_RABBIT_PLUSH = new ADRabbitPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block BLACK_RABBIT_PLUSH = new ADRabbitPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block WHITE_SPLOTCHED_RABBIT_PLUSH = new ADRabbitPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block GOLD_RABBIT_PLUSH = new ADRabbitPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block TOAST_RABBIT_PLUSH = new ADRabbitPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block SALT_RABBIT_PLUSH = new ADRabbitPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block WHITE_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block ORANGE_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block MAGENTA_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block LIGHT_BLUE_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block YELLOW_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block LIME_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block PINK_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
     public static final Block GRAY_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
-    public static final Block LIGHT_GRAY_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(LIGHT_GRAY_HORSE_PLUSH));
-    public static final Block CYAN_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(CAVE_SPIDER_PLUSH));
-    public static final Block PURPLE_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.of(Material.WOOL, MapColor.PURPLE)
-            .strength(0.2F).sounds(BlockSoundGroup.WOOL));
-    public static final Block BLUE_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.of(Material.WOOL, MapColor.BLUE)
-            .strength(0.2F).sounds(BlockSoundGroup.WOOL));
-    public static final Block BROWN_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(COW_PLUSH));
-    public static final Block GREEN_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.of(Material.WOOL, MapColor.GREEN)
-            .strength(0.2F).sounds(BlockSoundGroup.WOOL));
-    public static final Block RED_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(MAGMA_CUBE_PLUSH));
-    public static final Block BLACK_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(ENDERMAN_PLUSH));
-    public static final Block SKELETON_PLUSH = new ADSkeletonPlushBlock(AbstractBlock.Settings.copy(LIGHT_GRAY_HORSE_PLUSH));
-    public static final Block SLIME_PLUSH = new ADCubePlushBlock(AbstractBlock.Settings.copy(CREEPER_PLUSH));
-    public static final Block SPIDER_PLUSH = new ADSpiderPlushBlock(AbstractBlock.Settings.copy(ENDERMAN_PLUSH));
-    public static final Block SQUID_PLUSH = new ADSquidPlushBlock(AbstractBlock.Settings.copy(BLUE_SHEEP_PLUSH));
-    public static final Block GLOW_SQUID_PLUSH = new ADSquidPlushBlock(AbstractBlock.Settings.copy(LIGHT_BLUE_SHEEP_PLUSH).luminance((state) -> 10));
-    public static final Block BEE_PLUSH = new ADBeePlushBlock(AbstractBlock.Settings.copy(BLAZE_PLUSH));
-    public static final Block PLAINS_VILLAGER_PLUSH = new ADVillagerPlushBlock(AbstractBlock.Settings.copy(COW_PLUSH));
-    public static final Block DESERT_VILLAGER_PLUSH = new ADDesertVillagerPlushBlock(AbstractBlock.Settings.copy(RED_CAT_PLUSH));
-    public static final Block JUNGLE_VILLAGER_PLUSH = new ADVillagerPlushBlock(AbstractBlock.Settings.copy(BLAZE_PLUSH));
-    public static final Block SAVANNA_VILLAGER_PLUSH = new ADVillagerPlushBlock(AbstractBlock.Settings.copy(COW_PLUSH));
-    public static final Block SNOW_VILLAGER_PLUSH = new ADShortHatVillagerPlushBlock(AbstractBlock.Settings.copy(COW_PLUSH));
-    public static final Block SWAMP_VILLAGER_PLUSH = new ADShortHatVillagerPlushBlock(AbstractBlock.Settings.copy(GREEN_SHEEP_PLUSH));
-    public static final Block TAIGA_VILLAGER_PLUSH = new ADVillagerPlushBlock(AbstractBlock.Settings.copy(COW_PLUSH));
-    public static final Block CRIMSON_VILLAGER_PLUSH = new ADVillagerPlushBlock(AbstractBlock.Settings.copy(COW_PLUSH));
-    public static final Block WARPED_VILLAGER_PLUSH = new ADVillagerPlushBlock(AbstractBlock.Settings.copy(COW_PLUSH));
-    public static final Block WANDERING_TRADER_PLUSH = new ADShortHatVillagerPlushBlock(AbstractBlock.Settings.copy(BLUE_SHEEP_PLUSH));
-    public static final Block PLAINS_ZOMBIE_VILLAGER_PLUSH = new ADZombieVillagerPlushBlock(AbstractBlock.Settings.copy(GREEN_SHEEP_PLUSH));
-    public static final Block DESERT_ZOMBIE_VILLAGER_PLUSH = new ADDesertZombieVillagerPlushBlock(AbstractBlock.Settings.copy(GREEN_SHEEP_PLUSH));
-    public static final Block JUNGLE_ZOMBIE_VILLAGER_PLUSH = new ADZombieVillagerPlushBlock(AbstractBlock.Settings.copy(BLAZE_PLUSH));
-    public static final Block SAVANNA_ZOMBIE_VILLAGER_PLUSH = new ADZombieVillagerPlushBlock(AbstractBlock.Settings.copy(COW_PLUSH));
-    public static final Block SNOW_ZOMBIE_VILLAGER_PLUSH = new ADShortHatZombieVillagerPlushBlock(AbstractBlock.Settings.copy(COW_PLUSH));
-    public static final Block SWAMP_ZOMBIE_VILLAGER_PLUSH = new ADShortHatZombieVillagerPlushBlock(AbstractBlock.Settings.copy(COW_PLUSH));
-    public static final Block TAIGA_ZOMBIE_VILLAGER_PLUSH = new ADZombieVillagerPlushBlock(AbstractBlock.Settings.copy(BLAZE_PLUSH));
-    public static final Block CRIMSON_ZOMBIE_VILLAGER_PLUSH = new ADZombieVillagerPlushBlock(AbstractBlock.Settings.copy(BLAZE_PLUSH));
-    public static final Block WARPED_ZOMBIE_VILLAGER_PLUSH = new ADZombieVillagerPlushBlock(AbstractBlock.Settings.copy(BLAZE_PLUSH));
-    public static final Block WITCH_PLUSH = new ADWitchPlushBlock(AbstractBlock.Settings.copy(ENDERMAN_PLUSH));
-    public static final Block WOLF_PLUSH = new ADWolfPlushBlock(AbstractBlock.Settings.copy(CHICKEN_PLUSH));
-    public static final Block ZOMBIE_PLUSH = new ADZombiePlushBlock(AbstractBlock.Settings.copy(GREEN_SHEEP_PLUSH));
-    public static final Block PIGLIN_PLUSH = new ADPiglinPlushBlock(AbstractBlock.Settings.copy(PIG_PLUSH));
-    public static final Block ZOMBIFIED_PIGLIN_PLUSH = new ADZombiePlushBlock(AbstractBlock.Settings.copy(PIG_PLUSH));
-    public static final Block PUFFERFISH_PLUSH = new ADPufferfishPlushBlock(AbstractBlock.Settings.copy(BLAZE_PLUSH));
-    public static final Block WITHER_PLUSH = new ADWitherPlushBlock(AbstractBlock.Settings.copy(ENDERMAN_PLUSH));
-    public static final Block STRIDER_PLUSH = new ADStriderPlushBlock(AbstractBlock.Settings.copy(MAGMA_CUBE_PLUSH));
-    public static final Block SHIVERING_STRIDER_PLUSH = new ADStriderPlushBlock(AbstractBlock.Settings.copy(PURPLE_SHEEP_PLUSH));
-    public static final Block PHANTOM_PLUSH = new ADPhantomPlushBlock(AbstractBlock.Settings.copy(BLUE_SHEEP_PLUSH));
-    public static final Block HOGLIN_PLUSH = new ADHoglinPlushBlock(AbstractBlock.Settings.copy(RED_CAT_PLUSH));
-    public static final Block ZOGLIN_PLUSH = new ADHoglinPlushBlock(AbstractBlock.Settings.copy(PIG_PLUSH));
-    public static final Block POLAR_BEAR_PLUSH = new ADPolarBearPlushBlock(AbstractBlock.Settings.copy(CHICKEN_PLUSH));
+    public static final Block LIGHT_GRAY_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block CYAN_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block PURPLE_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block BLUE_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block BROWN_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block GREEN_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block RED_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block BLACK_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block SKELETON_PLUSH = new ADSkeletonPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block SLIME_PLUSH = new ADCubePlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block SPIDER_PLUSH = new ADSpiderPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block SQUID_PLUSH = new ADSquidPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block GLOW_SQUID_PLUSH = new ADSquidPlushBlock(AbstractBlock.Settings.of(Material.WOOL, MapColor.CLEAR)
+            .strength(0.2F).sounds(BlockSoundGroup.WOOL).luminance((state) -> 10));
+    public static final Block BEE_PLUSH = new ADBeePlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block PLAINS_VILLAGER_PLUSH = new ADVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block DESERT_VILLAGER_PLUSH = new ADDesertVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block JUNGLE_VILLAGER_PLUSH = new ADVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block SAVANNA_VILLAGER_PLUSH = new ADVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block SNOW_VILLAGER_PLUSH = new ADShortHatVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block SWAMP_VILLAGER_PLUSH = new ADShortHatVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block TAIGA_VILLAGER_PLUSH = new ADVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block CRIMSON_VILLAGER_PLUSH = new ADVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block WARPED_VILLAGER_PLUSH = new ADVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block WANDERING_TRADER_PLUSH = new ADShortHatVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block PLAINS_ZOMBIE_VILLAGER_PLUSH = new ADZombieVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block DESERT_ZOMBIE_VILLAGER_PLUSH = new ADDesertZombieVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block JUNGLE_ZOMBIE_VILLAGER_PLUSH = new ADZombieVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block SAVANNA_ZOMBIE_VILLAGER_PLUSH = new ADZombieVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block SNOW_ZOMBIE_VILLAGER_PLUSH = new ADShortHatZombieVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block SWAMP_ZOMBIE_VILLAGER_PLUSH = new ADShortHatZombieVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block TAIGA_ZOMBIE_VILLAGER_PLUSH = new ADZombieVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block CRIMSON_ZOMBIE_VILLAGER_PLUSH = new ADZombieVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block WARPED_ZOMBIE_VILLAGER_PLUSH = new ADZombieVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block WITCH_PLUSH = new ADWitchPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block WOLF_PLUSH = new ADWolfPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block ZOMBIE_PLUSH = new ADZombiePlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block PIGLIN_PLUSH = new ADPiglinPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block ZOMBIFIED_PIGLIN_PLUSH = new ADZombiePlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block PUFFERFISH_PLUSH = new ADPufferfishPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block WITHER_PLUSH = new ADWitherPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block STRIDER_PLUSH = new ADStriderPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block SHIVERING_STRIDER_PLUSH = new ADStriderPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block PHANTOM_PLUSH = new ADPhantomPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block HOGLIN_PLUSH = new ADHoglinPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block ZOGLIN_PLUSH = new ADHoglinPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block POLAR_BEAR_PLUSH = new ADPolarBearPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
     public static final Block ALLAY_PLUSH = new ADAllayPlushBlock(AbstractBlock.Settings.copy(GLOW_SQUID_PLUSH));
-    public static final Block RAVAGER_PLUSH = new ADHoglinPlushBlock(AbstractBlock.Settings.copy(HOGLIN_PLUSH));
-    public static final Block SHULKER_PLUSH = new ADShulkerPlushBlock(AbstractBlock.Settings.copy(PURPLE_SHEEP_PLUSH));
+    public static final Block PILLAGER_PLUSH = new ADVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block VINDICATOR_PLUSH = new ADVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block EVOKER_PLUSH = new ADVillagerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block RAVAGER_PLUSH = new ADHoglinPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block SHULKER_PLUSH = new ADShulkerPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
     public static final Block NETHER_SMOKY_QUARTZ_ORE = new OreBlock(AbstractBlock.Settings.copy(Blocks.NETHER_QUARTZ_ORE));
     public static final Block SMOKY_QUARTZ_BLOCK = new Block(AbstractBlock.Settings.of(Material.STONE, MapColor.BLACK)
             .requiresTool().strength(0.8F));
@@ -586,6 +575,9 @@ public class ADBlocks {
         register("zoglin_plush", ZOGLIN_PLUSH);
         register("polar_bear_plush", POLAR_BEAR_PLUSH);
         register("allay_plush", ALLAY_PLUSH);
+        register("pillager_plush", PILLAGER_PLUSH);
+        register("vindicator_plush", VINDICATOR_PLUSH);
+        register("evoker_plush", EVOKER_PLUSH);
         register("ravager_plush", RAVAGER_PLUSH);
         register("shulker_plush", SHULKER_PLUSH);
         register("nether_smoky_quartz_ore", NETHER_SMOKY_QUARTZ_ORE);
