@@ -6,12 +6,12 @@
     ]
   },
   "criteria": {
-    "has_jungle_sapling": {
+    "has_emerald": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:jungle_sapling"
+              "minecraft:emerald"
             ]
           }
         ]
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_jungle_sapling",
+      "has_emerald",
       "has_the_recipe"
     ]
   ]

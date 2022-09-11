@@ -3,7 +3,7 @@
   "group": "villager_plush",
   "pattern": [
     "HHH",
-    "HBH",
+    "HEH",
     "CIC"
   ],
   "key": {
@@ -13,8 +13,8 @@
     "C": {
       "item": "minecraft:purple_wool"
     },
-    "B": {
-      "item": "minecraft:book"
+    "E": {
+      "item": "minecraft:emerald"
     },
     "I": {
       "item": "minecraft:lily_pad"

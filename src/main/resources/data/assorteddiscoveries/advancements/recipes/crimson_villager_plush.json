@@ -6,12 +6,12 @@
     ]
   },
   "criteria": {
-    "has_crimson_fungus": {
+    "has_emerald": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:crimson_fungus"
+              "minecraft:emerald"
             ]
           }
         ]
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_crimson_fungus",
+      "has_emerald",
       "has_the_recipe"
     ]
   ]

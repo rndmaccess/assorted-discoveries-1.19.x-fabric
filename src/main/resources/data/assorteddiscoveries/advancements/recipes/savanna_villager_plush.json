@@ -6,12 +6,12 @@
     ]
   },
   "criteria": {
-    "has_acacia_sapling": {
+    "has_emerald": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:acacia_sapling"
+              "minecraft:emerald"
             ]
           }
         ]
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_acacia_sapling",
+      "has_emerald",
       "has_the_recipe"
     ]
   ]

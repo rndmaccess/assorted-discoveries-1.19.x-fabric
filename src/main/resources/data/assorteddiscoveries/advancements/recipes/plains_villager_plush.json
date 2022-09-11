@@ -6,12 +6,12 @@
     ]
   },
   "criteria": {
-    "has_grass": {
+    "has_emerald": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:grass"
+              "minecraft:emerald"
             ]
           }
         ]
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_grass",
+      "has_emerald",
       "has_the_recipe"
     ]
   ]

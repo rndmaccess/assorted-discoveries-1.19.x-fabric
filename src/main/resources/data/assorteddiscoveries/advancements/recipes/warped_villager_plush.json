@@ -6,12 +6,12 @@
     ]
   },
   "criteria": {
-    "has_book": {
+    "has_emerald": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:book"
+              "minecraft:emerald"
             ]
           }
         ]
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_book",
+      "has_emerald",
       "has_the_recipe"
     ]
   ]
