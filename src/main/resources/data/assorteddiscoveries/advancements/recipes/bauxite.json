@@ -6,12 +6,23 @@
     ]
   },
   "criteria": {
-    "has_granite_or_terracotta": {
+    "has_granite": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:granite",
+              "minecraft:granite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_terracotta": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
               "minecraft:terracotta"
             ]
           }
@@ -28,7 +39,8 @@
   },
   "requirements": [
     [
-      "has_granite_or_terracotta",
+      "has_granite",
+      "has_terracotta",
       "has_the_recipe"
     ]
   ]
