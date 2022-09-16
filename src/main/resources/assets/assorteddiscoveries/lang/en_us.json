@@ -94,6 +94,9 @@
   "block.assorteddiscoveries.zoglin_plush": "Zoglin Plush",
   "block.assorteddiscoveries.polar_bear_plush": "Polar Bear Plush",
   "block.assorteddiscoveries.allay_plush": "Allay Plush",
+  "block.assorteddiscoveries.pillager_plush": "Pillager Plush",
+  "block.assorteddiscoveries.vindicator_plush": "Vindicator Plush",
+  "block.assorteddiscoveries.evoker_plush": "Evoker Plush",
   "block.assorteddiscoveries.ravager_plush": "Ravager Plush",
   "block.assorteddiscoveries.shulker_plush": "Shulker Plush",
   "block.assorteddiscoveries.nether_smoky_quartz_ore": "Nether Smoky Quartz Ore",
@@ -152,6 +155,7 @@
   "block.assorteddiscoveries.dark_oak_rope_ladder": "Dark Oak Rope Ladder",
   "block.assorteddiscoveries.warped_rope_ladder": "Warped Rope Ladder",
   "block.assorteddiscoveries.crimson_rope_ladder": "Crimson Rope Ladder",
+  "block.assorteddiscoveries.mangrove_rope_ladder": "Mangrove Rope Ladder",
   "block.assorteddiscoveries.iron_ladder": "Iron Ladder",
   "block.assorteddiscoveries.dirt_slab": "Dirt Slab",
   "block.assorteddiscoveries.coarse_dirt_slab": "Coarse Dirt Slab",
@@ -355,6 +359,11 @@
   "block.assorteddiscoveries.blood_kelp_lantern": "Blood Kelp Lantern",
   "block.assorteddiscoveries.blood_kelp": "Blood Kelp",
   "block.assorteddiscoveries.blood_kelp_plant": "Blood Kelp Plant",
+  "block.assorteddiscoveries.maroon_wool": "Maroon Wool",
+  "block.assorteddiscoveries.maroon_stained_glass": "Maroon Stained Glass",
+  "block.assorteddiscoveries.maroon_stained_glass_pane": "Maroon Stained Glass Pane",
+  "block.assorteddiscoveries.maroon_candle": "Maroon Candle",
+  "block.assorteddiscoveries.maroon_candle_cake": "Maroon Candle Cake",
   
   "container.assorteddiscoveries.woodcutter": "Woodcutter",
   
@@ -387,6 +396,7 @@
   "item.assorteddiscoveries.blood_kelp_seed_cluster": "Blood Kelp Seed Cluster",
   "item.assorteddiscoveries.blood_kelp": "Blood Kelp",
   "item.assorteddiscoveries.dried_blood_kelp": "Dried Blood Kelp",
+  "item.assorteddiscoveries.maroon_dye": "Maroon Dye",
   
   "advancements.assorteddiscoveries.story.root.title": "Assorted Discoveries",
   "advancements.assorteddiscoveries.story.root.description": "A mod designed to enhance vanilla gameplay",
