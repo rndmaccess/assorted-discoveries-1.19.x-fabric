@@ -1,11 +1,15 @@
 package rndm_access.assorteddiscoveries.common.core;
 
 import net.minecraft.block.*;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.DyeColor;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.world.BlockView;
 import rndm_access.assorteddiscoveries.ADReference;
 import rndm_access.assorteddiscoveries.common.AssortedDiscoveries;
 import rndm_access.assorteddiscoveries.common.block.*;
@@ -176,6 +180,7 @@ public class ADBlocks {
     public static final Block DARK_OAK_ROPE_LADDER = ropeLadderBlock();
     public static final Block CRIMSON_ROPE_LADDER = ropeLadderBlock();
     public static final Block WARPED_ROPE_LADDER = ropeLadderBlock();
+    public static final Block MANGROVE_ROPE_LADDER = ropeLadderBlock();
     public static final Block IRON_LADDER = new LadderBlock(AbstractBlock.Settings.of(Material.METAL)
             .strength(0.4F, 5.0F).sounds(BlockSoundGroup.METAL).nonOpaque());
     public static final Block DIRT_SLAB = new ADDirtSlabBlock(AbstractBlock.Settings.copy(Blocks.DIRT).ticksRandomly());
@@ -439,6 +444,16 @@ public class ADBlocks {
     public static final Block DRIED_BLOOD_KELP_BLOCK = new Block(AbstractBlock.Settings.copy(Blocks.DRIED_KELP_BLOCK));
     public static final Block BLOOD_KELP_LANTERN = new PillarBlock(AbstractBlock.Settings.of(Material.GLASS, MapColor.PALE_YELLOW)
             .strength(0.3F).sounds(BlockSoundGroup.GLASS).luminance((state) -> 15));
+    public static final Block MAROON_WOOL = new Block(AbstractBlock.Settings.copy(Blocks.RED_WOOL));
+    public static final Block MAROON_STAINED_GLASS = new StainedGlassBlock(DyeColor.RED,
+            AbstractBlock.Settings.of(Material.GLASS, DyeColor.RED)
+                    .strength(0.3F).sounds(BlockSoundGroup.GLASS).nonOpaque().allowsSpawning(ADBlocks::never)
+                    .solidBlock(ADBlocks::never).suffocates(ADBlocks::never).blockVision(ADBlocks::never));
+    public static final Block MAROON_STAINED_GLASS_PANE = new StainedGlassPaneBlock(DyeColor.RED,
+            AbstractBlock.Settings.of(Material.GLASS).strength(0.3F).sounds(BlockSoundGroup.GLASS).nonOpaque());
+    public static final Block MAROON_CANDLE = new CandleBlock(AbstractBlock.Settings.of(Material.DECORATION, MapColor.RED)
+            .nonOpaque().strength(0.1F).sounds(BlockSoundGroup.CANDLE).luminance(CandleBlock.STATE_TO_LUMINANCE));
+    public static final Block MAROON_CANDLE_CAKE = new CandleCakeBlock(MAROON_CANDLE, AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
 
     private static ADBambooFenceBlock bambooFenceBlock(MapColor color) {
         return new ADBambooFenceBlock(AbstractBlock.Settings.of(Material.WOOD, color).strength(1.0F)
@@ -447,6 +462,14 @@ public class ADBlocks {
 
     private static WallTorchBlock wallTorchBlock(ParticleEffect flameParticle) {
         return new WallTorchBlock(AbstractBlock.Settings.copy(Blocks.WALL_TORCH), flameParticle);
+    }
+
+    private static Boolean never(BlockState state, BlockView world, BlockPos pos, EntityType<?> type) {
+        return false;
+    }
+
+    private static boolean never(BlockState state, BlockView world, BlockPos pos) {
+        return false;
     }
 
     private static TorchBlock torchBlock(ParticleEffect flameParticle) {
@@ -639,6 +662,7 @@ public class ADBlocks {
         register("dark_oak_rope_ladder", DARK_OAK_ROPE_LADDER);
         register("crimson_rope_ladder", CRIMSON_ROPE_LADDER);
         register("warped_rope_ladder", WARPED_ROPE_LADDER);
+        register("mangrove_rope_ladder", MANGROVE_ROPE_LADDER);
         register("iron_ladder", IRON_LADDER);
         register("dirt_slab", DIRT_SLAB);
         register("grass_slab", GRASS_SLAB);
@@ -852,6 +876,11 @@ public class ADBlocks {
         register("blood_kelp_plant", BLOOD_KELP_PLANT);
         register("dried_blood_kelp_block", DRIED_BLOOD_KELP_BLOCK);
         register("blood_kelp_lantern", BLOOD_KELP_LANTERN);
+        register("maroon_wool", MAROON_WOOL);
+        register("maroon_stained_glass", MAROON_STAINED_GLASS);
+        register("maroon_stained_glass_pane", MAROON_STAINED_GLASS_PANE);
+        register("maroon_candle", MAROON_CANDLE);
+        register("maroon_candle_cake", MAROON_CANDLE_CAKE);
 
         AssortedDiscoveries.LOGGER.info("Registered blocks");
     }

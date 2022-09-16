@@ -156,6 +156,8 @@
     "assorteddiscoveries:cracked_dripstone_brick_stairs",
     "assorteddiscoveries:cracked_dripstone_brick_slab",
     "assorteddiscoveries:cracked_dripstone_brick_wall",
-	"assorteddiscoveries:chiseled_dripstone_bricks"
+	"assorteddiscoveries:chiseled_dripstone_bricks",
+    "assorteddiscoveries:maroon_stained_glass",
+    "assorteddiscoveries:maroon_stained_glass_pane"
   ]
 }

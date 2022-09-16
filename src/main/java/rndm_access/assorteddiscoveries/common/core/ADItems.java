@@ -1,6 +1,8 @@
 package rndm_access.assorteddiscoveries.common.core;
 
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.CandleCakeBlock;
 import net.minecraft.item.*;
 import net.minecraft.util.registry.Registry;
 import rndm_access.assorteddiscoveries.ADReference;
@@ -160,6 +162,7 @@ public class ADItems {
     public static final Item DARK_OAK_ROPE_LADDER = ropeLadderBlockItem(ADBlocks.DARK_OAK_ROPE_LADDER);
     public static final Item CRIMSON_ROPE_LADDER = ropeLadderBlockItem(ADBlocks.CRIMSON_ROPE_LADDER);
     public static final Item WARPED_ROPE_LADDER = ropeLadderBlockItem(ADBlocks.WARPED_ROPE_LADDER);
+    public static final Item MANGROVE_ROPE_LADDER = ropeLadderBlockItem(ADBlocks.MANGROVE_ROPE_LADDER);
     public static final Item IRON_LADDER = blockItem(ADBlocks.IRON_LADDER);
     public static final Item DIRT_SLAB = blockItem(ADBlocks.DIRT_SLAB);
     public static final Item GRASS_SLAB = blockItem(ADBlocks.GRASS_SLAB);
@@ -378,6 +381,11 @@ public class ADItems {
     public static final Item DRIED_BLOOD_KELP_BLOCK = blockItem(ADBlocks.DRIED_BLOOD_KELP_BLOCK);
     public static final Item DRIED_BLOOD_KELP = new Item(makeSettings(FoodComponents.DRIED_KELP));
     public static final Item BLOOD_KELP_LANTERN = blockItem(ADBlocks.BLOOD_KELP_LANTERN);
+    public static final Item MAROON_WOOL = blockItem(ADBlocks.MAROON_WOOL);
+    public static final Item MAROON_STAINED_GLASS = blockItem(ADBlocks.MAROON_STAINED_GLASS);
+    public static final Item MAROON_STAINED_GLASS_PANE = blockItem(ADBlocks.MAROON_STAINED_GLASS_PANE);
+    public static final Item MAROON_CANDLE = blockItem(ADBlocks.MAROON_CANDLE);
+    public static final Item MAROON_DYE = item();
 
     private static Item item() {
         return new Item(makeSettings());
@@ -567,6 +575,7 @@ public class ADItems {
         register("dark_oak_rope_ladder", DARK_OAK_ROPE_LADDER);
         register("crimson_rope_ladder", CRIMSON_ROPE_LADDER);
         register("warped_rope_ladder", WARPED_ROPE_LADDER);
+        register("mangrove_rope_ladder", MANGROVE_ROPE_LADDER);
         register("iron_ladder", IRON_LADDER);
         register("dirt_slab", DIRT_SLAB);
         register("grass_slab", GRASS_SLAB);
@@ -785,6 +794,11 @@ public class ADItems {
         register("dried_blood_kelp_block", DRIED_BLOOD_KELP_BLOCK);
         register("dried_blood_kelp", DRIED_BLOOD_KELP);
         register("blood_kelp_lantern", BLOOD_KELP_LANTERN);
+        register("maroon_wool", MAROON_WOOL);
+        register("maroon_stained_glass", MAROON_STAINED_GLASS);
+        register("maroon_stained_glass_pane", MAROON_STAINED_GLASS_PANE);
+        register("maroon_candle", MAROON_CANDLE);
+        register("maroon_dye", MAROON_DYE);
 
         AssortedDiscoveries.LOGGER.info("Registered Items");
     }
