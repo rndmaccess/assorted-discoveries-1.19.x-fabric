@@ -6,7 +6,7 @@
 		"top": "#top",
 		"inside": "#inside"
 	},
-	"elements": [ 	 
+	"elements": [
 		{
 			"__comment": "Element",
 			"from": [ 13, 0, 1 ],
