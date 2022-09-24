@@ -25,11 +25,8 @@ public class ADCattailFeature extends Feature<ProbabilityConfig> {
         return placeCattail(context.getWorld(), context.getRandom(), origin.getX(), origin.getZ());
     }
 
-    private static boolean placeCattail(StructureWorldAccess world, Random random, int xOrigin, int zOrigin) {
-        int x = offsetOrigin(xOrigin, random);
-        int z = offsetOrigin(zOrigin, random);
-        int y = world.getTopY(Heightmap.Type.OCEAN_FLOOR, x, z);
-        BlockPos lowerPlacementPos = new BlockPos(x, y, z);
+    private boolean placeCattail(StructureWorldAccess world, Random random, int xOrigin, int zOrigin) {
+        BlockPos lowerPlacementPos = getRandomPos(random, world, xOrigin, zOrigin);
         BlockPos upperPlacementPos = lowerPlacementPos.up();
         BlockState lowerHalf = ADBlocks.CATTAIL.getDefaultState();
         BlockState upperHalf = lowerHalf.with(ADCattailBlock.HALF, DoubleBlockHalf.UPPER);
@@ -43,7 +40,15 @@ public class ADCattailFeature extends Feature<ProbabilityConfig> {
         return false;
     }
 
-    private static int offsetOrigin(int origin, Random random) {
+    private BlockPos getRandomPos(Random random, StructureWorldAccess world, int xOrigin, int zOrigin) {
+        int x = offsetOriginCoordinate(xOrigin, random);
+        int z = offsetOriginCoordinate(zOrigin, random);
+        int y = world.getTopY(Heightmap.Type.OCEAN_FLOOR, x, z);
+
+        return new BlockPos(x, y, z);
+    }
+
+    private int offsetOriginCoordinate(int origin, Random random) {
         return origin + random.nextInt(8) - random.nextInt(8);
     }
 }

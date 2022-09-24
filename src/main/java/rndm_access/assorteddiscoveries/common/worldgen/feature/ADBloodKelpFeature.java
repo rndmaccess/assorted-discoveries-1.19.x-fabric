@@ -32,7 +32,7 @@ public class ADBloodKelpFeature extends Feature<DefaultFeatureConfig> {
         return generateBloodKelp(world, random, placementPos);
     }
 
-    private static boolean generateBloodKelp(StructureWorldAccess world, Random random, BlockPos placementPos) {
+    private boolean generateBloodKelp(StructureWorldAccess world, Random random, BlockPos placementPos) {
         boolean isWater = world.getFluidState(placementPos).isOf(Fluids.WATER);
 
         if (isWater) {
