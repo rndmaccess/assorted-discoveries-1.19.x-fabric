@@ -4,13 +4,13 @@
   "package": "rndm_access.assorteddiscoveries.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "ADBoneMealItemMixin",
     "ADCropBlockMixin",
+    "ADEntityAccessor",
+    "ADLivingEntityMixin",
     "ADNetherWartBlockMixin",
     "ADPlantBlockMixin",
     "ADShovelItemMixin",
-    "ADEntityAccessor",
-    "ADLivingEntityMixin",
-    "ADBoneMealItemMixin",
     "ADSnowyBlockMixin",
     "ADSpreadableBlockMixin"
   ],
