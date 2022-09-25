@@ -1,16 +1,13 @@
 {
-  "type": "crafting_shaped",
-  "pattern": [
-    "#X"
-  ],
-  "key": {
-    "#": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
       "item": "minecraft:granite"
     },
-    "X": {
+    {
       "item": "minecraft:terracotta"
     }
-  },
+  ],
   "result": {
     "item": "assorteddiscoveries:bauxite",
 	"count": 2
