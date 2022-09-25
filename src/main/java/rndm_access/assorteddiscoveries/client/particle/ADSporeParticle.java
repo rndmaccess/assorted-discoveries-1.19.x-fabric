@@ -41,7 +41,6 @@ public class ADSporeParticle extends SpriteBillboardParticle {
     }
 
     public record Factory(SpriteProvider sprite) implements ParticleFactory<DefaultParticleType> {
-
         @Override
         public Particle createParticle(DefaultParticleType defaultParticleType, ClientWorld clientWorld,
                                        double x, double y, double z, double xd, double yd, double zd) {
