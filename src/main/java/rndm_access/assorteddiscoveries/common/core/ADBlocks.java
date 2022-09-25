@@ -454,6 +454,8 @@ public class ADBlocks {
     public static final Block MAROON_CANDLE = new CandleBlock(AbstractBlock.Settings.of(Material.DECORATION, MapColor.RED)
             .nonOpaque().strength(0.1F).sounds(BlockSoundGroup.CANDLE).luminance(CandleBlock.STATE_TO_LUMINANCE));
     public static final Block MAROON_CANDLE_CAKE = new CandleCakeBlock(MAROON_CANDLE, AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block WEEPING_HEART = new ADWeepingHeartBlock(AbstractBlock.Settings.of(Material.PLANT).ticksRandomly()
+            .breakInstantly().noCollision().sounds(BlockSoundGroup.SPORE_BLOSSOM).luminance(getCropLuminanceFromState(10)));
 
     private static ADBambooFenceBlock bambooFenceBlock(MapColor color) {
         return new ADBambooFenceBlock(AbstractBlock.Settings.of(Material.WOOD, color).strength(1.0F)
@@ -496,6 +498,10 @@ public class ADBlocks {
 
     private static ToIntFunction<BlockState> getLuminanceFromState(int luminance) {
         return (state) -> state.get(Properties.LIT) ? luminance : 0;
+    }
+
+    private static ToIntFunction<BlockState> getCropLuminanceFromState(int luminance) {
+        return (state) -> state.get(Properties.AGE_3) >= 2 ? luminance : 0;
     }
 
     private static void register(String path, Block block) {
@@ -881,6 +887,7 @@ public class ADBlocks {
         register("maroon_stained_glass_pane", MAROON_STAINED_GLASS_PANE);
         register("maroon_candle", MAROON_CANDLE);
         register("maroon_candle_cake", MAROON_CANDLE_CAKE);
+        register("weeping_heart", WEEPING_HEART);
 
         AssortedDiscoveries.LOGGER.info("Registered blocks");
     }

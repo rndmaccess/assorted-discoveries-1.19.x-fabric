@@ -1,0 +1,6 @@
+{
+  "parent": "assorteddiscoveries:block/template_weeping_heart",
+  "textures": {
+    "vines": "assorteddiscoveries:block/weeping_heart_vines_stage2"
+  }
+}

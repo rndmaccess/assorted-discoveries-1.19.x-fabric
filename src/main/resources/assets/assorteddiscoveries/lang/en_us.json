@@ -1,4 +1,4 @@
-{
+ {
   "block.assorteddiscoveries.bat_plush": "Bat Plush",
   "block.assorteddiscoveries.blaze_plush": "Blaze Plush",
   "block.assorteddiscoveries.cave_spider_plush": "Cave Spider Plush",
@@ -364,8 +364,9 @@
   "block.assorteddiscoveries.maroon_stained_glass_pane": "Maroon Stained Glass Pane",
   "block.assorteddiscoveries.maroon_candle": "Maroon Candle",
   "block.assorteddiscoveries.maroon_candle_cake": "Maroon Candle Cake",
-  
-  "container.assorteddiscoveries.woodcutter": "Woodcutter",
+  "block.assorteddiscoveries.weeping_heart": "Weeping Heart",
+
+   "container.assorteddiscoveries.woodcutter": "Woodcutter",
   
   "item.assorteddiscoveries.ruby": "Nether Ruby",
   "item.assorteddiscoveries.bok_choy_seeds": "Bok Choy Seeds",
@@ -397,6 +398,7 @@
   "item.assorteddiscoveries.blood_kelp": "Blood Kelp",
   "item.assorteddiscoveries.dried_blood_kelp": "Dried Blood Kelp",
   "item.assorteddiscoveries.maroon_dye": "Maroon Dye",
+  "item.assorteddiscoveries.weeping_heart_nectar_bucket": "Weeping Heart Nectar Bucket",
   
   "advancements.assorteddiscoveries.story.root.title": "Assorted Discoveries",
   "advancements.assorteddiscoveries.story.root.description": "A mod designed to enhance vanilla gameplay",

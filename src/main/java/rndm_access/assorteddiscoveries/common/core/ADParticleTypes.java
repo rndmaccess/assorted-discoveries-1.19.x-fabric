@@ -41,6 +41,8 @@ public class ADParticleTypes {
     public static final DefaultParticleType BLACK_FLAME = register("black_flame");
     public static final DefaultParticleType BLOOD_KELP_SPORE = register("blood_kelp_spore");
     public static final DefaultParticleType WITCHS_CRADLE_SPORE = register("witchs_cradle_spore");
+    public static final DefaultParticleType FALLING_WEEPING_HEART_NECTAR = register("falling_weeping_heart_nectar");
+    public static final DefaultParticleType WEEPING_HEART_AIR_NECTAR = register("weeping_heart_air_nectar");
 
     private static DefaultParticleType register(String path) {
         return Registry.register(Registry.PARTICLE_TYPE, ADReference.makeId(path), FabricParticleTypes.simple());

@@ -1,8 +1,6 @@
 package rndm_access.assorteddiscoveries.common.core;
 
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.CandleCakeBlock;
 import net.minecraft.item.*;
 import net.minecraft.util.registry.Registry;
 import rndm_access.assorteddiscoveries.ADReference;
@@ -386,6 +384,8 @@ public class ADItems {
     public static final Item MAROON_STAINED_GLASS_PANE = blockItem(ADBlocks.MAROON_STAINED_GLASS_PANE);
     public static final Item MAROON_CANDLE = blockItem(ADBlocks.MAROON_CANDLE);
     public static final Item MAROON_DYE = item();
+    public static final Item WEEPING_HEART_NECTAR_BUCKET = new ADWeepingHeartNectarBucketItem(makeSettings(ADFoodComponents.BLOOD_VILE, 1)
+            .recipeRemainder(Items.BUCKET));
 
     private static Item item() {
         return new Item(makeSettings());
@@ -799,6 +799,7 @@ public class ADItems {
         register("maroon_stained_glass_pane", MAROON_STAINED_GLASS_PANE);
         register("maroon_candle", MAROON_CANDLE);
         register("maroon_dye", MAROON_DYE);
+        register("weeping_heart_nectar_bucket", WEEPING_HEART_NECTAR_BUCKET);
 
         AssortedDiscoveries.LOGGER.info("Registered Items");
     }

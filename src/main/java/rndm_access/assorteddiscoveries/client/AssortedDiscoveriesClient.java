@@ -11,13 +11,14 @@ import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.color.world.GrassColors;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
-import net.minecraft.client.particle.FlameParticle;
-import net.minecraft.client.particle.LavaEmberParticle;
+import net.minecraft.client.particle.*;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.screen.PlayerScreenHandler;
 import rndm_access.assorteddiscoveries.ADReference;
 import rndm_access.assorteddiscoveries.client.block_entity.ADDyedCampfireBlockEntityRenderer;
+import rndm_access.assorteddiscoveries.client.particle.ADFallingWeepingHeartNectarParticle;
 import rndm_access.assorteddiscoveries.client.particle.ADSporeParticle;
+import rndm_access.assorteddiscoveries.client.particle.ADWeepingHeartAirNectarParticle;
 import rndm_access.assorteddiscoveries.client.screen.ADWoodcutterScreen;
 import rndm_access.assorteddiscoveries.common.core.*;
 
@@ -132,6 +133,8 @@ public class AssortedDiscoveriesClient implements ClientModInitializer {
         factoryRegistry.register(ADParticleTypes.BLACK_FLAME, FlameParticle.Factory::new);
         factoryRegistry.register(ADParticleTypes.BLOOD_KELP_SPORE, ADSporeParticle.Factory::new);
         factoryRegistry.register(ADParticleTypes.WITCHS_CRADLE_SPORE, ADSporeParticle.Factory::new);
+        factoryRegistry.register(ADParticleTypes.FALLING_WEEPING_HEART_NECTAR, ADFallingWeepingHeartNectarParticle.Factory::new);
+        factoryRegistry.register(ADParticleTypes.WEEPING_HEART_AIR_NECTAR, ADWeepingHeartAirNectarParticle.Factory::new);
     }
 
     private void registerRenderLayers() {
@@ -160,7 +163,7 @@ public class AssortedDiscoveriesClient implements ClientModInitializer {
                 ADBlocks.BLACK_WALL_TORCH, ADBlocks.BOK_CHOY, ADBlocks.GARLIC, ADBlocks.GREEN_ONIONS,
                 ADBlocks.BLUEBERRY_BUSH, ADBlocks.WITCHS_CRADLE, ADBlocks.SNAPDRAGON, ADBlocks.POTTED_SNAPDRAGON,
                 ADBlocks.ENDER_GRASS, ADBlocks.ICICLE, ADBlocks.CATTAIL, ADBlocks.POTTED_PURPLE_MUSHROOM,
-                ADBlocks.BLOOD_KELP, ADBlocks.BLOOD_KELP_PLANT, ADBlocks.MANGROVE_ROPE_LADDER);
+                ADBlocks.BLOOD_KELP, ADBlocks.BLOOD_KELP_PLANT, ADBlocks.MANGROVE_ROPE_LADDER, ADBlocks.WEEPING_HEART);
 
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutoutMipped(),
                 ADBlocks.ENDERMAN_PLUSH, ADBlocks.GRASS_SLAB);

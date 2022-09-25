@@ -14,6 +14,7 @@ public class ADBiomeTags {
     public static final TagKey<Biome> PATCH_WITCHS_CRADLE = of("has_feature/patch_witchs_cradle");
     public static final TagKey<Biome> BLOOD_KELP = of("has_feature/blood_kelp");
     public static final TagKey<Biome> ORE_BAUXITE = of("has_feature/ore_bauxite");
+    public static final TagKey<Biome> WEEPING_HEART = of("has_feature/weeping_heart");
 
     private static TagKey<Biome> of(String path) {
         return TagKey.of(Registry.BIOME_KEY, ADReference.makeId(path));

@@ -17,6 +17,7 @@ public class ADPlacedFeatureKeys {
     public static final RegistryKey<PlacedFeature> BLOOD_KELP = of("blood_kelp");
     public static final RegistryKey<PlacedFeature> ORE_BAUXITE_LOWER = of("ore_bauxite_lower");
     public static final RegistryKey<PlacedFeature> ORE_BAUXITE_UPPER = of("ore_bauxite_upper");
+    public static final RegistryKey<PlacedFeature> WEEPING_HEART = of("weeping_heart");
 
     public static RegistryKey<PlacedFeature> of(String path) {
         return RegistryKey.of(Registry.PLACED_FEATURE_KEY, ADReference.makeId(path));

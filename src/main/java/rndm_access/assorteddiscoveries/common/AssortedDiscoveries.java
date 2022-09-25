@@ -78,6 +78,8 @@ public class AssortedDiscoveries implements ModInitializer {
 				GenerationStep.Feature.UNDERGROUND_ORES, ADPlacedFeatureKeys.ORE_BAUXITE_LOWER);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ADBiomeTags.ORE_BAUXITE),
 				GenerationStep.Feature.UNDERGROUND_ORES, ADPlacedFeatureKeys.ORE_BAUXITE_UPPER);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ADBiomeTags.WEEPING_HEART),
+				GenerationStep.Feature.VEGETAL_DECORATION, ADPlacedFeatureKeys.WEEPING_HEART);
 	}
 
 	private static void registerFuel() {
