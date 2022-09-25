@@ -1,18 +1,16 @@
 {
-  "type": "crafting_shaped",
-  "pattern": [
-    "#X"
-  ],
-  "key": {
-    "#": {
+  "type": "minecraft:crafting_shapeless",
+  "group": "maroon_dye",
+  "ingredients": [
+    {
       "item": "minecraft:red_dye"
     },
-    "X": {
+    {
       "item": "minecraft:brown_dye"
     }
-  },
+  ],
   "result": {
     "item": "assorteddiscoveries:maroon_dye",
-	"count": 2
+    "count": 2
   }
 }
