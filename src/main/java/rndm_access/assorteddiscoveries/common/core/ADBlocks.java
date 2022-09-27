@@ -163,6 +163,7 @@ public class ADBlocks {
     public static final Block JUNGLE_WALL = new WallBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS));
     public static final Block ACACIA_WALL = new WallBlock(AbstractBlock.Settings.copy(Blocks.ACACIA_PLANKS));
     public static final Block DARK_OAK_WALL = new WallBlock(AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS));
+    public static final Block MANGROVE_WALL = new WallBlock(AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS));
     public static final Block CRIMSON_WALL = new WallBlock(AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS));
     public static final Block WARPED_WALL = new WallBlock(AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS));
     public static final Block STRIPPED_OAK_WALL = new WallBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS));
@@ -171,6 +172,7 @@ public class ADBlocks {
     public static final Block STRIPPED_JUNGLE_WALL = new WallBlock(AbstractBlock.Settings.copy(Blocks.JUNGLE_PLANKS));
     public static final Block STRIPPED_ACACIA_WALL = new WallBlock(AbstractBlock.Settings.copy(Blocks.ACACIA_PLANKS));
     public static final Block STRIPPED_DARK_OAK_WALL = new WallBlock(AbstractBlock.Settings.copy(Blocks.DARK_OAK_PLANKS));
+    public static final Block STRIPPED_MANGROVE_WALL = new WallBlock(AbstractBlock.Settings.copy(Blocks.MANGROVE_PLANKS));
     public static final Block STRIPPED_CRIMSON_WALL = new WallBlock(AbstractBlock.Settings.copy(Blocks.CRIMSON_PLANKS));
     public static final Block STRIPPED_WARPED_WALL = new WallBlock(AbstractBlock.Settings.copy(Blocks.WARPED_PLANKS));
     public static final Block OAK_ROPE_LADDER = ropeLadderBlock();
@@ -652,6 +654,7 @@ public class ADBlocks {
         register("jungle_wall", JUNGLE_WALL);
         register("acacia_wall", ACACIA_WALL);
         register("dark_oak_wall", DARK_OAK_WALL);
+        register("mangrove_wall", MANGROVE_WALL);
         register("crimson_wall", CRIMSON_WALL);
         register("warped_wall", WARPED_WALL);
         register("stripped_oak_wall", STRIPPED_OAK_WALL);
@@ -660,6 +663,7 @@ public class ADBlocks {
         register("stripped_jungle_wall", STRIPPED_JUNGLE_WALL);
         register("stripped_acacia_wall", STRIPPED_ACACIA_WALL);
         register("stripped_dark_oak_wall", STRIPPED_DARK_OAK_WALL);
+        register("stripped_mangrove_wall", STRIPPED_MANGROVE_WALL);
         register("stripped_crimson_wall", STRIPPED_CRIMSON_WALL);
         register("stripped_warped_wall", STRIPPED_WARPED_WALL);
         register("oak_rope_ladder", OAK_ROPE_LADDER);

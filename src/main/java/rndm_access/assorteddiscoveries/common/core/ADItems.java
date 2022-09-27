@@ -143,6 +143,7 @@ public class ADItems {
     public static final Item JUNGLE_WALL = blockItem(ADBlocks.JUNGLE_WALL);
     public static final Item ACACIA_WALL = blockItem(ADBlocks.ACACIA_WALL);
     public static final Item DARK_OAK_WALL = blockItem(ADBlocks.DARK_OAK_WALL);
+    public static final Item MANGROVE_WALL = blockItem(ADBlocks.MANGROVE_WALL);
     public static final Item CRIMSON_WALL = blockItem(ADBlocks.CRIMSON_WALL);
     public static final Item WARPED_WALL = blockItem(ADBlocks.WARPED_WALL);
     public static final Item STRIPPED_OAK_WALL = blockItem(ADBlocks.STRIPPED_OAK_WALL);
@@ -151,6 +152,7 @@ public class ADItems {
     public static final Item STRIPPED_JUNGLE_WALL = blockItem(ADBlocks.STRIPPED_JUNGLE_WALL);
     public static final Item STRIPPED_ACACIA_WALL = blockItem(ADBlocks.STRIPPED_ACACIA_WALL);
     public static final Item STRIPPED_DARK_OAK_WALL = blockItem(ADBlocks.STRIPPED_DARK_OAK_WALL);
+    public static final Item STRIPPED_MANGROVE_WALL = blockItem(ADBlocks.STRIPPED_MANGROVE_WALL);
     public static final Item STRIPPED_CRIMSON_WALL = blockItem(ADBlocks.STRIPPED_CRIMSON_WALL);
     public static final Item STRIPPED_WARPED_WALL = blockItem(ADBlocks.STRIPPED_WARPED_WALL);
     public static final Item OAK_ROPE_LADDER = ropeLadderBlockItem(ADBlocks.OAK_ROPE_LADDER);
@@ -559,6 +561,7 @@ public class ADItems {
         register("jungle_wall", JUNGLE_WALL);
         register("acacia_wall", ACACIA_WALL);
         register("dark_oak_wall", DARK_OAK_WALL);
+        register("mangrove_wall", MANGROVE_WALL);
         register("crimson_wall", CRIMSON_WALL);
         register("warped_wall", WARPED_WALL);
         register("stripped_oak_wall", STRIPPED_OAK_WALL);
@@ -567,6 +570,7 @@ public class ADItems {
         register("stripped_jungle_wall", STRIPPED_JUNGLE_WALL);
         register("stripped_acacia_wall", STRIPPED_ACACIA_WALL);
         register("stripped_dark_oak_wall", STRIPPED_DARK_OAK_WALL);
+        register("stripped_mangrove_wall", STRIPPED_MANGROVE_WALL);
         register("stripped_crimson_wall", STRIPPED_CRIMSON_WALL);
         register("stripped_warped_wall", STRIPPED_WARPED_WALL);
         register("oak_rope_ladder", OAK_ROPE_LADDER);
