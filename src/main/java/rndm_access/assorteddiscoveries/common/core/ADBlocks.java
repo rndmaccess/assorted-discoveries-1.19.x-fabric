@@ -154,6 +154,7 @@ public class ADBlocks {
     public static final Block JUNGLE_PLANTER_BOX = planterBoxBlock(MapColor.DIRT_BROWN);
     public static final Block ACACIA_PLANTER_BOX = planterBoxBlock(MapColor.ORANGE);
     public static final Block DARK_OAK_PLANTER_BOX = planterBoxBlock(MapColor.BROWN);
+    public static final Block MANGROVE_PLANTER_BOX = planterBoxBlock(MapColor.RED);
     public static final Block CRIMSON_PLANTER_BOX = netherPlanterBoxBlock(MapColor.DULL_PINK);
     public static final Block WARPED_PLANTER_BOX = netherPlanterBoxBlock(MapColor.DARK_AQUA);
     public static final Block OAK_WALL = new WallBlock(AbstractBlock.Settings.copy(Blocks.OAK_PLANKS));
@@ -642,6 +643,7 @@ public class ADBlocks {
         register("jungle_planter_box", JUNGLE_PLANTER_BOX);
         register("acacia_planter_box", ACACIA_PLANTER_BOX);
         register("dark_oak_planter_box", DARK_OAK_PLANTER_BOX);
+        register("mangrove_planter_box", MANGROVE_PLANTER_BOX);
         register("crimson_planter_box", CRIMSON_PLANTER_BOX);
         register("warped_planter_box", WARPED_PLANTER_BOX);
         register("oak_wall", OAK_WALL);

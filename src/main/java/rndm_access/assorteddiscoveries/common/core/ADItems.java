@@ -134,6 +134,7 @@ public class ADItems {
     public static final Item JUNGLE_PLANTER_BOX = blockItem(ADBlocks.JUNGLE_PLANTER_BOX);
     public static final Item ACACIA_PLANTER_BOX = blockItem(ADBlocks.ACACIA_PLANTER_BOX);
     public static final Item DARK_OAK_PLANTER_BOX = blockItem(ADBlocks.DARK_OAK_PLANTER_BOX);
+    public static final Item MANGROVE_PLANTER_BOX = blockItem(ADBlocks.MANGROVE_PLANTER_BOX);
     public static final Item CRIMSON_PLANTER_BOX = blockItem(ADBlocks.CRIMSON_PLANTER_BOX);
     public static final Item WARPED_PLANTER_BOX = blockItem(ADBlocks.WARPED_PLANTER_BOX);
     public static final Item OAK_WALL = blockItem(ADBlocks.OAK_WALL);
@@ -549,6 +550,7 @@ public class ADItems {
         register("jungle_planter_box", JUNGLE_PLANTER_BOX);
         register("acacia_planter_box", ACACIA_PLANTER_BOX);
         register("dark_oak_planter_box", DARK_OAK_PLANTER_BOX);
+        register("mangrove_planter_box", MANGROVE_PLANTER_BOX);
         register("crimson_planter_box", CRIMSON_PLANTER_BOX);
         register("warped_planter_box", WARPED_PLANTER_BOX);
         register("oak_wall", OAK_WALL);
