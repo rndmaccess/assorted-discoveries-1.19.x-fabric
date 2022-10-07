@@ -13,6 +13,7 @@ import net.minecraft.world.BlockView;
 import rndm_access.assorteddiscoveries.ADReference;
 import rndm_access.assorteddiscoveries.common.AssortedDiscoveries;
 import rndm_access.assorteddiscoveries.common.block.*;
+import rndm_access.assorteddiscoveries.common.util.ADDyeColor;
 
 import java.util.function.ToIntFunction;
 
@@ -329,8 +330,8 @@ public class ADBlocks {
             .strength(0.2F).noCollision().sounds(BlockSoundGroup.GLASS));
     public static final Block CATTAIL = new ADCattailBlock(AbstractBlock.Settings.of(Material.PLANT).noCollision()
             .nonOpaque().sounds(BlockSoundGroup.WET_GRASS));
-    public static final Block CHOCOLATE_CAKE = new CakeBlock(AbstractBlock.Settings.copy(Blocks.CAKE));
-    public static final Block RED_VELVET_CAKE = new CakeBlock(AbstractBlock.Settings.copy(Blocks.CAKE));
+    public static final Block CHOCOLATE_CAKE = new ADCakeBlock(AbstractBlock.Settings.copy(Blocks.CAKE));
+    public static final Block RED_VELVET_CAKE = new ADCakeBlock(AbstractBlock.Settings.copy(Blocks.CAKE));
     public static final Block STONE_TILES = new Block(AbstractBlock.Settings.copy(Blocks.STONE)
             .sounds(BlockSoundGroup.DEEPSLATE_TILES));
     public static final Block STONE_TILE_SLAB = new SlabBlock(AbstractBlock.Settings.copy(STONE_TILES));
@@ -441,9 +442,9 @@ public class ADBlocks {
     public static final Block CRACKED_DRIPSTONE_BRICK_WALL = new WallBlock(AbstractBlock.Settings.copy(Blocks.DRIPSTONE_BLOCK));
     public static final Block CHISELED_DRIPSTONE_BRICKS = new Block(AbstractBlock.Settings.copy(Blocks.DRIPSTONE_BLOCK));
     public static final Block BLOOD_KELP = new ADBloodKelpBlock(AbstractBlock.Settings.copy(Blocks.KELP)
-            .luminance(getLuminanceFromState(10)));
+            .luminance(getLuminanceFromState()));
     public static final Block BLOOD_KELP_PLANT = new ADBloodKelpPlantBlock(AbstractBlock.Settings.copy(Blocks.KELP_PLANT)
-            .luminance(getLuminanceFromState(10)));
+            .luminance(getLuminanceFromState()));
     public static final Block DRIED_BLOOD_KELP_BLOCK = new Block(AbstractBlock.Settings.copy(Blocks.DRIED_KELP_BLOCK));
     public static final Block BLOOD_KELP_LANTERN = new PillarBlock(AbstractBlock.Settings.of(Material.GLASS, MapColor.PALE_YELLOW)
             .strength(0.3F).sounds(BlockSoundGroup.GLASS).luminance((state) -> 15));
@@ -458,7 +459,79 @@ public class ADBlocks {
             .nonOpaque().strength(0.1F).sounds(BlockSoundGroup.CANDLE).luminance(CandleBlock.STATE_TO_LUMINANCE));
     public static final Block MAROON_CANDLE_CAKE = new CandleCakeBlock(MAROON_CANDLE, AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
     public static final Block WEEPING_HEART = new ADWeepingHeartBlock(AbstractBlock.Settings.of(Material.PLANT).ticksRandomly()
-            .breakInstantly().noCollision().sounds(BlockSoundGroup.SPORE_BLOSSOM).luminance(getCropLuminanceFromState(10)));
+            .breakInstantly().noCollision().sounds(BlockSoundGroup.SPORE_BLOSSOM).luminance(getCropLuminanceFromState()));
+    public static final Block MAROON_CANDLE_CHOCOLATE_CAKE = new ADCandleCakeBlock(CHOCOLATE_CAKE, MAROON_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block CANDLE_CHOCOLATE_CAKE = new ADCandleCakeBlock(CHOCOLATE_CAKE, Blocks.CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block WHITE_CANDLE_CHOCOLATE_CAKE = new ADCandleCakeBlock(CHOCOLATE_CAKE, Blocks.WHITE_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block ORANGE_CANDLE_CHOCOLATE_CAKE = new ADCandleCakeBlock(CHOCOLATE_CAKE, Blocks.ORANGE_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block MAGENTA_CANDLE_CHOCOLATE_CAKE = new ADCandleCakeBlock(CHOCOLATE_CAKE, Blocks.MAGENTA_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block LIGHT_BLUE_CANDLE_CHOCOLATE_CAKE = new ADCandleCakeBlock(CHOCOLATE_CAKE, Blocks.LIGHT_BLUE_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block YELLOW_CANDLE_CHOCOLATE_CAKE = new ADCandleCakeBlock(CHOCOLATE_CAKE, Blocks.YELLOW_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block LIME_CANDLE_CHOCOLATE_CAKE = new ADCandleCakeBlock(CHOCOLATE_CAKE, Blocks.LIME_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block PINK_CANDLE_CHOCOLATE_CAKE = new ADCandleCakeBlock(CHOCOLATE_CAKE, Blocks.PINK_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block GRAY_CANDLE_CHOCOLATE_CAKE = new ADCandleCakeBlock(CHOCOLATE_CAKE, Blocks.GRAY_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block LIGHT_GRAY_CANDLE_CHOCOLATE_CAKE = new ADCandleCakeBlock(CHOCOLATE_CAKE, Blocks.LIGHT_GRAY_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block CYAN_CANDLE_CHOCOLATE_CAKE = new ADCandleCakeBlock(CHOCOLATE_CAKE, Blocks.CYAN_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block PURPLE_CANDLE_CHOCOLATE_CAKE = new ADCandleCakeBlock(CHOCOLATE_CAKE, Blocks.PURPLE_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block BLUE_CANDLE_CHOCOLATE_CAKE = new ADCandleCakeBlock(CHOCOLATE_CAKE, Blocks.BLUE_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block BROWN_CANDLE_CHOCOLATE_CAKE = new ADCandleCakeBlock(CHOCOLATE_CAKE, Blocks.BROWN_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block GREEN_CANDLE_CHOCOLATE_CAKE = new ADCandleCakeBlock(CHOCOLATE_CAKE, Blocks.GREEN_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block RED_CANDLE_CHOCOLATE_CAKE = new ADCandleCakeBlock(CHOCOLATE_CAKE, Blocks.RED_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block BLACK_CANDLE_CHOCOLATE_CAKE = new ADCandleCakeBlock(CHOCOLATE_CAKE, Blocks.BLACK_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block MAROON_CANDLE_RED_VELVET_CAKE = new ADCandleCakeBlock(RED_VELVET_CAKE, MAROON_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block CANDLE_RED_VELVET_CAKE = new ADCandleCakeBlock(RED_VELVET_CAKE, Blocks.CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block WHITE_CANDLE_RED_VELVET_CAKE = new ADCandleCakeBlock(RED_VELVET_CAKE, Blocks.WHITE_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block ORANGE_CANDLE_RED_VELVET_CAKE = new ADCandleCakeBlock(RED_VELVET_CAKE, Blocks.ORANGE_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block MAGENTA_CANDLE_RED_VELVET_CAKE = new ADCandleCakeBlock(RED_VELVET_CAKE, Blocks.MAGENTA_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block LIGHT_BLUE_CANDLE_RED_VELVET_CAKE = new ADCandleCakeBlock(RED_VELVET_CAKE, Blocks.LIGHT_BLUE_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block YELLOW_CANDLE_RED_VELVET_CAKE = new ADCandleCakeBlock(RED_VELVET_CAKE, Blocks.YELLOW_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block LIME_CANDLE_RED_VELVET_CAKE = new ADCandleCakeBlock(RED_VELVET_CAKE, Blocks.LIME_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block PINK_CANDLE_RED_VELVET_CAKE = new ADCandleCakeBlock(RED_VELVET_CAKE, Blocks.PINK_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block GRAY_CANDLE_RED_VELVET_CAKE = new ADCandleCakeBlock(RED_VELVET_CAKE, Blocks.GRAY_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block LIGHT_GRAY_CANDLE_RED_VELVET_CAKE = new ADCandleCakeBlock(RED_VELVET_CAKE, Blocks.LIGHT_GRAY_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block CYAN_CANDLE_RED_VELVET_CAKE = new ADCandleCakeBlock(RED_VELVET_CAKE, Blocks.CYAN_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block PURPLE_CANDLE_RED_VELVET_CAKE = new ADCandleCakeBlock(RED_VELVET_CAKE, Blocks.PURPLE_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block BLUE_CANDLE_RED_VELVET_CAKE = new ADCandleCakeBlock(RED_VELVET_CAKE, Blocks.BLUE_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block BROWN_CANDLE_RED_VELVET_CAKE = new ADCandleCakeBlock(RED_VELVET_CAKE, Blocks.BROWN_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block GREEN_CANDLE_RED_VELVET_CAKE = new ADCandleCakeBlock(RED_VELVET_CAKE, Blocks.GREEN_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block RED_CANDLE_RED_VELVET_CAKE = new ADCandleCakeBlock(RED_VELVET_CAKE, Blocks.RED_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
+    public static final Block BLACK_CANDLE_RED_VELVET_CAKE = new ADCandleCakeBlock(RED_VELVET_CAKE, Blocks.BLACK_CANDLE,
+            AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
 
     private static ADBambooFenceBlock bambooFenceBlock(MapColor color) {
         return new ADBambooFenceBlock(AbstractBlock.Settings.of(Material.WOOD, color).strength(1.0F)
@@ -499,12 +572,12 @@ public class ADBlocks {
         return new ADDyedCampfireBlock(AbstractBlock.Settings.copy(Blocks.CAMPFIRE), sparkParticle);
     }
 
-    private static ToIntFunction<BlockState> getLuminanceFromState(int luminance) {
-        return (state) -> state.get(Properties.LIT) ? luminance : 0;
+    private static ToIntFunction<BlockState> getLuminanceFromState() {
+        return (state) -> state.get(Properties.LIT) ? 10 : 0;
     }
 
-    private static ToIntFunction<BlockState> getCropLuminanceFromState(int luminance) {
-        return (state) -> state.get(Properties.AGE_3) >= 2 ? luminance : 0;
+    private static ToIntFunction<BlockState> getCropLuminanceFromState() {
+        return (state) -> state.get(Properties.AGE_3) >= 2 ? 10 : 0;
     }
 
     private static void register(String path, Block block) {
@@ -894,6 +967,42 @@ public class ADBlocks {
         register("maroon_candle", MAROON_CANDLE);
         register("maroon_candle_cake", MAROON_CANDLE_CAKE);
         register("weeping_heart", WEEPING_HEART);
+        register("maroon_candle_chocolate_cake", MAROON_CANDLE_CHOCOLATE_CAKE);
+        register("candle_chocolate_cake", CANDLE_CHOCOLATE_CAKE);
+        register("white_candle_chocolate_cake", WHITE_CANDLE_CHOCOLATE_CAKE);
+        register("orange_candle_chocolate_cake", ORANGE_CANDLE_CHOCOLATE_CAKE);
+        register("magenta_candle_chocolate_cake", MAGENTA_CANDLE_CHOCOLATE_CAKE);
+        register("light_blue_candle_chocolate_cake", LIGHT_BLUE_CANDLE_CHOCOLATE_CAKE);
+        register("yellow_candle_chocolate_cake", YELLOW_CANDLE_CHOCOLATE_CAKE);
+        register("lime_candle_chocolate_cake", LIME_CANDLE_CHOCOLATE_CAKE);
+        register("pink_candle_chocolate_cake", PINK_CANDLE_CHOCOLATE_CAKE);
+        register("gray_candle_chocolate_cake", GRAY_CANDLE_CHOCOLATE_CAKE);
+        register("light_gray_candle_chocolate_cake", LIGHT_GRAY_CANDLE_CHOCOLATE_CAKE);
+        register("cyan_candle_chocolate_cake", CYAN_CANDLE_CHOCOLATE_CAKE);
+        register("purple_candle_chocolate_cake", PURPLE_CANDLE_CHOCOLATE_CAKE);
+        register("blue_candle_chocolate_cake", BLUE_CANDLE_CHOCOLATE_CAKE);
+        register("brown_candle_chocolate_cake", BROWN_CANDLE_CHOCOLATE_CAKE);
+        register("green_candle_chocolate_cake", GREEN_CANDLE_CHOCOLATE_CAKE);
+        register("red_candle_chocolate_cake", RED_CANDLE_CHOCOLATE_CAKE);
+        register("black_candle_chocolate_cake", BLACK_CANDLE_CHOCOLATE_CAKE);
+        register("maroon_candle_red_velvet_cake", MAROON_CANDLE_RED_VELVET_CAKE);
+        register("candle_red_velvet_cake", CANDLE_RED_VELVET_CAKE);
+        register("white_candle_red_velvet_cake", WHITE_CANDLE_RED_VELVET_CAKE);
+        register("orange_candle_red_velvet_cake", ORANGE_CANDLE_RED_VELVET_CAKE);
+        register("magenta_candle_red_velvet_cake", MAGENTA_CANDLE_RED_VELVET_CAKE);
+        register("light_blue_candle_red_velvet_cake", LIGHT_BLUE_CANDLE_RED_VELVET_CAKE);
+        register("yellow_candle_red_velvet_cake", YELLOW_CANDLE_RED_VELVET_CAKE);
+        register("lime_candle_red_velvet_cake", LIME_CANDLE_RED_VELVET_CAKE);
+        register("pink_candle_red_velvet_cake", PINK_CANDLE_RED_VELVET_CAKE);
+        register("gray_candle_red_velvet_cake", GRAY_CANDLE_RED_VELVET_CAKE);
+        register("light_gray_candle_red_velvet_cake", LIGHT_GRAY_CANDLE_RED_VELVET_CAKE);
+        register("cyan_candle_red_velvet_cake", CYAN_CANDLE_RED_VELVET_CAKE);
+        register("purple_candle_red_velvet_cake", PURPLE_CANDLE_RED_VELVET_CAKE);
+        register("blue_candle_red_velvet_cake", BLUE_CANDLE_RED_VELVET_CAKE);
+        register("brown_candle_red_velvet_cake", BROWN_CANDLE_RED_VELVET_CAKE);
+        register("green_candle_red_velvet_cake", GREEN_CANDLE_RED_VELVET_CAKE);
+        register("red_candle_red_velvet_cake", RED_CANDLE_RED_VELVET_CAKE);
+        register("black_candle_red_velvet_cake", BLACK_CANDLE_RED_VELVET_CAKE);
 
         AssortedDiscoveries.LOGGER.info("Registered blocks");
     }
