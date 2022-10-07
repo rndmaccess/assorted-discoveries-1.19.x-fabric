@@ -1,13 +1,10 @@
 package rndm_access.assorteddiscoveries.common.util;
 
-import com.google.common.collect.ImmutableList;
-import net.minecraft.util.function.BooleanBiFunction;
-import net.minecraft.util.math.Box;
+import com.google.common.collect.ImmutableList;import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
