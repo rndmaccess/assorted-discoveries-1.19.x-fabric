@@ -2,9 +2,12 @@ package rndm_access.assorteddiscoveries.common.block;
 
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
@@ -21,7 +24,6 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
-import net.minecraft.world.event.GameEvent;
 import rndm_access.assorteddiscoveries.common.core.ADItems;
 import rndm_access.assorteddiscoveries.common.core.ADParticleTypes;
 
@@ -84,21 +86,23 @@ public class ADWeepingHeartBlock extends Block implements Fertilizable {
     }
 
     private void givePlayerNectar(PlayerEntity player, Hand hand) {
-        boolean hasWeepingHeartNectarBucket = player.getInventory().contains(new ItemStack(ADItems.WEEPING_HEART_NECTAR_BUCKET));
+        ItemStack nectarBucketStack = new ItemStack(ADItems.WEEPING_HEART_NECTAR_BUCKET);
+        
+        player.playSound(SoundEvents.BLOCK_BEEHIVE_DRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
         if(player.isCreative()) {
-            if(!hasWeepingHeartNectarBucket) {
-                player.giveItemStack(new ItemStack(ADItems.WEEPING_HEART_NECTAR_BUCKET, 1));
+            PlayerInventory playerInventory = player.getInventory();
+
+            if(!playerInventory.contains(nectarBucketStack)) {
+                player.giveItemStack(nectarBucketStack);
             }
-        }
-        else {
+        } else {
             player.getStackInHand(hand).decrement(1);
 
             if(player.getStackInHand(hand).isEmpty()) {
-                player.setStackInHand(hand, new ItemStack(ADItems.WEEPING_HEART_NECTAR_BUCKET));
-            }
-            else {
-                player.giveItemStack(new ItemStack(ADItems.WEEPING_HEART_NECTAR_BUCKET, 1));
+                player.setStackInHand(hand, nectarBucketStack);
+            } else {
+                player.giveItemStack(nectarBucketStack);
             }
         }
     }
@@ -107,7 +111,6 @@ public class ADWeepingHeartBlock extends Block implements Fertilizable {
         BlockState blockState = state.with(AGE, 0);
 
         world.setBlockState(pos, blockState);
-        world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(blockState));
     }
 
     @SuppressWarnings("deprecation")
@@ -162,7 +165,6 @@ public class ADWeepingHeartBlock extends Block implements Fertilizable {
         if (i < 3 && random.nextInt(5) == 0 && world.getBaseLightLevel(pos.up(), 0) >= 9) {
             BlockState blockState = state.with(AGE, i + 1);
             world.setBlockState(pos, blockState, 2);
-            world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(blockState));
         }
     }
 
