@@ -16,13 +16,14 @@ public class ADWeepingHeartNectarBucketItem extends AliasedBlockItem {
 
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
+        ActionResult result = super.useOnBlock(context);
         PlayerEntity player = context.getPlayer();
         Hand hand = context.getHand();
 
-        if (player != null && !player.isCreative()) {
+        if (player != null && !player.isCreative() && result.isAccepted()) {
             player.setStackInHand(hand, new ItemStack(Items.BUCKET));
         }
-        return super.useOnBlock(context);
+        return result;
     }
 
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
