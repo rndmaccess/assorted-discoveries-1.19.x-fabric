@@ -35,7 +35,7 @@ public class ADMixedSeedPacketItem extends Item {
         user.playSound(SoundEvents.BLOCK_BAMBOO_STEP, 1.0F, 1.0F);
 
         if (user.isCreative()) {
-            return TypedActionResult.pass(heldStack);
+            return TypedActionResult.success(heldStack);
         } else {
             return TypedActionResult.consume(new ItemStack(heldStack.getItem(), heldStack.getCount() - 1));
         }
