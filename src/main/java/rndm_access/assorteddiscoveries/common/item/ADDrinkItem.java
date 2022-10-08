@@ -9,24 +9,17 @@ import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
 public class ADDrinkItem extends Item {
-    private final Item returnItem;
-
     public ADDrinkItem(Item.Settings settings) {
         super(settings);
-        this.returnItem = Items.GLASS_BOTTLE;
-    }
-
-    public ADDrinkItem(Item.Settings settings, Item returnItemIn) {
-        super(settings);
-        this.returnItem = returnItemIn;
     }
 
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
         if (user instanceof PlayerEntity playerEntity) {
             if (!playerEntity.isCreative()) {
-                playerEntity.giveItemStack(new ItemStack(this.returnItem, 1));
-                return super.finishUsing(stack, world, user);
+                stack.decrement(1);
+                playerEntity.giveItemStack(new ItemStack(Items.GLASS_BOTTLE, 1));
+                return stack;
             }
         }
         return user.eatFood(world, stack);

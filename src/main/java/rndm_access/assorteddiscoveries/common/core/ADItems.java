@@ -371,8 +371,6 @@ public class ADItems {
     public static final Item FORESTS_BOUNTY = new ADFoodContainerItem(makeSettings(ADFoodComponents.FORESTS_BOUNTY, 1));
     public static final Item WITCHS_CRADLE_BRANCH = new AliasedBlockItem(ADBlocks.WITCHS_CRADLE, makeSettings(ADFoodComponents.WITCHS_CRADLE_BRANCH));
     public static final Item WITCHS_CRADLE_SOUP = new ADFoodContainerItem(makeSettings(ADFoodComponents.WITCHS_CRADLE_SOUP, 1));
-    public static final Item GLASS_VIAL = new ADGlassVialItem(makeSettings());
-    public static final Item BLOOD_VIAL = new ADDrinkItem(makeSettings(ADFoodComponents.BLOOD_VILE, 16), ADItems.GLASS_VIAL);
     public static final Item MIXED_SEED_PACKET = new ADMixedSeedPacketItem(makeSettings());
     public static final Item CATTAIL = new AliasedBlockItem(ADBlocks.CATTAIL, makeSettings());
     public static final Item DRIED_BAMBOO = item();
@@ -789,8 +787,6 @@ public class ADItems {
         register("forests_bounty", FORESTS_BOUNTY);
         register("witchs_cradle_branch", WITCHS_CRADLE_BRANCH);
         register("witchs_cradle_soup", WITCHS_CRADLE_SOUP);
-        register("glass_vial", GLASS_VIAL);
-        register("blood_vial", BLOOD_VIAL);
         register("mixed_seed_packet", MIXED_SEED_PACKET);
         register("cattail", CATTAIL);
         register("dried_bamboo", DRIED_BAMBOO);
