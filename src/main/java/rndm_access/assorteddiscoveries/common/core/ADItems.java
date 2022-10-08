@@ -386,8 +386,8 @@ public class ADItems {
     public static final Item MAROON_STAINED_GLASS_PANE = blockItem(ADBlocks.MAROON_STAINED_GLASS_PANE);
     public static final Item MAROON_CANDLE = blockItem(ADBlocks.MAROON_CANDLE);
     public static final Item MAROON_DYE = item();
-    public static final Item WEEPING_HEART_NECTAR_BUCKET = new ADWeepingHeartNectarBucketItem(makeSettings(ADFoodComponents.BLOOD_VILE, 1)
-            .recipeRemainder(Items.BUCKET));
+    public static final Item WEEPING_HEART_NECTAR_BUCKET = new ADWeepingHeartNectarBucketItem(
+            makeSettings(ADFoodComponents.WEEPING_HEART_NECTAR_BUCKET, 1).recipeRemainder(Items.BUCKET));
 
     private static Item item() {
         return new Item(makeSettings());
