@@ -13,7 +13,6 @@ import net.minecraft.world.BlockView;
 import rndm_access.assorteddiscoveries.ADReference;
 import rndm_access.assorteddiscoveries.common.AssortedDiscoveries;
 import rndm_access.assorteddiscoveries.common.block.*;
-import rndm_access.assorteddiscoveries.common.util.ADDyeColor;
 
 import java.util.function.ToIntFunction;
 
@@ -72,6 +71,7 @@ public class ADBlocks {
     public static final Block GREEN_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
     public static final Block RED_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
     public static final Block BLACK_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
+    public static final Block MAROON_SHEEP_PLUSH = new ADSheepPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
     public static final Block SKELETON_PLUSH = new ADSkeletonPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
     public static final Block SLIME_PLUSH = new ADCubePlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
     public static final Block SPIDER_PLUSH = new ADSpiderPlushBlock(AbstractBlock.Settings.copy(BAT_PLUSH));
@@ -641,6 +641,7 @@ public class ADBlocks {
         register("green_sheep_plush", GREEN_SHEEP_PLUSH);
         register("red_sheep_plush", RED_SHEEP_PLUSH);
         register("black_sheep_plush", BLACK_SHEEP_PLUSH);
+        register("maroon_sheep_plush", MAROON_SHEEP_PLUSH);
         register("skeleton_plush", SKELETON_PLUSH);
         register("slime_plush", SLIME_PLUSH);
         register("spider_plush", SPIDER_PLUSH);

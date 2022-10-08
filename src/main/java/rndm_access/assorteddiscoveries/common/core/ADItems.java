@@ -61,6 +61,7 @@ public class ADItems {
     public static final Item GREEN_SHEEP_PLUSH = blockItem(ADBlocks.GREEN_SHEEP_PLUSH);
     public static final Item RED_SHEEP_PLUSH = blockItem(ADBlocks.RED_SHEEP_PLUSH);
     public static final Item BLACK_SHEEP_PLUSH = blockItem(ADBlocks.BLACK_SHEEP_PLUSH);
+    public static final Item MAROON_SHEEP_PLUSH = blockItem(ADBlocks.MAROON_SHEEP_PLUSH);
     public static final Item SKELETON_PLUSH = blockItem(ADBlocks.SKELETON_PLUSH);
     public static final Item SLIME_PLUSH = blockItem(ADBlocks.SLIME_PLUSH);
     public static final Item SPIDER_PLUSH = blockItem(ADBlocks.SPIDER_PLUSH);
@@ -477,6 +478,7 @@ public class ADItems {
         register("green_sheep_plush", GREEN_SHEEP_PLUSH);
         register("red_sheep_plush", RED_SHEEP_PLUSH);
         register("black_sheep_plush", BLACK_SHEEP_PLUSH);
+        register("maroon_sheep_plush", MAROON_SHEEP_PLUSH);
         register("skeleton_plush", SKELETON_PLUSH);
         register("slime_plush", SLIME_PLUSH);
         register("spider_plush", SPIDER_PLUSH);
