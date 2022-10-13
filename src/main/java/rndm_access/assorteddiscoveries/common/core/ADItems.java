@@ -210,6 +210,7 @@ public class ADItems {
     public static final Item GREEN_LANTERN = blockItem(ADBlocks.GREEN_LANTERN);
     public static final Item RED_LANTERN = blockItem(ADBlocks.RED_LANTERN);
     public static final Item BLACK_LANTERN = blockItem(ADBlocks.BLACK_LANTERN);
+    public static final Item MAROON_LANTERN = blockItem(ADBlocks.MAROON_LANTERN);
     public static final Item WHITE_TORCH = wallStandingBlockItem(ADBlocks.WHITE_TORCH, ADBlocks.WHITE_WALL_TORCH);
     public static final Item ORANGE_TORCH = wallStandingBlockItem(ADBlocks.ORANGE_TORCH, ADBlocks.ORANGE_WALL_TORCH);
     public static final Item MAGENTA_TORCH = wallStandingBlockItem(ADBlocks.MAGENTA_TORCH, ADBlocks.MAGENTA_WALL_TORCH);
@@ -629,6 +630,7 @@ public class ADItems {
         register("green_lantern", GREEN_LANTERN);
         register("red_lantern", RED_LANTERN);
         register("black_lantern", BLACK_LANTERN);
+        register("maroon_lantern", MAROON_LANTERN);
         register("white_torch", WHITE_TORCH);
         register("orange_torch", ORANGE_TORCH);
         register("magenta_torch", MAGENTA_TORCH);

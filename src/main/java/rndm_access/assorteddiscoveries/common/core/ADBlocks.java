@@ -234,6 +234,7 @@ public class ADBlocks {
     public static final Block GREEN_LANTERN = lanternBlock();
     public static final Block RED_LANTERN = lanternBlock();
     public static final Block BLACK_LANTERN = lanternBlock();
+    public static final Block MAROON_LANTERN = lanternBlock();
     public static final Block WHITE_WALL_TORCH = wallTorchBlock(ADParticleTypes.WHITE_FLAME);
     public static final Block ORANGE_WALL_TORCH = wallTorchBlock(ADParticleTypes.ORANGE_FLAME);
     public static final Block MAGENTA_WALL_TORCH = wallTorchBlock(ADParticleTypes.MAGENTA_FLAME);
@@ -797,6 +798,7 @@ public class ADBlocks {
         register("green_lantern", GREEN_LANTERN);
         register("red_lantern", RED_LANTERN);
         register("black_lantern", BLACK_LANTERN);
+        register("maroon_lantern", MAROON_LANTERN);
         register("white_wall_torch", WHITE_WALL_TORCH);
         register("orange_wall_torch", ORANGE_WALL_TORCH);
         register("magenta_wall_torch", MAGENTA_WALL_TORCH);
