@@ -217,6 +217,7 @@ public class ADBlocks {
     public static final Block GREEN_CAMPFIRE = dyedCampfireBlock(ADParticleTypes.GREEN_SPARK);
     public static final Block RED_CAMPFIRE = dyedCampfireBlock(ADParticleTypes.RED_SPARK);
     public static final Block BLACK_CAMPFIRE = dyedCampfireBlock(ADParticleTypes.BLACK_SPARK);
+    public static final Block MAROON_CAMPFIRE = dyedCampfireBlock(ADParticleTypes.MAROON_SPARK);
     public static final Block WHITE_LANTERN = lanternBlock();
     public static final Block ORANGE_LANTERN = lanternBlock();
     public static final Block MAGENTA_LANTERN = lanternBlock();
@@ -777,6 +778,7 @@ public class ADBlocks {
         register("green_campfire", GREEN_CAMPFIRE);
         register("red_campfire", RED_CAMPFIRE);
         register("black_campfire", BLACK_CAMPFIRE);
+        register("maroon_campfire", MAROON_CAMPFIRE);
         register("white_lantern", WHITE_LANTERN);
         register("orange_lantern", ORANGE_LANTERN);
         register("magenta_lantern", MAGENTA_LANTERN);

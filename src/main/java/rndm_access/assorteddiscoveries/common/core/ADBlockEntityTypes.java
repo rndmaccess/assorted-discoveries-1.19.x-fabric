@@ -15,7 +15,8 @@ public class ADBlockEntityTypes {
             ADBlocks.LIME_CAMPFIRE, ADBlocks.PINK_CAMPFIRE, ADBlocks.GRAY_CAMPFIRE,
             ADBlocks.LIGHT_GRAY_CAMPFIRE, ADBlocks.CYAN_CAMPFIRE,
             ADBlocks.PURPLE_CAMPFIRE, ADBlocks.BLUE_CAMPFIRE, ADBlocks.BROWN_CAMPFIRE,
-            ADBlocks.GREEN_CAMPFIRE, ADBlocks.RED_CAMPFIRE, ADBlocks.BLACK_CAMPFIRE).build();
+            ADBlocks.GREEN_CAMPFIRE, ADBlocks.RED_CAMPFIRE, ADBlocks.BLACK_CAMPFIRE,
+            ADBlocks.MAROON_CAMPFIRE).build();
 
     private static <T extends BlockEntity> void register(String path, BlockEntityType<T> type) {
         Registry.register(Registry.BLOCK_ENTITY_TYPE, ADReference.makeId(path), type);

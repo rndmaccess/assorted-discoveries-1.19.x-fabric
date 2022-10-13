@@ -193,6 +193,7 @@ public class ADItems {
     public static final Item GREEN_CAMPFIRE = blockItem(ADBlocks.GREEN_CAMPFIRE);
     public static final Item RED_CAMPFIRE = blockItem(ADBlocks.RED_CAMPFIRE);
     public static final Item BLACK_CAMPFIRE = blockItem(ADBlocks.BLACK_CAMPFIRE);
+    public static final Item MAROON_CAMPFIRE = blockItem(ADBlocks.MAROON_CAMPFIRE);
     public static final Item WHITE_LANTERN = blockItem(ADBlocks.WHITE_LANTERN);
     public static final Item ORANGE_LANTERN = blockItem(ADBlocks.ORANGE_LANTERN);
     public static final Item MAGENTA_LANTERN = blockItem(ADBlocks.MAGENTA_LANTERN);
@@ -610,6 +611,7 @@ public class ADItems {
         register("green_campfire", GREEN_CAMPFIRE);
         register("red_campfire", RED_CAMPFIRE);
         register("black_campfire", BLACK_CAMPFIRE);
+        register("maroon_campfire", MAROON_CAMPFIRE);
         register("white_lantern", WHITE_LANTERN);
         register("orange_lantern", ORANGE_LANTERN);
         register("magenta_lantern", MAGENTA_LANTERN);

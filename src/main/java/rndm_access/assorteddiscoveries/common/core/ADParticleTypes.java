@@ -23,6 +23,7 @@ public class ADParticleTypes {
     public static final DefaultParticleType GREEN_SPARK = register("green_spark");
     public static final DefaultParticleType RED_SPARK = register("red_spark");
     public static final DefaultParticleType BLACK_SPARK = register("black_spark");
+    public static final DefaultParticleType MAROON_SPARK = register("maroon_spark");
     public static final DefaultParticleType WHITE_FLAME = register("white_flame");
     public static final DefaultParticleType ORANGE_FLAME = register("orange_flame");
     public static final DefaultParticleType MAGENTA_FLAME = register("magenta_flame");
