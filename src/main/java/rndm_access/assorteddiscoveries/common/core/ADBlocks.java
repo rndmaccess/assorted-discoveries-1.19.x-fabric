@@ -250,6 +250,7 @@ public class ADBlocks {
     public static final Block GREEN_WALL_TORCH = wallTorchBlock(ADParticleTypes.GREEN_FLAME);
     public static final Block RED_WALL_TORCH = wallTorchBlock(ADParticleTypes.RED_FLAME);
     public static final Block BLACK_WALL_TORCH = wallTorchBlock(ADParticleTypes.BLACK_FLAME);
+    public static final Block MAROON_WALL_TORCH = wallTorchBlock(ADParticleTypes.MAROON_FLAME);
     public static final Block WHITE_TORCH = torchBlock(ADParticleTypes.WHITE_FLAME);
     public static final Block ORANGE_TORCH = torchBlock(ADParticleTypes.ORANGE_FLAME);
     public static final Block MAGENTA_TORCH = torchBlock(ADParticleTypes.MAGENTA_FLAME);
@@ -266,6 +267,7 @@ public class ADBlocks {
     public static final Block GREEN_TORCH = torchBlock(ADParticleTypes.GREEN_FLAME);
     public static final Block RED_TORCH = torchBlock(ADParticleTypes.RED_FLAME);
     public static final Block BLACK_TORCH = torchBlock(ADParticleTypes.BLACK_FLAME);
+    public static final Block MAROON_TORCH = torchBlock(ADParticleTypes.MAROON_FLAME);
     public static final Block WITCHS_CRADLE = new ADWitchsCradleBlock(AbstractBlock.Settings.copy(Blocks.SWEET_BERRY_BUSH)
             .luminance((state) -> 10));
     public static final Block FRESH_BAMBOO_FENCE = bambooFenceBlock(MapColor.DARK_GREEN);
@@ -811,6 +813,7 @@ public class ADBlocks {
         register("green_wall_torch", GREEN_WALL_TORCH);
         register("red_wall_torch", RED_WALL_TORCH);
         register("black_wall_torch", BLACK_WALL_TORCH);
+        register("maroon_wall_torch", MAROON_WALL_TORCH);
         register("white_torch", WHITE_TORCH);
         register("orange_torch", ORANGE_TORCH);
         register("magenta_torch", MAGENTA_TORCH);
@@ -827,6 +830,7 @@ public class ADBlocks {
         register("green_torch", GREEN_TORCH);
         register("red_torch", RED_TORCH);
         register("black_torch", BLACK_TORCH);
+        register("maroon_torch", MAROON_TORCH);
         register("witchs_cradle", WITCHS_CRADLE);
         register("fresh_bamboo_fence", FRESH_BAMBOO_FENCE);
         register("fresh_bamboo_fence_gate", FRESH_BAMBOO_FENCE_GATE);

@@ -226,6 +226,7 @@ public class ADItems {
     public static final Item GREEN_TORCH = wallStandingBlockItem(ADBlocks.GREEN_TORCH, ADBlocks.GREEN_WALL_TORCH);
     public static final Item RED_TORCH = wallStandingBlockItem(ADBlocks.RED_TORCH, ADBlocks.RED_WALL_TORCH);
     public static final Item BLACK_TORCH = wallStandingBlockItem(ADBlocks.BLACK_TORCH, ADBlocks.BLACK_WALL_TORCH);
+    public static final Item MAROON_TORCH = wallStandingBlockItem(ADBlocks.MAROON_TORCH, ADBlocks.MAROON_WALL_TORCH);
     public static final Item FRESH_BAMBOO_FENCE = blockItem(ADBlocks.FRESH_BAMBOO_FENCE);
     public static final Item FRESH_BAMBOO_FENCE_GATE = blockItem(ADBlocks.FRESH_BAMBOO_FENCE_GATE);
     public static final Item DRIED_BAMBOO_FENCE = blockItem(ADBlocks.DRIED_BAMBOO_FENCE);
@@ -644,6 +645,7 @@ public class ADItems {
         register("green_torch", GREEN_TORCH);
         register("red_torch", RED_TORCH);
         register("black_torch", BLACK_TORCH);
+        register("maroon_torch", MAROON_TORCH);
         register("fresh_bamboo_fence", FRESH_BAMBOO_FENCE);
         register("fresh_bamboo_fence_gate", FRESH_BAMBOO_FENCE_GATE);
         register("dried_bamboo_fence", DRIED_BAMBOO_FENCE);

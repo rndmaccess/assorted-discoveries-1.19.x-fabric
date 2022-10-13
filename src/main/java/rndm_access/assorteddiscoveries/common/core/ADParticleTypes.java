@@ -40,6 +40,7 @@ public class ADParticleTypes {
     public static final DefaultParticleType GREEN_FLAME = register("green_flame");
     public static final DefaultParticleType RED_FLAME = register("red_flame");
     public static final DefaultParticleType BLACK_FLAME = register("black_flame");
+    public static final DefaultParticleType MAROON_FLAME = register("maroon_flame");
     public static final DefaultParticleType BLOOD_KELP_SPORE = register("blood_kelp_spore");
     public static final DefaultParticleType WITCHS_CRADLE_SPORE = register("witchs_cradle_spore");
     public static final DefaultParticleType FALLING_WEEPING_HEART_NECTAR = register("falling_weeping_heart_nectar");
