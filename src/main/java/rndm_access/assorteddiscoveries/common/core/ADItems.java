@@ -388,6 +388,8 @@ public class ADItems {
     public static final Item MAROON_STAINED_GLASS = blockItem(ADBlocks.MAROON_STAINED_GLASS);
     public static final Item MAROON_STAINED_GLASS_PANE = blockItem(ADBlocks.MAROON_STAINED_GLASS_PANE);
     public static final Item MAROON_CANDLE = blockItem(ADBlocks.MAROON_CANDLE);
+    public static final Item MAROON_CONCRETE = blockItem(ADBlocks.MAROON_CONCRETE);
+    public static final Item MAROON_CONCRETE_POWDER = blockItem(ADBlocks.MAROON_CONCRETE_POWDER);
     public static final Item MAROON_DYE = item();
     public static final Item WEEPING_HEART_NECTAR_BUCKET = new ADWeepingHeartNectarBucketItem(
             makeSettings(ADFoodComponents.WEEPING_HEART_NECTAR_BUCKET, 1).recipeRemainder(Items.BUCKET));
@@ -808,6 +810,8 @@ public class ADItems {
         register("maroon_stained_glass", MAROON_STAINED_GLASS);
         register("maroon_stained_glass_pane", MAROON_STAINED_GLASS_PANE);
         register("maroon_candle", MAROON_CANDLE);
+        register("maroon_concrete", MAROON_CONCRETE);
+        register("maroon_concrete_powder", MAROON_CONCRETE_POWDER);
         register("maroon_dye", MAROON_DYE);
         register("weeping_heart_nectar_bucket", WEEPING_HEART_NECTAR_BUCKET);
 

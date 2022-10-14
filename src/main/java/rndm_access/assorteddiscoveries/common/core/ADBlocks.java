@@ -461,6 +461,10 @@ public class ADBlocks {
             AbstractBlock.Settings.of(Material.GLASS).strength(0.3F).sounds(BlockSoundGroup.GLASS).nonOpaque());
     public static final Block MAROON_CANDLE = new CandleBlock(AbstractBlock.Settings.of(Material.DECORATION, MapColor.RED)
             .nonOpaque().strength(0.1F).sounds(BlockSoundGroup.CANDLE).luminance(CandleBlock.STATE_TO_LUMINANCE));
+    public static final Block MAROON_CONCRETE = new Block(AbstractBlock.Settings.of(Material.STONE, MapColor.DARK_RED)
+            .requiresTool().strength(1.8F));
+    public static final Block MAROON_CONCRETE_POWDER = new ConcretePowderBlock(MAROON_CONCRETE, AbstractBlock.Settings.of(
+            Material.AGGREGATE, MapColor.DARK_RED).strength(0.5F).sounds(BlockSoundGroup.SAND));
     public static final Block MAROON_CANDLE_CAKE = new CandleCakeBlock(MAROON_CANDLE, AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
     public static final Block WEEPING_HEART = new ADWeepingHeartBlock(AbstractBlock.Settings.of(Material.PLANT).ticksRandomly()
             .breakInstantly().noCollision().sounds(BlockSoundGroup.SPORE_BLOSSOM).luminance(getCropLuminanceFromState()));
@@ -975,6 +979,8 @@ public class ADBlocks {
         register("maroon_stained_glass_pane", MAROON_STAINED_GLASS_PANE);
         register("maroon_candle", MAROON_CANDLE);
         register("maroon_candle_cake", MAROON_CANDLE_CAKE);
+        register("maroon_concrete", MAROON_CONCRETE);
+        register("maroon_concrete_powder", MAROON_CONCRETE_POWDER);
         register("weeping_heart", WEEPING_HEART);
         register("maroon_candle_chocolate_cake", MAROON_CANDLE_CHOCOLATE_CAKE);
         register("candle_chocolate_cake", CANDLE_CHOCOLATE_CAKE);
