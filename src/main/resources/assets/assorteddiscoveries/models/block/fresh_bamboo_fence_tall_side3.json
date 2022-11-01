@@ -1,6 +1,0 @@
-{
-  "parent": "assorteddiscoveries:block/template_bamboo_fence_tall_side3",
-  "textures": {
-    "bamboo": "minecraft:block/bamboo_stalk"
-  }
-}

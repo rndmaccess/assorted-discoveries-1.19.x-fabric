@@ -4,8 +4,6 @@ import net.minecraft.block.*;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
-import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
@@ -13,12 +11,10 @@ import net.minecraft.world.WorldAccess;
 import rndm_access.assorteddiscoveries.common.core.ADBlockTags;
 
 public class ADBambooFenceBlock extends FenceBlock {
-    public static final BooleanProperty UP = Properties.UP;
-
     public ADBambooFenceBlock(AbstractBlock.Settings settings) {
         super(settings);
         this.setDefaultState(this.getStateManager().getDefaultState().with(NORTH, false).with(SOUTH, false)
-                .with(WEST, false).with(EAST, false).with(WATERLOGGED, false).with(UP, false));
+                .with(WEST, false).with(EAST, false).with(WATERLOGGED, false));
     }
 
     @Override
@@ -43,9 +39,6 @@ public class ADBambooFenceBlock extends FenceBlock {
             state = state.with(FACING_PROPERTIES.get(direction), this.hasNeighborConnection(world, neighborPos, direction));
         }
 
-        if(axis.isVertical()) {
-            state = state.with(UP, this.hasBambooFenceAbove(world, pos));
-        }
         return state;
     }
 
@@ -60,8 +53,7 @@ public class ADBambooFenceBlock extends FenceBlock {
                 .with(SOUTH, this.hasNeighborConnection(world, pos.south(), Direction.SOUTH))
                 .with(WEST, this.hasNeighborConnection(world, pos.west(), Direction.WEST))
                 .with(EAST, this.hasNeighborConnection(world, pos.east(), Direction.EAST))
-                .with(WATERLOGGED, isWater)
-                .with(UP, this.hasBambooFenceAbove(world, pos));
+                .with(WATERLOGGED, isWater);
     }
 
     private boolean hasNeighborConnection(WorldAccess world, BlockPos neighborPos, Direction direction) {
@@ -71,13 +63,7 @@ public class ADBambooFenceBlock extends FenceBlock {
         return this.canConnect(neighborState, neighborState.isSideSolidFullSquare(world, neighborPos, oppDir), oppDir);
     }
 
-    private boolean hasBambooFenceAbove(WorldAccess world, BlockPos pos) {
-        BlockState state = world.getBlockState(pos.up());
-
-        return state.isIn(ADBlockTags.BAMBOO_FENCES);
-    }
-
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(NORTH, SOUTH, WEST, EAST, WATERLOGGED, UP);
+        builder.add(NORTH, SOUTH, WEST, EAST, WATERLOGGED);
     }
 }
