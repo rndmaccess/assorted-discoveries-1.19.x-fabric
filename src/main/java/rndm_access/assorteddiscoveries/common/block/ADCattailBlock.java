@@ -1,9 +1,6 @@
 package rndm_access.assorteddiscoveries.common.block;
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.TallFlowerBlock;
+import net.minecraft.block.*;
 import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
@@ -42,8 +39,8 @@ public class ADCattailBlock extends TallFlowerBlock {
         return new ItemStack(ADItems.CATTAIL);
     }
 
+    @SuppressWarnings("depreciation")
     @Override
-    @SuppressWarnings("depreciated")
     public FluidState getFluidState(BlockState state) {
         return state.get(HALF) == DoubleBlockHalf.LOWER ? Fluids.WATER.getStill(false)
                 : Fluids.EMPTY.getDefaultState();
