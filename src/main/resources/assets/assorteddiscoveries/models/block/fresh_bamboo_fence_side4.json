@@ -1,6 +1,7 @@
 {
   "parent": "assorteddiscoveries:block/template_bamboo_fence_side4",
   "textures": {
-    "bamboo": "assorteddiscoveries:block/bamboo_stalk"
+    "bamboo": "assorteddiscoveries:block/bamboo_stalk",
+	"bamboo_top": "assorteddiscoveries:block/bamboo_top"
   }
 }

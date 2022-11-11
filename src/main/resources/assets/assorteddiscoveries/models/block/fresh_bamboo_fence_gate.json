@@ -1,9 +1,7 @@
 {
   "parent": "assorteddiscoveries:block/template_bamboo_fence_gate",
   "textures": {
-    "vertical_bamboo": "assorteddiscoveries:block/bamboo_stalk",
-	"bamboo_mesh": "assorteddiscoveries:block/bamboo_mesh",
-    "vertical_cut_bamboo": "assorteddiscoveries:block/bamboo_vertical_cut_stalk",
-	"horizontal_cut_bamboo": "assorteddiscoveries:block/bamboo_horizontal_cut_stalk"
+    "bamboo": "assorteddiscoveries:block/bamboo_stalk",
+	"bamboo_gate_details": "assorteddiscoveries:block/bamboo_gate"
   }
 }

@@ -1,6 +1,0 @@
-{
-  "parent": "assorteddiscoveries:block/template_bamboo_fence_tall_side2",
-  "textures": {
-    "bamboo": "assorteddiscoveries:block/dried_bamboo_vertical_stalk"
-  }
-}

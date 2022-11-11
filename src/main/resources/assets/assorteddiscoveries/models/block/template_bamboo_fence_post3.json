@@ -1,21 +1,23 @@
 {
-  "__comment": "Designed by rndm_access with Cubik Studio - https://cubik.studio",
-  "textures": {
-    "particle": "#bamboo"
-  },
-  "elements": [
-    {
-      "__comment": "Post",
-      "from": [ 6, 0, 6 ],
-      "to": [ 10, 16, 10 ],
-      "faces": {
-        "down": { "uv": [ 13, 0, 16, 3 ], "texture": "#bamboo", "cullface": "down" },
-        "up": { "uv": [ 13, 0, 16, 3 ], "texture": "#bamboo", "cullface": "up" },
-        "north": { "uv": [ 6, 0, 9, 16 ], "texture": "#bamboo" },
-        "south": { "uv": [ 9, 0, 6, 16 ], "texture": "#bamboo" },
-        "west": { "uv": [ 6, 0, 9, 16 ], "texture": "#bamboo" },
-        "east": { "uv": [ 6, 0, 9, 16 ], "texture": "#bamboo" }
-      }
-    }
-  ]
+	"__comment": "Designed by rndm_access with Cubik Studio - https://cubik.studio",
+	"textures": {
+		"particle": "#bamboo",
+		"bamboo": "#bamboo",
+		"bamboo_top": "#bamboo_top"
+	},
+	"elements": [ 	 
+		{
+			"__comment": "Post",
+			"from": [ 6, 0, 6 ],
+			"to": [ 10, 16, 10 ],
+			"faces": {
+				"down": { "uv": [ 0, 0, 4, 4 ], "texture": "#bamboo_top", "cullface": "down" },
+				"up": { "uv": [ 0, 0, 4, 4 ], "texture": "#bamboo_top", "cullface": "up" },
+				"north": { "uv": [ 8, 0, 12, 16 ], "texture": "#bamboo" },
+				"south": { "uv": [ 8, 0, 12, 16 ], "texture": "#bamboo" },
+				"west": { "uv": [ 8, 0, 12, 16 ], "texture": "#bamboo" },
+				"east": { "uv": [ 8, 0, 12, 16 ], "texture": "#bamboo" }
+			}
+		}
+	]
 }
