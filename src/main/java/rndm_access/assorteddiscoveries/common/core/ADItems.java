@@ -174,6 +174,10 @@ public class ADItems {
     public static final Item SNOW_BRICK_STAIRS = blockItem(ADBlocks.SNOW_BRICK_STAIRS);
     public static final Item SNOW_BRICK_SLAB = blockItem(ADBlocks.SNOW_BRICK_SLAB);
     public static final Item SNOW_BRICK_WALL = blockItem(ADBlocks.SNOW_BRICK_WALL);
+    public static final Item PACKED_SNOW = blockItem(ADBlocks.PACKED_SNOW);
+    public static final Item PACKED_SNOW_STAIRS = blockItem(ADBlocks.PACKED_SNOW_STAIRS);
+    public static final Item PACKED_SNOW_SLAB = blockItem(ADBlocks.PACKED_SNOW_SLAB);
+    public static final Item PACKED_SNOW_WALL = blockItem(ADBlocks.PACKED_SNOW_WALL);
     public static final Item PURPLE_MUSHROOM = blockItem(ADBlocks.PURPLE_MUSHROOM);
     public static final Item PURPLE_MUSHROOM_BLOCK = blockItem(ADBlocks.PURPLE_MUSHROOM_BLOCK);
     public static final Item WOODCUTTER = blockItem(ADBlocks.WOODCUTTER);
@@ -601,6 +605,10 @@ public class ADItems {
         register("snow_brick_stairs", SNOW_BRICK_STAIRS);
         register("snow_brick_slab", SNOW_BRICK_SLAB);
         register("snow_brick_wall", SNOW_BRICK_WALL);
+        register("packed_snow", PACKED_SNOW);
+        register("packed_snow_stairs", PACKED_SNOW_STAIRS);
+        register("packed_snow_slab", PACKED_SNOW_SLAB);
+        register("packed_snow_wall", PACKED_SNOW_WALL);
         register("purple_mushroom", PURPLE_MUSHROOM);
         register("purple_mushroom_block", PURPLE_MUSHROOM_BLOCK);
         register("woodcutter", WOODCUTTER);

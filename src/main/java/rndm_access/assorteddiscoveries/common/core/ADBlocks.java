@@ -1,6 +1,7 @@
 package rndm_access.assorteddiscoveries.common.core;
 
 import net.minecraft.block.*;
+import net.minecraft.block.enums.BedPart;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.particle.ParticleEffect;
@@ -197,6 +198,12 @@ public class ADBlocks {
             AbstractBlock.Settings.copy(SNOW_BRICKS));
     public static final Block SNOW_BRICK_SLAB = new SlabBlock(AbstractBlock.Settings.copy(SNOW_BRICKS));
     public static final Block SNOW_BRICK_WALL = new WallBlock(AbstractBlock.Settings.copy(SNOW_BRICKS));
+    public static final Block PACKED_SNOW = new Block(AbstractBlock.Settings.of(Material.SNOW_BLOCK).strength(0.6F)
+            .requiresTool().sounds(BlockSoundGroup.SNOW));
+    public static final Block PACKED_SNOW_STAIRS = new StairsBlock(ADBlocks.PACKED_SNOW.getDefaultState(),
+            AbstractBlock.Settings.copy(SNOW_BRICKS));
+    public static final Block PACKED_SNOW_SLAB = new SlabBlock(AbstractBlock.Settings.copy(PACKED_SNOW));
+    public static final Block PACKED_SNOW_WALL = new WallBlock(AbstractBlock.Settings.copy(PACKED_SNOW));
     public static final Block PURPLE_MUSHROOM = new MushroomPlantBlock(AbstractBlock.Settings.copy(Blocks.RED_MUSHROOM),
             () -> ADConfiguredFeatures.HUGE_PURPLE_MUSHROOM);
     public static final Block PURPLE_MUSHROOM_BLOCK = new ADPurpleMushroomBlock(AbstractBlock.Settings.copy(Blocks.RED_MUSHROOM_BLOCK));
@@ -767,6 +774,10 @@ public class ADBlocks {
         register("snow_brick_stairs", SNOW_BRICK_STAIRS);
         register("snow_brick_slab", SNOW_BRICK_SLAB);
         register("snow_brick_wall", SNOW_BRICK_WALL);
+        register("packed_snow", PACKED_SNOW);
+        register("packed_snow_stairs", PACKED_SNOW_STAIRS);
+        register("packed_snow_slab", PACKED_SNOW_SLAB);
+        register("packed_snow_wall", PACKED_SNOW_WALL);
         register("purple_mushroom", PURPLE_MUSHROOM);
         register("purple_mushroom_block", PURPLE_MUSHROOM_BLOCK);
         register("woodcutter", WOODCUTTER);
