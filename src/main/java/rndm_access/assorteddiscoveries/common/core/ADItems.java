@@ -397,6 +397,7 @@ public class ADItems {
     public static final Item MAROON_DYE = item();
     public static final Item WEEPING_HEART_NECTAR_BUCKET = new ADDrinkContainerItem(
             makeSettings(ADFoodComponents.WEEPING_HEART_NECTAR_BUCKET, 1).recipeRemainder(Items.BUCKET), Items.BUCKET);
+    public static final Item WEEPING_HEART_SEEDS = new AliasedBlockItem(ADBlocks.WEEPING_HEART, makeSettings());
 
     private static Item item() {
         return new Item(makeSettings());
@@ -822,6 +823,7 @@ public class ADItems {
         register("maroon_concrete_powder", MAROON_CONCRETE_POWDER);
         register("maroon_dye", MAROON_DYE);
         register("weeping_heart_nectar_bucket", WEEPING_HEART_NECTAR_BUCKET);
+        register("weeping_heart_seeds", WEEPING_HEART_SEEDS);
 
         AssortedDiscoveries.LOGGER.info("Registered Items");
     }
