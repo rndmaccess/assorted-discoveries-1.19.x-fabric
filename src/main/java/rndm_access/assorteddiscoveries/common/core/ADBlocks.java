@@ -550,6 +550,7 @@ public class ADBlocks {
     public static final Block MAROON_BED = new BedBlock(DyeColor.RED, AbstractBlock.Settings.of(Material.WOOL,
                     (state) -> state.get(BedBlock.PART) == BedPart.FOOT ? MapColor.DARK_RED : MapColor.WHITE_GRAY)
             .sounds(BlockSoundGroup.WOOD).strength(0.2F).nonOpaque());
+    public static final Block CORN = new ADCornCropBlock(AbstractBlock.Settings.copy(Blocks.WHEAT));
 
     private static ADBambooFenceBlock bambooFenceBlock(MapColor color) {
         return new ADBambooFenceBlock(AbstractBlock.Settings.of(Material.WOOD, color).strength(1.0F)
@@ -1033,6 +1034,7 @@ public class ADBlocks {
         register("red_candle_red_velvet_cake", RED_CANDLE_RED_VELVET_CAKE);
         register("black_candle_red_velvet_cake", BLACK_CANDLE_RED_VELVET_CAKE);
         register("maroon_bed", MAROON_BED);
+        register("corn", CORN);
 
         AssortedDiscoveries.LOGGER.info("Registered blocks");
     }
