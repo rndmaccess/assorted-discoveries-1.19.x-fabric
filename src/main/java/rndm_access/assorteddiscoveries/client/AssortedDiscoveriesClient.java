@@ -8,7 +8,6 @@ import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.color.world.GrassColors;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
@@ -40,6 +39,7 @@ public class AssortedDiscoveriesClient implements ClientModInitializer {
 
     private void registerBlockEntityRenderers() {
         BlockEntityRendererRegistry.register(ADBlockEntityTypes.DYED_CAMPFIRE, ADDyedCampfireBlockEntityRenderer::new);
+        BlockEntityRendererRegistry.register(ADBlockEntityTypes.BED, BedBlockEntityRenderer::new);
     }
 
     private void registerBlockColorProviders() {

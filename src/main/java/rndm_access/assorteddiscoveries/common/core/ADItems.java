@@ -395,9 +395,10 @@ public class ADItems {
     public static final Item MAROON_CONCRETE = blockItem(ADBlocks.MAROON_CONCRETE);
     public static final Item MAROON_CONCRETE_POWDER = blockItem(ADBlocks.MAROON_CONCRETE_POWDER);
     public static final Item MAROON_DYE = item();
-    public static final Item WEEPING_HEART_NECTAR_BUCKET = new ADWeepingHeartNectarBucketItem(
-            makeSettings(ADFoodComponents.WEEPING_HEART_NECTAR_BUCKET, 1).recipeRemainder(Items.BUCKET));
-    public static final Item CORN_COB = new AliasedBlockItem(ADBlocks.CORN, makeSettings());
+    public static final Item WEEPING_HEART_NECTAR_BUCKET = new ADFoodContainerItem(
+            makeSettings(ADFoodComponents.WEEPING_HEART_NECTAR_BUCKET, 1).recipeRemainder(Items.BUCKET), Items.BUCKET);
+    public static final Item WEEPING_HEART_SEEDS = new AliasedBlockItem(ADBlocks.WEEPING_HEART, makeSettings());
+    public static final Item MAROON_BED = new BedItem(ADBlocks.MAROON_BED, makeSettings(1));
 
     private static Item item() {
         return new Item(makeSettings());
@@ -827,7 +828,8 @@ public class ADItems {
         register("maroon_concrete_powder", MAROON_CONCRETE_POWDER);
         register("maroon_dye", MAROON_DYE);
         register("weeping_heart_nectar_bucket", WEEPING_HEART_NECTAR_BUCKET);
-        register("corn_cob", CORN_COB);
+        register("weeping_heart_seeds", WEEPING_HEART_SEEDS);
+        register("maroon_bed", MAROON_BED);
 
         AssortedDiscoveries.LOGGER.info("Registered Items");
     }

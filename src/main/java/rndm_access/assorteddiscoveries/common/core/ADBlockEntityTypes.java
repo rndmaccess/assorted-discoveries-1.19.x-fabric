@@ -1,6 +1,7 @@
 package rndm_access.assorteddiscoveries.common.core;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
+import net.minecraft.block.entity.BedBlockEntity;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.util.registry.Registry;
@@ -17,6 +18,8 @@ public class ADBlockEntityTypes {
             ADBlocks.PURPLE_CAMPFIRE, ADBlocks.BLUE_CAMPFIRE, ADBlocks.BROWN_CAMPFIRE,
             ADBlocks.GREEN_CAMPFIRE, ADBlocks.RED_CAMPFIRE, ADBlocks.BLACK_CAMPFIRE,
             ADBlocks.MAROON_CAMPFIRE).build();
+    public static final BlockEntityType<BedBlockEntity> BED = FabricBlockEntityTypeBuilder.create(BedBlockEntity::new,
+            ADBlocks.MAROON_BED).build();
 
     private static <T extends BlockEntity> void register(String path, BlockEntityType<T> type) {
         Registry.register(Registry.BLOCK_ENTITY_TYPE, ADReference.makeId(path), type);
@@ -27,6 +30,7 @@ public class ADBlockEntityTypes {
      */
     public static void registerBlockEntityTypes() {
         register("dyed_campfire", DYED_CAMPFIRE);
+        register("bed", BED);
 
         AssortedDiscoveries.LOGGER.info("Registered block entity types");
     }
