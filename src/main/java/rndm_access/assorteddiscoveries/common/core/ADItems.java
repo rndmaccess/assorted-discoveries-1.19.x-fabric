@@ -366,8 +366,8 @@ public class ADItems {
     public static final Item GARLIC = new AliasedBlockItem(ADBlocks.GARLIC, makeSettings(ADFoodComponents.GARLIC));
     public static final Item GREEN_ONION = new AliasedBlockItem(ADBlocks.GREEN_ONIONS, makeSettings(ADFoodComponents.GREEN_ONION));
     public static final Item BLUEBERRIES = new AliasedBlockItem(ADBlocks.BLUEBERRY_BUSH, makeSettings(ADFoodComponents.BLUEBERRIES));
-    public static final Item SWEET_BERRY_JUICE = new ADDrinkItem(makeSettings(ADFoodComponents.SWEET_BERRY_JUICE, 16));
-    public static final Item BLUEBERRY_JUICE = new ADDrinkItem(makeSettings(ADFoodComponents.BLUEBERRY_JUICE, 16));
+    public static final Item SWEET_BERRY_JUICE = new ADDrinkContainerItem(makeSettings(ADFoodComponents.SWEET_BERRY_JUICE, 16));
+    public static final Item BLUEBERRY_JUICE = new ADDrinkContainerItem(makeSettings(ADFoodComponents.BLUEBERRY_JUICE, 16));
     public static final Item NOODLES = item();
     public static final Item NOODLE_SOUP = new ADFoodContainerItem(makeSettings(ADFoodComponents.NOODLE_SOUP, 1));
     public static final Item PUDDING = new ADFoodContainerItem(makeSettings(ADFoodComponents.PUDDING, 1));
@@ -395,7 +395,7 @@ public class ADItems {
     public static final Item MAROON_CONCRETE = blockItem(ADBlocks.MAROON_CONCRETE);
     public static final Item MAROON_CONCRETE_POWDER = blockItem(ADBlocks.MAROON_CONCRETE_POWDER);
     public static final Item MAROON_DYE = item();
-    public static final Item WEEPING_HEART_NECTAR_BUCKET = new ADFoodContainerItem(
+    public static final Item WEEPING_HEART_NECTAR_BUCKET = new ADDrinkContainerItem(
             makeSettings(ADFoodComponents.WEEPING_HEART_NECTAR_BUCKET, 1).recipeRemainder(Items.BUCKET), Items.BUCKET);
     public static final Item WEEPING_HEART_SEEDS = new AliasedBlockItem(ADBlocks.WEEPING_HEART, makeSettings());
     public static final Item MAROON_BED = new BedItem(ADBlocks.MAROON_BED, makeSettings(1));
