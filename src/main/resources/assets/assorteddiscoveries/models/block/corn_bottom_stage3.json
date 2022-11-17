@@ -1,6 +1,0 @@
-{
-  "parent": "block/crop",
-  "textures": {
-    "crop": "assorteddiscoveries:block/corn_bottom_stage3"
-  }
-}
