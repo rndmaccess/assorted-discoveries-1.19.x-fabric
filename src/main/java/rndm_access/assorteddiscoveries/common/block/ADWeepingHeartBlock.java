@@ -38,7 +38,7 @@ public class ADWeepingHeartBlock extends Block implements Fertilizable {
 
     @Override
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
-        return ADItems.WEEPING_HEART_NECTAR_BUCKET.getDefaultStack();
+        return ADItems.WEEPING_HEART_SEEDS.getDefaultStack();
     }
 
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
