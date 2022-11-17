@@ -8,9 +8,17 @@ import net.minecraft.item.Items;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
-public class ADDrinkItem extends Item {
-    public ADDrinkItem(Item.Settings settings) {
+public class ADDrinkContainerItem extends Item {
+    private final Item emptyContainer;
+
+    public ADDrinkContainerItem(Item.Settings settings) {
         super(settings);
+        this.emptyContainer = Items.GLASS_BOTTLE;
+    }
+
+    public ADDrinkContainerItem(Item.Settings settings, Item emptyContainer) {
+        super(settings);
+        this.emptyContainer = emptyContainer;
     }
 
     @Override
@@ -18,7 +26,7 @@ public class ADDrinkItem extends Item {
         if (user instanceof PlayerEntity playerEntity) {
             if (!playerEntity.isCreative()) {
                 stack.decrement(1);
-                playerEntity.giveItemStack(new ItemStack(Items.GLASS_BOTTLE, 1));
+                playerEntity.giveItemStack(new ItemStack(this.emptyContainer, 1));
                 return stack;
             }
         }
