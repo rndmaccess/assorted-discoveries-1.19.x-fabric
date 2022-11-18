@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "assorteddiscoveries:oak_rope_ladder",
     "assorteddiscoveries:spruce_rope_ladder",
     "assorteddiscoveries:birch_rope_ladder",
     "assorteddiscoveries:jungle_rope_ladder",
