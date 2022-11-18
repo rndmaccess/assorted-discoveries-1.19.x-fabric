@@ -402,6 +402,7 @@
   "block.assorteddiscoveries.red_candle_red_velvet_cake": "Red Candle Red Velvet Cake",
   "block.assorteddiscoveries.black_candle_red_velvet_cake": "Black Candle Red Velvet Cake",
   "block.assorteddiscoveries.blueberry_bush": "Blueberry Bush",
+  "block.assorteddiscoveries.corn": "Corn",
 
   "container.assorteddiscoveries.woodcutter": "Woodcutter",
   
@@ -435,6 +436,7 @@
   "item.assorteddiscoveries.maroon_dye": "Maroon Dye",
   "item.assorteddiscoveries.weeping_heart_nectar_bucket": "Weeping Heart Nectar Bucket",
   "item.assorteddiscoveries.weeping_heart_seeds": "Weeping Heart Seeds",
+  "item.assorteddiscoveries.corn_cob": "Corn Cob",
   
   "advancements.assorteddiscoveries.story.root.title": "Assorted Discoveries",
   "advancements.assorteddiscoveries.story.root.description": "A mod designed to enhance vanilla gameplay",
