@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "assorteddiscoveries:snow_bricks"
+      "assorteddiscoveries:packed_snow_slab"
     ]
   },
   "criteria": {
@@ -20,7 +20,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "assorteddiscoveries:snow_bricks"
+        "recipe": "assorteddiscoveries:packed_snow_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
