@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "assorteddiscoveries:packed_snow"
+      "item": "minecraft:snow_block"
     }
   },
   "result": {
-    "item": "assorteddiscoveries:snow_bricks",
+    "item": "assorteddiscoveries:packed_snow",
     "count": 4
   }
 }
