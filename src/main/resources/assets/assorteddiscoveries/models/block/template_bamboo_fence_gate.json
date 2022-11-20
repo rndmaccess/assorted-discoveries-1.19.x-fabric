@@ -2,8 +2,8 @@
 	"__comment": "Designed by rndm_access with Cubik Studio - https://cubik.studio",
 	"parent": "minecraft:block/block",
 	"textures": {
-		"particle": "#bamboo",
-		"bamboo": "#bamboo",
+		"particle": "#side",
+		"side": "#side",
 		"bamboo_gate_details": "#bamboo_gate_details"
 	},
 	"elements": [ 	 
@@ -14,10 +14,10 @@
 			"faces": {
 				"down": { "uv": [ 0, 8, 3, 11 ], "texture": "#bamboo_gate_details", "cullface": "down" },
 				"up": { "uv": [ 0, 8, 3, 11 ], "texture": "#bamboo_gate_details", "cullface": "up" },
-				"north": { "uv": [ 0, 2, 3, 13 ], "texture": "#bamboo" },
-				"south": { "uv": [ 0, 2, 3, 13 ], "texture": "#bamboo" },
-				"west": { "uv": [ 0, 2, 3, 13 ], "texture": "#bamboo", "cullface": "west" },
-				"east": { "uv": [ 0, 2, 3, 13 ], "texture": "#bamboo" }
+				"north": { "uv": [ 0, 2, 3, 13 ], "texture": "#side" },
+				"south": { "uv": [ 0, 2, 3, 13 ], "texture": "#side" },
+				"west": { "uv": [ 0, 2, 3, 13 ], "texture": "#side", "cullface": "west" },
+				"east": { "uv": [ 0, 2, 3, 13 ], "texture": "#side" }
 			}
 		},
 		{
@@ -109,10 +109,10 @@
 			"faces": {
 				"down": { "uv": [ 0, 8, 3, 11 ], "texture": "#bamboo_gate_details", "cullface": "down" },
 				"up": { "uv": [ 0, 8, 3, 11 ], "texture": "#bamboo_gate_details", "cullface": "up" },
-				"north": { "uv": [ 0, 2, 3, 13 ], "texture": "#bamboo" },
-				"south": { "uv": [ 0, 2, 3, 13 ], "texture": "#bamboo" },
-				"west": { "uv": [ 0, 2, 3, 13 ], "texture": "#bamboo" },
-				"east": { "uv": [ 0, 2, 3, 13 ], "texture": "#bamboo", "cullface": "east" }
+				"north": { "uv": [ 0, 2, 3, 13 ], "texture": "#side" },
+				"south": { "uv": [ 0, 2, 3, 13 ], "texture": "#side" },
+				"west": { "uv": [ 0, 2, 3, 13 ], "texture": "#side" },
+				"east": { "uv": [ 0, 2, 3, 13 ], "texture": "#side", "cullface": "east" }
 			}
 		}
 	]
