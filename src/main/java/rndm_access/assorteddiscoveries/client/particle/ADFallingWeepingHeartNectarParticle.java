@@ -17,7 +17,7 @@ public class ADFallingWeepingHeartNectarParticle extends SpriteBillboardParticle
         super(clientWorld, x, y - 0.125D, z);
 
         this.setBoundingBoxSpacing(0.01F, 0.01F);
-        this.setColor(0.7F, 0.7F, 0.0F);
+        this.setColor(0.8F, 0.6F, 0.3F);
         this.setSprite(spriteProvider);
         this.gravityStrength = 0.005F;
         this.maxAge = maxAge;

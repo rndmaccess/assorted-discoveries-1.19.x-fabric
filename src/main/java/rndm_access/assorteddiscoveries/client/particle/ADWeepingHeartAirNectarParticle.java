@@ -23,7 +23,7 @@ public class ADWeepingHeartAirNectarParticle extends SpriteBillboardParticle {
         this.collidesWithWorld = false;
         this.velocityMultiplier = 1.0F;
         this.gravityStrength = 0.01F;
-        this.setColor(0.7F, 0.7F, 0.0F);
+        this.setColor(0.8F, 0.6F, 0.3F);
     }
 
     @Override
