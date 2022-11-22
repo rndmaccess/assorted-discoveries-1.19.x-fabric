@@ -15,6 +15,7 @@ public class ADBlockTags {
     public static final TagKey<Block> DIRT_SLABS = of("dirt_slabs");
     public static final TagKey<Block> SNOW_SLABS = of("snow_slabs");
     public static final TagKey<Block> SNOW_STAIRS = of("snow_stairs");
+    public static final TagKey<Block> WEEPING_HEART_PLANTABLE_ON = of("weeping_heart_plantable_on");
 
     /**
      * @param path The name of the tag.
