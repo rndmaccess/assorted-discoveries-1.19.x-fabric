@@ -166,6 +166,10 @@
   "block.assorteddiscoveries.snow_brick_stairs": "Snow Brick Stairs",
   "block.assorteddiscoveries.snow_brick_slab": "Snow Brick Slab",
   "block.assorteddiscoveries.snow_brick_wall": "Snow Brick Wall",
+  "block.assorteddiscoveries.packed_snow": "Packed Snow",
+  "block.assorteddiscoveries.packed_snow_stairs": "Packed Snow Stairs",
+  "block.assorteddiscoveries.packed_snow_slab": "Packed Snow Slab",
+  "block.assorteddiscoveries.packed_snow_wall": "Packed Snow Wall",
   "block.assorteddiscoveries.glass_of_darkness": "Glass Of Darkness",
   "block.assorteddiscoveries.purple_mushroom": "Purple Mushroom",
   "block.assorteddiscoveries.purple_mushroom_block": "Purple Mushroom Block",
@@ -402,10 +406,6 @@
   "block.assorteddiscoveries.red_candle_red_velvet_cake": "Red Candle Red Velvet Cake",
   "block.assorteddiscoveries.black_candle_red_velvet_cake": "Black Candle Red Velvet Cake",
   "block.assorteddiscoveries.blueberry_bush": "Blueberry Bush",
-  "block.assorteddiscoveries.packed_snow": "Packed Snow",
-  "block.assorteddiscoveries.packed_snow_stairs": "Packed Snow Stairs",
-  "block.assorteddiscoveries.packed_snow_slab": "Packed Snow Slab",
-  "block.assorteddiscoveries.packed_snow_wall": "Packed Snow Wall",
 
   "container.assorteddiscoveries.woodcutter": "Woodcutter",
   
