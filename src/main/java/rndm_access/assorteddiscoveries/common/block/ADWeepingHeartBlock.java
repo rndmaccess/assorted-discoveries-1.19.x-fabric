@@ -11,7 +11,6 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
-import net.minecraft.tag.BlockTags;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
@@ -24,6 +23,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
+import rndm_access.assorteddiscoveries.common.core.ADBlockTags;
 import rndm_access.assorteddiscoveries.common.core.ADItems;
 import rndm_access.assorteddiscoveries.common.core.ADParticleTypes;
 
@@ -118,8 +118,7 @@ public class ADWeepingHeartBlock extends Block implements Fertilizable {
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         BlockState supportingBlock = world.getBlockState(pos.up());
 
-        return (supportingBlock.isIn(BlockTags.LOGS_THAT_BURN) || supportingBlock.isIn(BlockTags.LEAVES))
-                && !world.isWater(pos);
+        return supportingBlock.isIn(ADBlockTags.WEEPING_HEART_PLANTABLE_ON) && !world.isWater(pos);
     }
 
     @SuppressWarnings("deprecation")
