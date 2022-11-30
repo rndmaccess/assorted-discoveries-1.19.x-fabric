@@ -1,13 +1,14 @@
 package rndm_access.assorteddiscoveries.common.block;
 
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.CakeBlock;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
-import net.minecraft.tag.ItemTags;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
@@ -22,24 +23,34 @@ public class ADCakeBlock extends CakeBlock {
     }
 
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        ItemStack itemStack = player.getStackInHand(hand);
-        Item item = itemStack.getItem();
-        if (itemStack.isIn(ItemTags.CANDLES) && state.get(BITES) == 0) {
-            Block block = Block.getBlockFromItem(item);
-            if (block instanceof CandleBlock) {
-                if (!player.isCreative()) {
-                    itemStack.decrement(1);
-                }
+        ItemStack heldStack = player.getStackInHand(hand);
 
-                world.playSound(null, pos, SoundEvents.BLOCK_CAKE_ADD_CANDLE, SoundCategory.BLOCKS, 1.0F, 1.0F);
-                world.setBlockState(pos, ADCandleCakeBlock.getCandleCake(this, block));
-                world.emitGameEvent(player, GameEvent.BLOCK_CHANGE, pos);
-                player.incrementStat(Stats.USED.getOrCreateStat(item));
-                return ActionResult.SUCCESS;
+        if (state.get(BITES) == 0) {
+            Item item = heldStack.getItem();
+            Block block = Block.getBlockFromItem(item);
+
+            if(ADCandleCakeBlock.containsCandleCake(this, block)) {
+                return this.placeCandleCake(world, player, pos, heldStack, block, item);
             }
         }
+        return this.eatCake(world, player, pos, heldStack, state);
+    }
 
-        if (world.isClient) {
+    private ActionResult placeCandleCake(World world, PlayerEntity player, BlockPos pos, ItemStack itemStack, Block block, Item item) {
+        if (!player.isCreative()) {
+            itemStack.decrement(1);
+        }
+
+        world.playSound(null, pos, SoundEvents.BLOCK_CAKE_ADD_CANDLE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+        world.setBlockState(pos, ADCandleCakeBlock.getCandleCake(this, block));
+        world.emitGameEvent(player, GameEvent.BLOCK_CHANGE, pos);
+        player.incrementStat(Stats.USED.getOrCreateStat(item));
+        return ActionResult.SUCCESS;
+    }
+
+    private ActionResult eatCake(World world, PlayerEntity player, BlockPos pos,
+                                 ItemStack itemStack, BlockState state) {
+        if (world.isClient()) {
             if (tryEatCake(world, pos, state, player).isAccepted()) {
                 return ActionResult.SUCCESS;
             }

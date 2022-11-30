@@ -74,6 +74,10 @@ public class ADCandleCakeBlock extends AbstractCandleBlock {
         return CANDLES_TO_CANDLE_CAKES.get(List.of(cake, candle)).getDefaultState();
     }
 
+    public static boolean containsCandleCake(Block cake, Block candle) {
+        return CANDLES_TO_CANDLE_CAKES.containsKey(List.of(cake, candle));
+    }
+
     protected Iterable<Vec3d> getParticleOffsets(BlockState state) {
         return ImmutableList.of(new Vec3d(0.5D, 1.0D, 0.5D));
     }
