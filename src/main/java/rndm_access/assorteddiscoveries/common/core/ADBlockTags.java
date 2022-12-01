@@ -10,7 +10,7 @@ public class ADBlockTags {
     public static final TagKey<Block> SNAPDRAGON_PLANTABLE_ON = of("snapdragon_plantable_on");
     public static final TagKey<Block> ENDER_GRASS_PLANTABLE_ON = of("ender_grass_plantable_on");
     public static final TagKey<Block> BAMBOO_FENCES = of("bamboo_fences");
-    public static final TagKey<Block> PLANTER_BOXES = of("planter_boxes");
+    public static final TagKey<Block> OVERWORLD_PLANTER_BOXES = of("overworld_planter_boxes");
     public static final TagKey<Block> NETHER_PLANTER_BOXES = of("nether_planter_boxes");
     public static final TagKey<Block> DIRT_SLABS = of("dirt_slabs");
     public static final TagKey<Block> SNOW_SLABS = of("snow_slabs");

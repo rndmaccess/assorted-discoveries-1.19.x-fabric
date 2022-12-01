@@ -8,4 +8,8 @@ public class ADReference {
     public static Identifier makeId(String path) {
         return new Identifier(MOD_ID, path);
     }
+
+    public static Identifier makeCommonId(String path) {
+        return new Identifier("c", path);
+    }
 }
