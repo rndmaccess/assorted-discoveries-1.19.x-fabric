@@ -11,6 +11,7 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.Pair;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -22,7 +23,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
-import java.util.List;
 import java.util.Map;
 
 public class ADCandleCakeBlock extends AbstractCandleBlock {
@@ -30,14 +30,14 @@ public class ADCandleCakeBlock extends AbstractCandleBlock {
     private static final VoxelShape CAKE_SHAPE = Block.createCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D);
     private static final VoxelShape CANDLE_SHAPE = Block.createCuboidShape(7.0D, 8.0D, 7.0D, 9.0D, 14.0D, 9.0D);
     private static final VoxelShape SHAPE = VoxelShapes.union(CAKE_SHAPE, CANDLE_SHAPE);
-    private static final Map<List<Block>, ADCandleCakeBlock> CANDLES_TO_CANDLE_CAKES = Maps.newHashMap();
+    private static final Map<Pair<Block, Block>, ADCandleCakeBlock> CANDLES_TO_CANDLE_CAKES = Maps.newHashMap();
     private final Block cake;
 
     public ADCandleCakeBlock(Block cake, Block candle, Settings settings) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState().with(LIT, false));
         this.cake = cake;
-        CANDLES_TO_CANDLE_CAKES.put(List.of(cake, candle), this);
+        CANDLES_TO_CANDLE_CAKES.put(new Pair<>(cake, candle), this);
     }
 
     @Override
@@ -71,11 +71,11 @@ public class ADCandleCakeBlock extends AbstractCandleBlock {
     }
 
     public static BlockState getCandleCake(Block cake, Block candle) {
-        return CANDLES_TO_CANDLE_CAKES.get(List.of(cake, candle)).getDefaultState();
+        return CANDLES_TO_CANDLE_CAKES.get(new Pair<>(cake, candle)).getDefaultState();
     }
 
     public static boolean containsCandleCake(Block cake, Block candle) {
-        return CANDLES_TO_CANDLE_CAKES.containsKey(List.of(cake, candle));
+        return CANDLES_TO_CANDLE_CAKES.containsKey(new Pair<>(cake, candle));
     }
 
     protected Iterable<Vec3d> getParticleOffsets(BlockState state) {
