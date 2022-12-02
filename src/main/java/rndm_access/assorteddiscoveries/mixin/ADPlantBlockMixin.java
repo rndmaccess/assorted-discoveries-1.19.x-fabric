@@ -25,11 +25,11 @@ public class ADPlantBlockMixin {
             info.setReturnValue(true);
         }
 
-        if(floor.isIn(ADBlockTags.NETHER_PLANTER_BOXES) && state.isIn(CBlockTags.NETHER_PLANTS)) {
+        if(floor.isIn(ADBlockTags.NETHER_PLANTER_BOXES) && state.isIn(CBlockTags.NETHER_PLANTER_BOX_PLANTS)) {
             info.setReturnValue(true);
         }
 
-        if(floor.isIn(ADBlockTags.OVERWORLD_PLANTER_BOXES) && state.isIn(CBlockTags.OVERWORLD_PLANTS)) {
+        if(floor.isIn(ADBlockTags.OVERWORLD_PLANTER_BOXES) && state.isIn(CBlockTags.OVERWORLD_PLANTER_BOX_PLANTS)) {
             info.setReturnValue(true);
         }
     }

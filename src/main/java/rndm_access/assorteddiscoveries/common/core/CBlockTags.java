@@ -6,8 +6,8 @@ import net.minecraft.util.registry.Registry;
 import rndm_access.assorteddiscoveries.ADReference;
 
 public class CBlockTags {
-    public static final TagKey<Block> OVERWORLD_PLANTS = of("overworld_plants");
-    public static final TagKey<Block> NETHER_PLANTS = of("nether_plants");
+    public static final TagKey<Block> OVERWORLD_PLANTER_BOX_PLANTS = of("overworld_planter_box_plants");
+    public static final TagKey<Block> NETHER_PLANTER_BOX_PLANTS = of("nether_planter_box_plants");
 
     /**
      * @param path The name of the tag.
