@@ -1,8 +1,6 @@
 {
-  "parent": "block/cube_bottom_top",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "bottom": "minecraft:block/netherrack",
-    "top": "assorteddiscoveries:block/weeping_netherrack_top",
-    "side": "assorteddiscoveries:block/weeping_netherrack_side"
+    "all": "assorteddiscoveries:block/weeping_netherrack"
   }
 }
