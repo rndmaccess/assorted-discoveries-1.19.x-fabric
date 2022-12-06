@@ -1,8 +1,6 @@
 {
-  "parent": "assorteddiscoveries:block/template_wall_side_bottom_top",
+  "parent": "minecraft:block/template_wall_side",
   "textures": {
-    "top": "assorteddiscoveries:block/twisted_netherrack_top",
-    "bottom": "minecraft:block/netherrack",
-    "side": "assorteddiscoveries:block/twisted_netherrack_side"
+    "wall": "assorteddiscoveries:block/twisted_netherrack"
   }
 }
