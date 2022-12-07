@@ -1,8 +1,8 @@
 {
-  "parent": "block/slab",
+  "parent": "minecraft:block/slab",
   "textures": {
-    "bottom": "minecraft:block/netherrack",
-    "top": "assorteddiscoveries:block/twisted_netherrack_top",
-    "side": "assorteddiscoveries:block/twisted_netherrack_side"
+    "bottom": "assorteddiscoveries:block/twisted_netherrack",
+    "top": "assorteddiscoveries:block/twisted_netherrack",
+    "side": "assorteddiscoveries:block/twisted_netherrack"
   }
 }
