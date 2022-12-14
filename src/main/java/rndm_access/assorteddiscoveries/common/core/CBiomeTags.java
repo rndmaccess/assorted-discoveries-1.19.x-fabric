@@ -5,7 +5,7 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
 import rndm_access.assorteddiscoveries.ADReference;
 
-public class ADBiomeTags {
+public class CBiomeTags {
     public static final TagKey<Biome> ORE_SMOKY_QUARTZ = of("has_feature/ore_smoky_quartz");
     public static final TagKey<Biome> PATCH_BLUEBERRY_BUSH = of("has_feature/patch_blueberry_bush");
     public static final TagKey<Biome> PATCH_CATTAIL = of("has_feature/patch_cattail");
@@ -17,6 +17,6 @@ public class ADBiomeTags {
     public static final TagKey<Biome> WEEPING_HEART = of("has_feature/weeping_heart");
 
     private static TagKey<Biome> of(String path) {
-        return TagKey.of(Registry.BIOME_KEY, ADReference.makeId(path));
+        return TagKey.of(Registry.BIOME_KEY, ADReference.makeCommonId(path));
     }
 }

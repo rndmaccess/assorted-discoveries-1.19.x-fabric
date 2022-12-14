@@ -1,6 +1,6 @@
 {
   "type": "minecraft:jigsaw",
-  "biomes": "#assorteddiscoveries:has_structure/cabin_taiga",
+  "biomes": "#c:has_structure/cabin_taiga",
   "step": "surface_structures",
   "spawn_overrides": {},
   "terrain_adaptation": "beard_thin",

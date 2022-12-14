@@ -56,29 +56,29 @@ public class AssortedDiscoveries implements ModInitializer {
 	}
 
 	private static void addFeaturesToBiomes() {
-		BiomeModifications.addFeature(BiomeSelectors.tag(ADBiomeTags.PATCH_CATTAIL),
+		BiomeModifications.addFeature(BiomeSelectors.tag(CBiomeTags.PATCH_CATTAIL),
 				GenerationStep.Feature.VEGETAL_DECORATION, ADPlacedFeatureKeys.PATCH_CATTAIL);
-		BiomeModifications.addFeature(BiomeSelectors.tag(ADBiomeTags.ORE_SMOKY_QUARTZ),
+		BiomeModifications.addFeature(BiomeSelectors.tag(CBiomeTags.ORE_SMOKY_QUARTZ),
 				GenerationStep.Feature.UNDERGROUND_ORES, ADPlacedFeatureKeys.ORE_SMOKY_QUARTZ);
-		BiomeModifications.addFeature(BiomeSelectors.tag(ADBiomeTags.PATCH_HUGE_PURPLE_MUSHROOM),
+		BiomeModifications.addFeature(BiomeSelectors.tag(CBiomeTags.PATCH_HUGE_PURPLE_MUSHROOM),
 				GenerationStep.Feature.VEGETAL_DECORATION, ADPlacedFeatureKeys.PATCH_HUGE_PURPLE_MUSHROOM);
-		BiomeModifications.addFeature(BiomeSelectors.tag(ADBiomeTags.PATCH_BLUEBERRY_BUSH),
+		BiomeModifications.addFeature(BiomeSelectors.tag(CBiomeTags.PATCH_BLUEBERRY_BUSH),
 				GenerationStep.Feature.VEGETAL_DECORATION, ADPlacedFeatureKeys.PATCH_BLUEBERRY_COMMON);
-		BiomeModifications.addFeature(BiomeSelectors.tag(ADBiomeTags.PATCH_BLUEBERRY_BUSH),
+		BiomeModifications.addFeature(BiomeSelectors.tag(CBiomeTags.PATCH_BLUEBERRY_BUSH),
 				GenerationStep.Feature.VEGETAL_DECORATION, ADPlacedFeatureKeys.PATCH_BLUEBERRY_RARE);
-		BiomeModifications.addFeature(BiomeSelectors.tag(ADBiomeTags.PATCH_WITCHS_CRADLE),
+		BiomeModifications.addFeature(BiomeSelectors.tag(CBiomeTags.PATCH_WITCHS_CRADLE),
 				GenerationStep.Feature.VEGETAL_DECORATION, ADPlacedFeatureKeys.PATCH_WITCHS_CRADLE_COMMON);
-		BiomeModifications.addFeature(BiomeSelectors.tag(ADBiomeTags.PATCH_WITCHS_CRADLE),
+		BiomeModifications.addFeature(BiomeSelectors.tag(CBiomeTags.PATCH_WITCHS_CRADLE),
 				GenerationStep.Feature.VEGETAL_DECORATION, ADPlacedFeatureKeys.PATCH_WITCHS_CRADLE_RARE);
-		BiomeModifications.addFeature(BiomeSelectors.tag(ADBiomeTags.PATCH_ENDER_PLANTS),
+		BiomeModifications.addFeature(BiomeSelectors.tag(CBiomeTags.PATCH_ENDER_PLANTS),
 				GenerationStep.Feature.VEGETAL_DECORATION, ADPlacedFeatureKeys.PATCH_ENDER_PLANTS);
-		BiomeModifications.addFeature(BiomeSelectors.tag(ADBiomeTags.BLOOD_KELP),
+		BiomeModifications.addFeature(BiomeSelectors.tag(CBiomeTags.BLOOD_KELP),
 				GenerationStep.Feature.VEGETAL_DECORATION, ADPlacedFeatureKeys.BLOOD_KELP);
-		BiomeModifications.addFeature(BiomeSelectors.tag(ADBiomeTags.ORE_BAUXITE),
+		BiomeModifications.addFeature(BiomeSelectors.tag(CBiomeTags.ORE_BAUXITE),
 				GenerationStep.Feature.UNDERGROUND_ORES, ADPlacedFeatureKeys.ORE_BAUXITE_LOWER);
-		BiomeModifications.addFeature(BiomeSelectors.tag(ADBiomeTags.ORE_BAUXITE),
+		BiomeModifications.addFeature(BiomeSelectors.tag(CBiomeTags.ORE_BAUXITE),
 				GenerationStep.Feature.UNDERGROUND_ORES, ADPlacedFeatureKeys.ORE_BAUXITE_UPPER);
-		BiomeModifications.addFeature(BiomeSelectors.tag(ADBiomeTags.WEEPING_HEART),
+		BiomeModifications.addFeature(BiomeSelectors.tag(CBiomeTags.WEEPING_HEART),
 				GenerationStep.Feature.VEGETAL_DECORATION, ADPlacedFeatureKeys.WEEPING_HEART);
 	}
 

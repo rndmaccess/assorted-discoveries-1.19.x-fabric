@@ -1,6 +1,6 @@
 {
   "type": "minecraft:jigsaw",
-  "biomes": "#assorteddiscoveries:has_structure/cabin_birch_forest",
+  "biomes": "#c:has_structure/cabin_birch_forest",
   "step": "surface_structures",
   "spawn_overrides": {},
   "terrain_adaptation": "beard_thin",
