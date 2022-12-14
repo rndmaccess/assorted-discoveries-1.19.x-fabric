@@ -1,6 +1,6 @@
 {
   "type": "minecraft:jigsaw",
-  "biomes": "#assorteddiscoveries:has_structure/nether_cabin_warped_forest",
+  "biomes": "#c:has_structure/nether_cabin_warped_forest",
   "step": "surface_structures",
   "spawn_overrides": {},
   "terrain_adaptation": "beard_thin",
