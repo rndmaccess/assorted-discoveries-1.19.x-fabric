@@ -5,12 +5,17 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "ADBoneMealItemMixin",
+    "ADCropBlockMixin",
     "ADEntityAccessor",
+    "ADFungusBlockMixin",
     "ADLivingEntityMixin",
+    "ADNetherWartBlockMixin",
     "ADPlantBlockMixin",
+    "ADRootsBlockMixin",
     "ADShovelItemMixin",
     "ADSnowyBlockMixin",
-    "ADSpreadableBlockMixin"
+    "ADSpreadableBlockMixin",
+    "ADSproutsBlockMixin"
   ],
   "client": [],
   "injectors": {

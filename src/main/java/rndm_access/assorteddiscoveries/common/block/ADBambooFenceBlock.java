@@ -8,7 +8,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
-import rndm_access.assorteddiscoveries.common.core.ADBlockTags;
+import rndm_access.assorteddiscoveries.common.core.CBlockTags;
 
 public class ADBambooFenceBlock extends FenceBlock {
     public ADBambooFenceBlock(AbstractBlock.Settings settings) {
@@ -22,7 +22,7 @@ public class ADBambooFenceBlock extends FenceBlock {
         Block block = state.getBlock();
         boolean isGate = block instanceof FenceGateBlock && FenceGateBlock.canWallConnect(state, dir);
 
-        return !cannotConnect(state) && neighborIsFullSquare || isGate || state.isIn(ADBlockTags.BAMBOO_FENCES);
+        return !cannotConnect(state) && neighborIsFullSquare || isGate || state.isIn(CBlockTags.BAMBOO_FENCES);
     }
 
     @Override

@@ -7,7 +7,7 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import rndm_access.assorteddiscoveries.common.core.ADBlockTags;
+import rndm_access.assorteddiscoveries.common.core.CBlockTags;
 
 public class ADEnderGrassBlock extends PlantBlock {
     protected static final VoxelShape ENDER_GRASS_SHAPE;
@@ -18,7 +18,7 @@ public class ADEnderGrassBlock extends PlantBlock {
 
     @Override
     public boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isIn(ADBlockTags.ENDER_GRASS_PLANTABLE_ON);
+        return floor.isIn(CBlockTags.ENDER_GRASS_PLANTABLE_ON);
     }
 
     @Override
@@ -30,6 +30,7 @@ public class ADEnderGrassBlock extends PlantBlock {
         world.addParticle(ParticleTypes.PORTAL, x, y, z, 0.0D, 0.0D, 0.0D);
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return ENDER_GRASS_SHAPE;

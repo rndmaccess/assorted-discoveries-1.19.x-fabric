@@ -1,6 +1,9 @@
 package rndm_access.assorteddiscoveries.common.block;
 
-import net.minecraft.block.*;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.SlabBlock;
 import net.minecraft.block.enums.SlabType;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.server.world.ServerWorld;
@@ -14,9 +17,11 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
-import rndm_access.assorteddiscoveries.common.core.ADBlockTags;
 import rndm_access.assorteddiscoveries.common.core.ADBlocks;
+import rndm_access.assorteddiscoveries.common.core.CBlockTags;
 import rndm_access.assorteddiscoveries.common.util.ADBlockStateUtil;
+
+import java.util.Objects;
 
 public class ADGrassSlabBlock extends SlabBlock {
     public static final BooleanProperty SNOWY = Properties.SNOWY;
@@ -30,7 +35,7 @@ public class ADGrassSlabBlock extends SlabBlock {
         BlockPos abovePos = pos.up();
         BlockState aboveState = world.getBlockState(abovePos);
 
-        if (aboveState.isIn(BlockTags.SNOW) || aboveState.isIn(ADBlockTags.SNOW_STAIRS) || aboveState.isIn(ADBlockTags.SNOW_SLABS)) {
+        if (aboveState.isIn(BlockTags.SNOW) || aboveState.isIn(CBlockTags.SNOW_STAIRS) || aboveState.isIn(CBlockTags.SNOW_SLABS)) {
             return true;
         } else if (aboveState.getFluidState().getLevel() == 8) {
             return false;
@@ -43,7 +48,7 @@ public class ADGrassSlabBlock extends SlabBlock {
         World world = context.getWorld();
         BlockPos blockPos = context.getBlockPos().up();
         BlockState blockState = world.getBlockState(blockPos);
-        return super.getPlacementState(context).with(SNOWY, isSnow(world, blockPos, blockState));
+        return Objects.requireNonNull(super.getPlacementState(context)).with(SNOWY, isSnow(world, blockPos, blockState));
     }
 
     @Override
@@ -62,6 +67,7 @@ public class ADGrassSlabBlock extends SlabBlock {
         return state.isIn(BlockTags.SNOW);
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (!canBeGrass(state, world, pos)) {

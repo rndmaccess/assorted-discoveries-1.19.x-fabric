@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import rndm_access.assorteddiscoveries.common.core.ADBlockTags;
+import rndm_access.assorteddiscoveries.common.core.CBlockTags;
 
 @Mixin(SpreadableBlock.class)
 public class ADSpreadableBlockMixin {
@@ -18,7 +18,7 @@ public class ADSpreadableBlockMixin {
                                                        CallbackInfoReturnable<Boolean> info) {
         BlockState blockState = world.getBlockState(pos.up());
 
-        if(blockState.isIn(BlockTags.SNOW) || blockState.isIn(ADBlockTags.SNOW_SLABS) || blockState.isIn(ADBlockTags.SNOW_STAIRS)) {
+        if(blockState.isIn(BlockTags.SNOW) || blockState.isIn(CBlockTags.SNOW_SLABS) || blockState.isIn(CBlockTags.SNOW_STAIRS)) {
             info.setReturnValue(true);
         }
     }
