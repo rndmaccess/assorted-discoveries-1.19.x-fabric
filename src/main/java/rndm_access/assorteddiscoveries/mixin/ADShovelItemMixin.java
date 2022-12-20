@@ -16,8 +16,8 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import rndm_access.assorteddiscoveries.common.core.ADBlockTags;
 import rndm_access.assorteddiscoveries.common.core.ADBlocks;
+import rndm_access.assorteddiscoveries.common.core.CBlockTags;
 
 @Mixin(ShovelItem.class)
 public class ADShovelItemMixin {
@@ -28,7 +28,7 @@ public class ADShovelItemMixin {
         World world = context.getWorld();
         BlockState state = world.getBlockState(pos);
         BlockState aboveState = world.getBlockState(pos.up());
-        boolean isDirtSlab = state.isIn(ADBlockTags.DIRT_SLABS);
+        boolean isDirtSlab = state.isIn(CBlockTags.DIRT_SLABS);
 
         // Add functionality to the shovel so slabs in the dirt slabs tag can be converted to paths.
         if((isDirtSlab && (context.getSide() != Direction.DOWN) && aboveState.isAir())

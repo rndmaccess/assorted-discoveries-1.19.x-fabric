@@ -23,9 +23,9 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
-import rndm_access.assorteddiscoveries.common.core.ADBlockTags;
 import rndm_access.assorteddiscoveries.common.core.ADItems;
 import rndm_access.assorteddiscoveries.common.core.ADParticleTypes;
+import rndm_access.assorteddiscoveries.common.core.CBlockTags;
 
 public class ADWeepingHeartBlock extends Block implements Fertilizable {
     public static final IntProperty AGE = Properties.AGE_3;
@@ -118,7 +118,7 @@ public class ADWeepingHeartBlock extends Block implements Fertilizable {
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         BlockState supportingBlock = world.getBlockState(pos.up());
 
-        return supportingBlock.isIn(ADBlockTags.WEEPING_HEART_PLANTABLE_ON) && !world.isWater(pos);
+        return supportingBlock.isIn(CBlockTags.WEEPING_HEART_PLANTABLE_ON) && !world.isWater(pos);
     }
 
     @SuppressWarnings("deprecation")

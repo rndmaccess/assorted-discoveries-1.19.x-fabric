@@ -13,8 +13,8 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import rndm_access.assorteddiscoveries.common.core.ADBlockTags;
 import rndm_access.assorteddiscoveries.common.core.ADBlocks;
+import rndm_access.assorteddiscoveries.common.core.CBlockTags;
 
 import java.util.Random;
 
@@ -33,7 +33,7 @@ public abstract class ADBoneMealItemMixin {
 
         // Grow snapdragons and ender grass on blocks in the END_BONE_MEALABLE_BLOCKS
         // when using bone meal.
-        if (blockBoneMealed.isIn(ADBlockTags.END_BONE_MEALABLE_BLOCKS) && world.getBlockState(blockPos.up()).isAir()) {
+        if (blockBoneMealed.isIn(CBlockTags.END_BONE_MEALABLE_BLOCKS) && world.getBlockState(blockPos.up()).isAir()) {
             if (!world.isClient()) {
                 growEnderPlants(blockPos, random, world);
             }
@@ -54,9 +54,9 @@ public abstract class ADBoneMealItemMixin {
                 BlockState state = world.getBlockState(mutablePos);
                 BlockState soilState = world.getBlockState(mutablePos.down());
 
-                if (soilState.isIn(ADBlockTags.END_BONE_MEALABLE_BLOCKS) && state.isAir()) {
+                if (soilState.isIn(CBlockTags.END_BONE_MEALABLE_BLOCKS) && state.isAir()) {
 
-                    // There is a 40% chance to get a snapdragon and a 60% chance to get some ender grass.
+                    // There is a 40% chance to grow a snapdragon and a 60% chance to get some ender grass.
                     if(random.nextFloat() <= 0.4) {
                         world.setBlockState(mutablePos, ADBlocks.SNAPDRAGON.getDefaultState());
                     }
