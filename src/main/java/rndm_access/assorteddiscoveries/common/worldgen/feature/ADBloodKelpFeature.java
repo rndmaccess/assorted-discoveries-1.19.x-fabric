@@ -4,6 +4,7 @@ import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.StructureWorldAccess;
@@ -27,37 +28,33 @@ public class ADBloodKelpFeature extends Feature<DefaultFeatureConfig> {
         int x = originPos.getX();
         int z = originPos.getZ();
         int y = world.getTopY(Heightmap.Type.OCEAN_FLOOR, x, z);
-        BlockPos placementPos = new BlockPos(x, y, z);
+        BlockPos.Mutable pos = new BlockPos(x, y, z).mutableCopy();
 
-        return generateBloodKelp(world, random, placementPos);
+        return placeBloodKelpStalk(world, random, pos);
     }
 
-    private boolean generateBloodKelp(StructureWorldAccess world, Random random, BlockPos placementPos) {
-        boolean isWater = world.getFluidState(placementPos).isOf(Fluids.WATER);
+    private boolean placeBloodKelpStalk(StructureWorldAccess world, Random random, BlockPos.Mutable pos) {
+        boolean isWater = world.getFluidState(pos).isOf(Fluids.WATER);
+        int maxLength = 1 + random.nextInt(10);
 
-        if (isWater) {
-            BlockState bloodKelpState = ADBlocks.BLOOD_KELP.getDefaultState();
-            BlockState bloodKelpPlantState = ADBlocks.BLOOD_KELP_PLANT.getDefaultState();
-            int maxLength = 1 + random.nextInt(10);
+        for (int length = 0; length <= maxLength && isWater; ++length) {
+            BlockState state = ADBlocks.BLOOD_KELP.getDefaultState();
+            BlockState plantState = ADBlocks.BLOOD_KELP_PLANT.getDefaultState();
+            boolean canSustainPlant = plantState.canPlaceAt(world, pos);
+            boolean isAboveEmpty = world.getFluidState(pos.up()).isEmpty();
 
-            for (int length = 0; length <= maxLength; ++length) {
-                boolean canSustainBloodKelpPlant = bloodKelpPlantState.canPlaceAt(world, placementPos);
-                boolean isAboveEmpty = world.getFluidState(placementPos.up()).isEmpty();
-
-                if (canSustainBloodKelpPlant && isWater) {
-                    if (isAboveEmpty || length == maxLength) {
-                        world.setBlockState(placementPos, bloodKelpState
-                                .with(ADBloodKelpBlock.LIT, ADBlockStateUtil.isBloodKelpLit(random))
-                                .with(ADBloodKelpBlock.AGE, random.nextInt(4) + 20), 2);
-                        return true;
-                    } else {
-                        world.setBlockState(placementPos, bloodKelpPlantState
-                                .with(ADBloodKelpPlantBlock.LIT, ADBlockStateUtil.isBloodKelpLit(random)), 2);
-                    }
+            if (canSustainPlant) {
+                if (isAboveEmpty || length == maxLength) {
+                    world.setBlockState(pos, state
+                            .with(ADBloodKelpBlock.LIT, ADBlockStateUtil.isBloodKelpLit(random))
+                            .with(ADBloodKelpBlock.AGE, random.nextInt(4) + 20), 2);
+                    return true;
                 }
-                placementPos = placementPos.up();
-                isWater = world.getFluidState(placementPos).isOf(Fluids.WATER);
+                world.setBlockState(pos, plantState
+                        .with(ADBloodKelpPlantBlock.LIT, ADBlockStateUtil.isBloodKelpLit(random)), 2);
             }
+            pos.move(Direction.UP);
+            isWater = world.getFluidState(pos).isOf(Fluids.WATER);
         }
         return false;
     }
