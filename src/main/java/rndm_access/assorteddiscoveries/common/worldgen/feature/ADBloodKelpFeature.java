@@ -24,37 +24,41 @@ public class ADBloodKelpFeature extends Feature<DefaultFeatureConfig> {
     public boolean generate(FeatureContext<DefaultFeatureConfig> context) {
         StructureWorldAccess world = context.getWorld();
         BlockPos originPos = context.getOrigin();
-        Random random = context.getRandom();
         int x = originPos.getX();
         int z = originPos.getZ();
         int y = world.getTopY(Heightmap.Type.OCEAN_FLOOR, x, z);
-        BlockPos.Mutable pos = new BlockPos(x, y, z).mutableCopy();
+        BlockPos.Mutable placePos = new BlockPos(x, y, z).mutableCopy();
 
-        return placeBloodKelpStalk(world, random, pos);
+        return placeBloodKelpStalk(world, context.getRandom(), placePos);
     }
 
-    private boolean placeBloodKelpStalk(StructureWorldAccess world, Random random, BlockPos.Mutable pos) {
-        boolean isWater = world.getFluidState(pos).isOf(Fluids.WATER);
+    private boolean placeBloodKelpStalk(StructureWorldAccess world, Random random, BlockPos.Mutable placePos) {
         int maxLength = 1 + random.nextInt(10);
+        BlockState state = ADBlocks.BLOOD_KELP.getDefaultState();
+        BlockState plantState = ADBlocks.BLOOD_KELP_PLANT.getDefaultState();
+        boolean canSustainPlant = state.canPlaceAt(world, placePos);
+        boolean isInWater = world.getFluidState(placePos).isOf(Fluids.WATER);
 
-        for (int length = 0; length <= maxLength && isWater; ++length) {
-            BlockState state = ADBlocks.BLOOD_KELP.getDefaultState();
-            BlockState plantState = ADBlocks.BLOOD_KELP_PLANT.getDefaultState();
-            boolean canSustainPlant = plantState.canPlaceAt(world, pos);
-            boolean isAboveEmpty = world.getFluidState(pos.up()).isEmpty();
+        if(!canSustainPlant) {
+            return false;
+        }
 
-            if (canSustainPlant) {
-                if (isAboveEmpty || length == maxLength) {
-                    world.setBlockState(pos, state
-                            .with(ADBloodKelpBlock.LIT, ADBlockStateUtil.isBloodKelpLit(random))
-                            .with(ADBloodKelpBlock.AGE, random.nextInt(4) + 20), 2);
-                    return true;
-                }
-                world.setBlockState(pos, plantState
-                        .with(ADBloodKelpPlantBlock.LIT, ADBlockStateUtil.isBloodKelpLit(random)), 2);
+        // Place a stalk of blood kelp
+        for (int length = 0; length <= maxLength && isInWater; ++length) {
+            boolean isAboveEmpty = world.getFluidState(placePos.up()).isEmpty();
+
+            // Top off the blood kelp stalk
+            if (isAboveEmpty || length == maxLength) {
+                world.setBlockState(placePos, state
+                        .with(ADBloodKelpBlock.LIT, ADBlockStateUtil.isBloodKelpLit(random))
+                        .with(ADBloodKelpBlock.AGE, random.nextInt(4) + 20), 2);
+                return true;
             }
-            pos.move(Direction.UP);
-            isWater = world.getFluidState(pos).isOf(Fluids.WATER);
+            world.setBlockState(placePos, plantState
+                    .with(ADBloodKelpPlantBlock.LIT, ADBlockStateUtil.isBloodKelpLit(random)), 2);
+
+            placePos.move(Direction.UP);
+            isInWater = world.getFluidState(placePos).isOf(Fluids.WATER);
         }
         return false;
     }
