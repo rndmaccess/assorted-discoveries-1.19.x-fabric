@@ -39,26 +39,27 @@ public class ADBloodKelpFeature extends Feature<DefaultFeatureConfig> {
         boolean canSustainPlant = state.canPlaceAt(world, placePos);
         boolean isInWater = world.getFluidState(placePos).isOf(Fluids.WATER);
 
-        if(!canSustainPlant) {
+        if(!canSustainPlant || !isInWater) {
             return false;
         }
 
-        // Place a stalk of blood kelp
-        for (int length = 0; length <= maxLength && isInWater; ++length) {
+        // Place a stalk of blood kelp.
+        for (int length = 0; length <= maxLength; ++length) {
             boolean isAboveEmpty = world.getFluidState(placePos.up()).isEmpty();
 
-            // Top off the blood kelp stalk
+            // Top off the blood kelp stalk with a head block.
             if (isAboveEmpty || length == maxLength) {
                 world.setBlockState(placePos, state
                         .with(ADBloodKelpBlock.LIT, ADBlockStateUtil.isBloodKelpLit(random))
                         .with(ADBloodKelpBlock.AGE, random.nextInt(4) + 20), 2);
                 return true;
             }
+
+            // Place the next blood kelp body block.
             world.setBlockState(placePos, plantState
                     .with(ADBloodKelpPlantBlock.LIT, ADBlockStateUtil.isBloodKelpLit(random)), 2);
 
             placePos.move(Direction.UP);
-            isInWater = world.getFluidState(placePos).isOf(Fluids.WATER);
         }
         return false;
     }
