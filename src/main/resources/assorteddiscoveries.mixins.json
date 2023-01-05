@@ -15,7 +15,8 @@
     "ADShovelItemMixin",
     "ADSnowyBlockMixin",
     "ADSpreadableBlockMixin",
-    "ADSproutsBlockMixin"
+    "ADSproutsBlockMixin",
+    "ADTrunkPlacerMixin"
   ],
   "client": [],
   "injectors": {
