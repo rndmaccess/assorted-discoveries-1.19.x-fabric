@@ -9,7 +9,7 @@
       "item": "minecraft:iron_ingot"
     },
     "#": {
-      "item": "minecraft:mossy_cobblestone"
+      "tag": "minecraft:planks"
     }
   },
   "result": {

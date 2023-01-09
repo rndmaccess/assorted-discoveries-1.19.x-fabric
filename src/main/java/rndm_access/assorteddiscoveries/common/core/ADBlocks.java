@@ -207,7 +207,8 @@ public class ADBlocks {
     public static final Block PURPLE_MUSHROOM = new MushroomPlantBlock(AbstractBlock.Settings.copy(Blocks.RED_MUSHROOM),
             () -> ADConfiguredFeatures.HUGE_PURPLE_MUSHROOM);
     public static final Block PURPLE_MUSHROOM_BLOCK = new ADPurpleMushroomBlock(AbstractBlock.Settings.copy(Blocks.RED_MUSHROOM_BLOCK));
-    public static final Block WOODCUTTER = new ADWoodcutterBlock(AbstractBlock.Settings.copy(Blocks.STONECUTTER));
+    public static final Block WOODCUTTER = new ADWoodcutterBlock(AbstractBlock.Settings.of(Material.WOOD)
+            .strength(2.5F).sounds(BlockSoundGroup.WOOD));
     public static final Block WHITE_CAMPFIRE = dyedCampfireBlock(ADParticleTypes.WHITE_SPARK);
     public static final Block ORANGE_CAMPFIRE = dyedCampfireBlock(ADParticleTypes.ORANGE_SPARK);
     public static final Block MAGENTA_CAMPFIRE = dyedCampfireBlock(ADParticleTypes.MAGENTA_SPARK);
