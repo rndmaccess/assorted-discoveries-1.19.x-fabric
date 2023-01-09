@@ -1,7 +1,7 @@
 {
   "type": "assorteddiscoveries:woodcutting",
   "ingredient": {
-    "item": "byg:blue_enchanted_log"
+    "item": "byg:stripped_blue_enchanted_log"
   },
   "result": "byg:stripped_blue_enchanted_wood",
   "count": 1,
