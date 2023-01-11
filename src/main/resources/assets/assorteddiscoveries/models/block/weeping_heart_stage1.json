@@ -1,6 +1,6 @@
 {
-  "parent": "assorteddiscoveries:block/template_weeping_heart",
+  "parent": "minecraft:block/cross",
   "textures": {
-    "vines": "assorteddiscoveries:block/weeping_heart_vines_stage1"
+	"cross": "assorteddiscoveries:block/weeping_heart_stage1"
   }
 }

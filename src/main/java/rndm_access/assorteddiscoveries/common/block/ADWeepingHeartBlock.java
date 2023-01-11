@@ -1,6 +1,9 @@
 package rndm_access.assorteddiscoveries.common.block;
 
-import net.minecraft.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.Fertilizable;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ItemStack;
@@ -18,7 +21,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.random.Random;
-import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
@@ -29,7 +31,6 @@ import rndm_access.assorteddiscoveries.common.core.CBlockTags;
 
 public class ADWeepingHeartBlock extends Block implements Fertilizable {
     public static final IntProperty AGE = Properties.AGE_3;
-    private static final VoxelShape SHAPE = Block.createCuboidShape(2.0D, 13.0D, 2.0D, 14.0D, 16.0D, 14.0D);
 
     public ADWeepingHeartBlock(Settings settings) {
         super(settings);
@@ -41,29 +42,37 @@ public class ADWeepingHeartBlock extends Block implements Fertilizable {
         return ADItems.WEEPING_HEART_SEEDS.getDefaultStack();
     }
 
+    @Override
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-        int i = pos.getX();
-        int j = pos.getY();
-        int k = pos.getZ();
-        double d = (double)i + random.nextDouble();
-        double e = (double)j + 0.7D;
-        double f = (double)k + random.nextDouble();
+        int xOrigin = pos.getX();
+        int yOrigin = pos.getY();
+        int zOrigin = pos.getZ();
+        double fallingX = xOrigin + random.nextDouble();
+        double fallingY = yOrigin + 0.7D;
+        double fallingZ = zOrigin + random.nextDouble();
 
+        // When the weeping heart has nectar play the particles.
         if(state.get(AGE) >= 2) {
-            world.addParticle(ADParticleTypes.FALLING_WEEPING_HEART_NECTAR, d, e, f, 0.0D, 0.0D, 0.0D);
+            // Play dripping particles under the plant.
+            world.addParticle(ADParticleTypes.FALLING_WEEPING_HEART_NECTAR, fallingX, fallingY, fallingZ,
+                    0.0D, 0.0D, 0.0D);
             BlockPos.Mutable mutable = new BlockPos.Mutable();
 
+            // Play air particles that float around the plant.
             for(int l = 0; l < 14; ++l) {
-                mutable.set(i + MathHelper.nextInt(random, -10, 10),
-                        j - random.nextInt(10),
-                        k + MathHelper.nextInt(random, -10, 10));
+                int floatingXOrigin = xOrigin + MathHelper.nextInt(random, -10, 10);
+                int floatingYOrigin = yOrigin - random.nextInt(10);
+                int floatingZOrigin = zOrigin + MathHelper.nextInt(random, -10, 10);
+
+                mutable.set(floatingXOrigin, floatingYOrigin, floatingZOrigin);
                 BlockState blockState = world.getBlockState(mutable);
 
                 if (!blockState.isFullCube(world, mutable)) {
-                    world.addParticle(ADParticleTypes.WEEPING_HEART_AIR_NECTAR,
-                            (double)mutable.getX() + random.nextDouble(),
-                            (double)mutable.getY() + random.nextDouble(),
-                            (double)mutable.getZ() + random.nextDouble(),
+                    double floatingX = mutable.getX() + random.nextDouble();
+                    double floatingY = mutable.getY() + random.nextDouble();
+                    double floatingZ = mutable.getZ() + random.nextDouble();
+
+                    world.addParticle(ADParticleTypes.WEEPING_HEART_AIR_NECTAR, floatingX, floatingY, floatingZ,
                             0.0D, 0.0D, 0.0D);
                 }
             }
@@ -74,43 +83,40 @@ public class ADWeepingHeartBlock extends Block implements Fertilizable {
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack heldStack = player.getStackInHand(hand);
-        boolean holdingBoneMeal = heldStack.isOf(Items.BONE_MEAL);
-        boolean holdingBucket = heldStack.isOf(Items.BUCKET);
 
-        if (!holdingBoneMeal && holdingBucket && state.get(AGE) == 3) {
-            givePlayerNectar(player, hand);
-            resetWeepingHeart(state, world, pos);
+        // Fill the held bucket with nectar when the player clicks the plant.
+        if (!heldStack.isOf(Items.BONE_MEAL) && heldStack.isOf(Items.BUCKET) && state.get(AGE) == 3) {
+            this.givePlayerNectar(player, hand);
+            this.clearNectar(state, world, pos);
             return ActionResult.success(world.isClient);
         }
         return ActionResult.PASS;
     }
 
     private void givePlayerNectar(PlayerEntity player, Hand hand) {
-        ItemStack nectarBucketStack = new ItemStack(ADItems.WEEPING_HEART_NECTAR_BUCKET);
+        ItemStack nectarBucket = new ItemStack(ADItems.WEEPING_HEART_NECTAR_BUCKET);
         
         player.playSound(SoundEvents.BLOCK_BEEHIVE_DRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
         if(player.isCreative()) {
             PlayerInventory playerInventory = player.getInventory();
 
-            if(!playerInventory.contains(nectarBucketStack)) {
-                player.giveItemStack(nectarBucketStack);
+            if(!playerInventory.contains(nectarBucket)) {
+                player.giveItemStack(nectarBucket);
             }
         } else {
             player.getStackInHand(hand).decrement(1);
 
             if(player.getStackInHand(hand).isEmpty()) {
-                player.setStackInHand(hand, nectarBucketStack);
+                player.setStackInHand(hand, nectarBucket);
             } else {
-                player.giveItemStack(nectarBucketStack);
+                player.giveItemStack(nectarBucket);
             }
         }
     }
 
-    private void resetWeepingHeart(BlockState state, World world, BlockPos pos) {
-        BlockState blockState = state.with(AGE, 0);
-
-        world.setBlockState(pos, blockState);
+    private void clearNectar(BlockState state, World world, BlockPos pos) {
+        world.setBlockState(pos, state.with(AGE, 1));
     }
 
     @SuppressWarnings("deprecation")
@@ -130,12 +136,6 @@ public class ADWeepingHeartBlock extends Block implements Fertilizable {
                 : state;
     }
 
-    @SuppressWarnings("deprecation")
-    @Override
-    public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return SHAPE;
-    }
-
     @Override
     public boolean isFertilizable(BlockView world, BlockPos pos, BlockState state, boolean isClient) {
         return state.get(AGE) < 3;
@@ -148,8 +148,7 @@ public class ADWeepingHeartBlock extends Block implements Fertilizable {
 
     @Override
     public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
-        int i = Math.min(3, state.get(AGE) + 1);
-        world.setBlockState(pos, state.with(AGE, i), 2);
+        world.setBlockState(pos, state.with(AGE, Math.min(3, state.get(AGE) + 1)), 2);
     }
 
     @Override
