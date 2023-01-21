@@ -11,30 +11,26 @@ import java.util.List;
 public final class ADVoxelShapeHelper {
     private ADVoxelShapeHelper() {}
 
-    /**
-     * @param source The north variant of the shape.
-     * @return A hashmap that has all rotated shapes.
-     */
-    public static HashMap<Direction, VoxelShape> getShapeRotationsAsMap(VoxelShape source) {
+    public static HashMap<Direction, VoxelShape> makeShapeRotationMap(VoxelShape northShape) {
         HashMap<Direction, VoxelShape> shapes = new HashMap<>();
-        Direction north = Direction.NORTH;
-        Direction south = Direction.SOUTH;
-        Direction east = Direction.EAST;
-        Direction west = Direction.WEST;
 
-        shapes.put(north, source);
-        shapes.put(south, rotate(source, south));
-        shapes.put(east, rotate(source, east));
-        shapes.put(west, rotate(source, west));
+        for(Direction direction : Direction.values()) {
+            if(direction.getAxis().isHorizontal()) {
+                shapes.put(direction, rotate(northShape, direction));
+            }
+        }
         return shapes;
     }
 
-    /**
-     * @param source The north variant of the shape.
-     * @return A list that has all rotated shapes.
-     */
-    public static List<VoxelShape> getShapeRotationsAsList(VoxelShape source) {
-        return ImmutableList.of(source, rotate(source, Direction.SOUTH), rotate(source, Direction.WEST), rotate(source, Direction.EAST));
+    public static List<VoxelShape> makeShapeRotationList(VoxelShape northShape) {
+        ImmutableList.Builder<VoxelShape> builder = ImmutableList.builder();
+
+        for(Direction direction : Direction.values()) {
+            if(direction.getAxis().isHorizontal()) {
+                builder.add(rotate(northShape, direction));
+            }
+        }
+        return builder.build();
     }
 
     private static VoxelShape rotate(VoxelShape source, Direction direction) {

@@ -26,14 +26,14 @@ public class ADCubePlushBlock extends ADPlushBlock {
     public static final EnumProperty<DoubleBlockHalf> HALF = Properties.DOUBLE_BLOCK_HALF;
 
     private static final VoxelShape NORTH_BOTTOM_SHAPE = Block.createCuboidShape(2.5D, 0.0D, 2.5D, 13.5D, 9.5D, 13.5D);
-    private static final HashMap<Direction, VoxelShape> BOTTOM_SHAPES = ADVoxelShapeHelper.getShapeRotationsAsMap(NORTH_BOTTOM_SHAPE);
+    private static final HashMap<Direction, VoxelShape> BOTTOM_SHAPES = ADVoxelShapeHelper.makeShapeRotationMap(NORTH_BOTTOM_SHAPE);
 
     private static final VoxelShape NORTH_TEMP_MIDDLE_SHAPE = Block.createCuboidShape(3.5D, 7.0D, 3.5D, 12.5D, 16.5D, 12.5D);
     private static final VoxelShape NORTH_MIDDLE_SHAPE = VoxelShapes.union(NORTH_BOTTOM_SHAPE, NORTH_TEMP_MIDDLE_SHAPE);
-    private static final HashMap<Direction, VoxelShape> MIDDLE_SHAPES = ADVoxelShapeHelper.getShapeRotationsAsMap(NORTH_MIDDLE_SHAPE);
+    private static final HashMap<Direction, VoxelShape> MIDDLE_SHAPES = ADVoxelShapeHelper.makeShapeRotationMap(NORTH_MIDDLE_SHAPE);
 
     private static final VoxelShape NORTH_TOP_SHAPE = Block.createCuboidShape(5.5D, 0.0D, 5.5D, 10.5D, 4.5D, 10.5D);
-    private static final HashMap<Direction, VoxelShape> TOP_SHAPES = ADVoxelShapeHelper.getShapeRotationsAsMap(NORTH_TOP_SHAPE);
+    private static final HashMap<Direction, VoxelShape> TOP_SHAPES = ADVoxelShapeHelper.makeShapeRotationMap(NORTH_TOP_SHAPE);
 
     public ADCubePlushBlock(AbstractBlock.Settings settings) {
         super(settings);

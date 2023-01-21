@@ -15,7 +15,6 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import org.jetbrains.annotations.Nullable;
 import rndm_access.assorteddiscoveries.common.util.ADVoxelShapeHelper;
@@ -44,28 +43,28 @@ public class ADPlanterBoxBlock extends Block {
     private static HashMap<List<Boolean>, VoxelShape> composeRotatedShapes() {
         VoxelShape bottomShape = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 15.0, 16.0);
         VoxelShape northBorderShape = Block.createCuboidShape(0.0, 15.0, 13.0, 16.0, 16.0, 16.0);
-        List<VoxelShape> borderShapes = ADVoxelShapeHelper.getShapeRotationsAsList(northBorderShape);
-        double setSize = 4;
-        double power_set_size = Math.pow(2, setSize);
-        HashMap<List<Boolean>, VoxelShape> map = new HashMap<>();
+        List<VoxelShape> borderShapes = ADVoxelShapeHelper.makeShapeRotationList(northBorderShape);
+        double borderNum = 4;
+        double stateNum = Math.pow(2, borderNum);
+        HashMap<List<Boolean>, VoxelShape> shapes = new HashMap<>();
 
-        // Add every subset to the map which covers every possible shape for every state these blocks.
-        for (int i = 0; i < power_set_size; i++) {
-            ArrayList<Boolean> edges = new ArrayList<>(4);
+        // Generate a map of shapes for each state that the planter box can be in.
+        for (int i = 0; i < stateNum; i++) {
+            ArrayList<Boolean> borders = new ArrayList<>(4);
             VoxelShape tempBorderShape = VoxelShapes.empty();
 
-            for (int j = 0; j < setSize; j++) {
-                // If this bit is on we know there has to be an edge on the planter box.
+            for (int j = 0; j < borderNum; j++) {
+                // When this bit is on there is a border here!!!
                 if (((i >> j) & 0x01) == 1) {
-                    edges.add(false);
+                    borders.add(false);
                     tempBorderShape = VoxelShapes.union(tempBorderShape, borderShapes.get(j));
                 } else {
-                    edges.add(true);
+                    borders.add(true);
                 }
             }
-            map.put(edges, VoxelShapes.union(tempBorderShape, bottomShape));
+            shapes.put(borders, VoxelShapes.union(tempBorderShape, bottomShape));
         }
-        return map;
+        return shapes;
     }
 
     @Override
@@ -79,19 +78,19 @@ public class ADPlanterBoxBlock extends Block {
     @Nullable
     @Override
     public BlockState getPlacementState(ItemPlacementContext context) {
-        BlockPos pos = context.getBlockPos();
-        World world = context.getWorld();
-        return getPlanterBoxState(this.getDefaultState(), world, pos);
+        return getPlanterBoxState(this.getDefaultState(), context.getWorld(), context.getBlockPos());
     }
 
     @Override
     @SuppressWarnings("deprecation")
-    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
+    public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
+                                                WorldAccess world, BlockPos pos, BlockPos neighborPos) {
         return getPlanterBoxState(state, world, pos);
     }
 
     private BlockState getPlanterBoxState(BlockState state, WorldAccess world, BlockPos pos) {
-        return state.with(NORTH, world.getBlockState(pos.north()).isOf(this))
+        return state
+                .with(NORTH, world.getBlockState(pos.north()).isOf(this))
                 .with(SOUTH, world.getBlockState(pos.south()).isOf(this))
                 .with(WEST, world.getBlockState(pos.west()).isOf(this))
                 .with(EAST, world.getBlockState(pos.east()).isOf(this));
@@ -105,64 +104,44 @@ public class ADPlanterBoxBlock extends Block {
     @SuppressWarnings("deprecation")
     public BlockState rotate(BlockState state, BlockRotation rotation) {
         BlockState rotatedState = this.getDefaultState();
-        boolean north = state.get(NORTH);
-        boolean south = state.get(SOUTH);
-        boolean west = state.get(WEST);
-        boolean east = state.get(EAST);
-        boolean hasNone = north && south && west && east;
-        boolean hasAll = !north && !south && !west && !east;
+        boolean hasNorthBorder = state.get(NORTH);
+        boolean hasSouthBorder = state.get(SOUTH);
+        boolean hasWestBorder = state.get(WEST);
+        boolean hasEastBorder = state.get(EAST);
+        boolean hasNoBorders = hasNorthBorder && hasSouthBorder && hasWestBorder && hasEastBorder;
+        boolean hasAllBorders = !hasNorthBorder && !hasSouthBorder && !hasWestBorder && !hasEastBorder;
 
-        // If the block is surrounded by borders or has no borders. Then we don't have
-        // to rotate it.
-        if (!(hasAll || hasNone)) {
-            switch (rotation) {
-            case CLOCKWISE_180:
-                if (south) {
-                    rotatedState = rotatedState.with(NORTH, true);
-                }
-                if (north) {
-                    rotatedState = rotatedState.with(SOUTH, true);
-                }
-                if (east) {
-                    rotatedState = rotatedState.with(WEST, true);
-                }
-                if (west) {
-                    rotatedState = rotatedState.with(EAST, true);
-                }
-                return rotatedState;
-            case CLOCKWISE_90:
-                if (south) {
-                    rotatedState = rotatedState.with(WEST, true);
-                }
-                if (north) {
-                    rotatedState = rotatedState.with(EAST, true);
-                }
-                if (east) {
-                    rotatedState = rotatedState.with(SOUTH, true);
-                }
-                if (west) {
-                    rotatedState = rotatedState.with(NORTH, true);
-                }
-                return rotatedState;
-            case COUNTERCLOCKWISE_90:
-                if (south) {
-                    rotatedState = rotatedState.with(EAST, true);
-                }
-                if (north) {
-                    rotatedState = rotatedState.with(WEST, true);
-                }
-                if (east) {
-                    rotatedState = rotatedState.with(NORTH, true);
-                }
-                if (west) {
-                    rotatedState = rotatedState.with(SOUTH, true);
-                }
-                return rotatedState;
-            default:
+        // If the block is surrounded by borders or has no borders. Then we don't have to rotate it.
+        if (!(hasAllBorders || hasNoBorders)) {
+            return state;
+        }
+
+        switch (rotation) {
+            case CLOCKWISE_180 -> {
+                return rotatedState
+                        .with(NORTH, hasSouthBorder)
+                        .with(SOUTH, hasNorthBorder)
+                        .with(WEST, hasEastBorder)
+                        .with(EAST, hasWestBorder);
+            }
+            case CLOCKWISE_90 -> {
+                return rotatedState
+                        .with(WEST, hasSouthBorder)
+                        .with(EAST, hasNorthBorder)
+                        .with(SOUTH, hasEastBorder)
+                        .with(NORTH, hasWestBorder);
+            }
+            case COUNTERCLOCKWISE_90 -> {
+                return rotatedState
+                        .with(EAST, hasSouthBorder)
+                        .with(WEST, hasNorthBorder)
+                        .with(NORTH, hasEastBorder)
+                        .with(SOUTH, hasWestBorder);
+            }
+            default -> {
                 return state;
             }
         }
-        return state;
     }
 
     @Override

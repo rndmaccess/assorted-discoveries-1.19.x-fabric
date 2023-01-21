@@ -15,7 +15,7 @@ public abstract class ADAbstractDirectionalPlushBlock extends ADPlushBlock {
 
     protected ADAbstractDirectionalPlushBlock(Settings settings, VoxelShape northShape) {
         super(settings);
-        this.shapes = ADVoxelShapeHelper.getShapeRotationsAsMap(northShape);
+        this.shapes = ADVoxelShapeHelper.makeShapeRotationMap(northShape);
     }
 
     @Override
