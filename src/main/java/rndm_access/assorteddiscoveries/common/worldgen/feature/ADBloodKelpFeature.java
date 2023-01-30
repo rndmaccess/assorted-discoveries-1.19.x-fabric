@@ -13,10 +13,10 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
 import rndm_access.assorteddiscoveries.common.block.ADBloodKelpBlock;
 import rndm_access.assorteddiscoveries.common.block.ADBloodKelpPlantBlock;
+import rndm_access.assorteddiscoveries.common.block.ADBloodKelp;
 import rndm_access.assorteddiscoveries.common.core.ADBlocks;
-import rndm_access.assorteddiscoveries.common.util.ADBlockStateUtil;
 
-public class ADBloodKelpFeature extends Feature<DefaultFeatureConfig> {
+public class ADBloodKelpFeature extends Feature<DefaultFeatureConfig> implements ADBloodKelp {
     public ADBloodKelpFeature(Codec<DefaultFeatureConfig> configCodec) {
         super(configCodec);
     }
@@ -50,14 +50,14 @@ public class ADBloodKelpFeature extends Feature<DefaultFeatureConfig> {
             // Top off the blood kelp stalk with a head block.
             if (isAboveEmpty || length == maxLength) {
                 world.setBlockState(placePos, state
-                        .with(ADBloodKelpBlock.LIT, ADBlockStateUtil.isBloodKelpLit(random))
+                        .with(ADBloodKelpBlock.LIT, ADBloodKelp.isLit(random))
                         .with(ADBloodKelpBlock.AGE, random.nextInt(4) + 20), 2);
                 return true;
             }
 
             // Place the next blood kelp body block.
             world.setBlockState(placePos, plantState
-                    .with(ADBloodKelpPlantBlock.LIT, ADBlockStateUtil.isBloodKelpLit(random)), 2);
+                    .with(ADBloodKelpPlantBlock.LIT, ADBloodKelp.isLit(random)), 2);
 
             placePos.move(Direction.UP);
         }
