@@ -474,8 +474,8 @@ public class ADBlocks {
     public static final Block MAROON_CONCRETE_POWDER = new ConcretePowderBlock(MAROON_CONCRETE, AbstractBlock.Settings.of(
             Material.AGGREGATE, MapColor.DARK_RED).strength(0.5F).sounds(BlockSoundGroup.SAND));
     public static final Block MAROON_CANDLE_CAKE = new CandleCakeBlock(MAROON_CANDLE, AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
-    public static final Block WEEPING_HEART = new ADWeepingHeartBlock(AbstractBlock.Settings.of(Material.PLANT).ticksRandomly()
-            .breakInstantly().noCollision().sounds(BlockSoundGroup.SPORE_BLOSSOM).luminance(getCropLuminanceFromState()));
+    public static final Block WEEPING_HEART = new ADWeepingHeartBlock(AbstractBlock.Settings.of(Material.PLANT)
+            .breakInstantly().noCollision().sounds(BlockSoundGroup.SPORE_BLOSSOM).luminance((state) -> 10));
     public static final Block MAROON_CANDLE_CHOCOLATE_CAKE = new ADCandleCakeBlock(CHOCOLATE_CAKE, MAROON_CANDLE,
             AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE));
     public static final Block CANDLE_CHOCOLATE_CAKE = new ADCandleCakeBlock(CHOCOLATE_CAKE, Blocks.CANDLE,
@@ -590,10 +590,6 @@ public class ADBlocks {
 
     private static ToIntFunction<BlockState> getLuminanceFromState() {
         return (state) -> state.get(Properties.LIT) ? 10 : 0;
-    }
-
-    private static ToIntFunction<BlockState> getCropLuminanceFromState() {
-        return (state) -> state.get(Properties.AGE_3) >= 2 ? 10 : 0;
     }
 
     private static void register(String path, Block block) {
