@@ -54,7 +54,7 @@ public class ADPlanterBoxBlock extends Block {
             VoxelShape tempBorderShape = VoxelShapes.empty();
 
             for (int j = 0; j < borderNum; j++) {
-                // When this bit is on there is a border here!!!
+                // When this bit is on there is a closed border here!!!
                 if (((i >> j) & 0x01) == 1) {
                     borders.add(false);
                     tempBorderShape = VoxelShapes.union(tempBorderShape, borderShapes.get(j));

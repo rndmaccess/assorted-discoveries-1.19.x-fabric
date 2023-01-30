@@ -398,6 +398,7 @@ public class ADItems {
     public static final Item MAROON_DYE = item();
     public static final Item HOGLIN_STEW = new ADFoodContainerItem(makeSettings(ADFoodComponents.HOGLIN_STEW, 1));
     public static final Item WEEPING_HEART = blockItem(ADBlocks.WEEPING_HEART);
+    public static final Item JUNGLE_SNARE = blockItem(ADBlocks.JUNGLE_SNARE);
 
     private static Item item() {
         return new Item(makeSettings());
@@ -825,6 +826,7 @@ public class ADItems {
         register("maroon_dye", MAROON_DYE);
         register("hoglin_stew", HOGLIN_STEW);
         register("weeping_heart", WEEPING_HEART);
+        register("jungle_snare", JUNGLE_SNARE);
 
         AssortedDiscoveries.LOGGER.info("Registered Items");
     }

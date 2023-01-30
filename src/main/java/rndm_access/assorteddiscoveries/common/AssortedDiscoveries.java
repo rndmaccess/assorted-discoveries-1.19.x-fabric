@@ -30,6 +30,10 @@ public class AssortedDiscoveries implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		/**
+		 * TODO: figure out how to replace all weeping heart seeds with weeping hearts.
+		 */
+
 		// General Registries
 		ADBlocks.registerBlocks();
 		ADItems.registerItems();
