@@ -27,6 +27,10 @@ public class ADBloodKelpPlantBlock extends KelpPlantBlock implements ADBloodKelp
         return (AbstractPlantStemBlock) ADBlocks.BLOOD_KELP;
     }
 
+    public BlockState getPlantState(Random random) {
+        return this.getDefaultState().with(LIT, ADBloodKelp.isLit(random));
+    }
+
     @Override
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState,
                                                 WorldAccess world, BlockPos pos, BlockPos neighborPos) {

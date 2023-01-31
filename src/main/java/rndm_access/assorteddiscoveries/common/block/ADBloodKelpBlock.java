@@ -41,12 +41,11 @@ public class ADBloodKelpBlock extends KelpBlock implements ADBloodKelp {
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         BlockPos newStemPos = pos.offset(this.growthDirection);
-        boolean isStemLit = state.get(LIT);
         int age = state.get(AGE);
 
         if (age < 25 && this.chooseStemState(world.getBlockState(newStemPos))) {
-            world.setBlockState(pos, this.getPlant().getDefaultState().with(ADBloodKelpPlantBlock.LIT, isStemLit), 2);
-            world.setBlockState(newStemPos, this.getBloodKelpState(random).with(AGE, age).cycle(AGE));
+            world.setBlockState(pos, this.growStemToPlant(state), 2);
+            world.setBlockState(newStemPos, this.getStemState(random, age).cycle(AGE));
         }
     }
 
@@ -56,13 +55,19 @@ public class ADBloodKelpBlock extends KelpBlock implements ADBloodKelp {
         int age = Math.min(state.get(AGE) + 1, 25);
 
         if(this.chooseStemState(world.getBlockState(newStemPos))) {
-            world.setBlockState(pos, this.getPlant().getDefaultState().with(ADBloodKelpPlantBlock.LIT, state.get(LIT)), 2);
-            world.setBlockState(newStemPos, this.getBloodKelpState(random).with(AGE, age));
+            world.setBlockState(pos, this.growStemToPlant(state), 2);
+            world.setBlockState(newStemPos, this.getStemState(random, age));
         }
     }
 
-    public BlockState getBloodKelpState(Random random) {
-        return this.getDefaultState().with(LIT, ADBloodKelp.isLit(random));
+    public BlockState getStemState(Random random, int age) {
+        return this.getDefaultState().with(LIT, ADBloodKelp.isLit(random)).with(AGE, age);
+    }
+
+    private BlockState growStemToPlant(BlockState stemState) {
+        boolean isLit = stemState.get(LIT);
+
+        return this.getPlant().getDefaultState().with(ADBloodKelpPlantBlock.LIT, isLit);
     }
 
     @Override
