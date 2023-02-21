@@ -400,7 +400,6 @@ public class ADItems {
     public static final Item WEEPING_HEART_NECTAR_BUCKET = new ADDrinkContainerItem(
             makeSettings(ADFoodComponents.WEEPING_HEART_NECTAR_BUCKET, 1).recipeRemainder(Items.BUCKET), Items.BUCKET);
     public static final Item WEEPING_HEART_SEEDS = new AliasedBlockItem(ADBlocks.WEEPING_HEART, makeSettings());
-    public static final Item JUNGLE_SNARE = blockItem(ADBlocks.JUNGLE_SNARE);
 
     private static Item item() {
         return new Item(makeSettings());
@@ -829,7 +828,6 @@ public class ADItems {
         register("hoglin_stew", HOGLIN_STEW);
         register("weeping_heart_nectar_bucket", WEEPING_HEART_NECTAR_BUCKET);
         register("weeping_heart_seeds", WEEPING_HEART_SEEDS);
-        register("jungle_snare", JUNGLE_SNARE);
 
         AssortedDiscoveries.LOGGER.info("Registered Items");
     }
