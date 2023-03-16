@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "assorteddiscoveries:twilightforest_compat/transformation_chest_from_transwood_logs_woodcutting"
+    ]
+  },
+  "criteria": {
+    "has_transwood_logs": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "twilightforest:transwood_logs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assorteddiscoveries:twilightforest_compat/transformation_chest_from_transwood_logs_woodcutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_transwood_logs",
+      "has_the_recipe"
+    ]
+  ],
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "twilightforest"
+      ]
+    }
+  ]
+}

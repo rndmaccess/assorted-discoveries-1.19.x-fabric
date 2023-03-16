@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "assorteddiscoveries:twilightforest_compat/transformation_stairs_from_transformation_planks_woodcutting"
+    ]
+  },
+  "criteria": {
+    "has_transformation_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "twilightforest:transformation_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "assorteddiscoveries:twilightforest_compat/transformation_stairs_from_transformation_planks_woodcutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_transformation_planks",
+      "has_the_recipe"
+    ]
+  ],
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "twilightforest"
+      ]
+    }
+  ]
+}

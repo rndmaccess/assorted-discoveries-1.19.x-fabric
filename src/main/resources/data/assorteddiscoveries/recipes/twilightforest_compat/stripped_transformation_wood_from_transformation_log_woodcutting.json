@@ -1,0 +1,16 @@
+{
+  "type": "assorteddiscoveries:woodcutting",
+  "ingredient": {
+    "item": "twilightforest:transformation_log"
+  },
+  "result": "twilightforest:stripped_transformation_wood",
+  "count": 1,
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "twilightforest"
+      ]
+    }
+  ]
+}
