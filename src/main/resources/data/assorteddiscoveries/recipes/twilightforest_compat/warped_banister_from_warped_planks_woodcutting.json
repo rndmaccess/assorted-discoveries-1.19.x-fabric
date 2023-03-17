@@ -1,0 +1,16 @@
+{
+  "type": "assorteddiscoveries:woodcutting",
+  "ingredient": {
+    "item": "minecraft:warped_planks"
+  },
+  "result": "twilightforest:warped_banister",
+  "count": 1,
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "twilightforest"
+      ]
+    }
+  ]
+}
